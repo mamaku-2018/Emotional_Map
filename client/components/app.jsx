@@ -5,7 +5,6 @@ import Launch from './Launch'
 import ErrorMessage from './ErrorMessage'
 import WaitIndicator from './WaitIndicator'
 import ViewMap from './ViewMap'
-
 const App = () => {
   return (
     <Router>
@@ -14,7 +13,7 @@ const App = () => {
         <WaitIndicator />
         <div className='main-conatiner'>
           <Route exact path='/' component={Launch} />
-          <ViewMap/>
+          <Route path="/view" component={ViewMap}/>
         </div>
       </div>
     </Router>
