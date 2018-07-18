@@ -12,8 +12,6 @@
     "test": "jest --watchAll",
     "start": "node server"
   },
-  "author": "EDA",
-  "license": "ISC",
   "babel": {
     "presets": [
       "env",
@@ -49,6 +47,6 @@
     "superagent": "^3.8.2",
     "supertest": "^3.0.0",
     "webpack": "^3.11.0",
-    "babel-register": "^6.26.0",
+    "babel-register": "^6.26.0"
   }
 }
