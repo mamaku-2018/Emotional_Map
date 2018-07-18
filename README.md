@@ -3,11 +3,11 @@
 
 
 #Team Roles
-Caitlin
-Shane
-Rachael
-Matt
-Mike
+>Caitlin
+>Shane
+>Rachael
+>Matt
+>Mike
 
 #General Thoughts/Things to elaborate
 We obviously need to pull in the Google Maps API. How do we achieve this?

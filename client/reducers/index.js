@@ -1,6 +1,9 @@
 import {combineReducers} from 'redux'
-import pinInfo from './pinInfo'
+
+import waiting from './waiting'
+import errorMessage from './errorMessage'
 
 export default combineReducers({
-  pinInfo
+  errorMessage,
+  waiting
 })
