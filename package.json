@@ -1,5 +1,5 @@
 {
-  "name": "Emotional_Map 13-08-35-944",
+  "name": "emotional-map",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/mamaku-2018/Emotional_Map.git",
@@ -19,9 +19,13 @@
     ]
   },
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.16.2",
+    "express-jwt": "^5.3.1",
     "jsdom": "^11.11.0",
+    "jsonwebtoken": "^8.3.0",
     "knex": "^0.15.0",
+    "leaflet": "^1.3.3",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "sqlite3": "^4.0.1"
@@ -31,6 +35,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.2.2",
@@ -46,7 +51,6 @@
     "sqlite3": "^4.0.1",
     "superagent": "^3.8.2",
     "supertest": "^3.0.0",
-    "webpack": "^3.11.0",
-    "babel-register": "^6.26.0"
+    "webpack": "^3.11.0"
   }
 }

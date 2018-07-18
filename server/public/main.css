@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+  border: 0.5px solid transparent;
+}
+
+.Map{
+  height: 500px;
+  width:500px;
+}
