@@ -19,3 +19,4 @@ what will our store look like?
 how will data flow from each page?
 Talk to caitlin about what her overall vision about the site.
 We will need to delegate jobs to everyone. how will our time be organised?
+will we be using some sort of framework for the site?
