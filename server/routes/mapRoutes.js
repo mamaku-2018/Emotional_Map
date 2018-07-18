@@ -1,16 +1,15 @@
 const express = require('express')
-// const db = require('../db/')
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  db.getAllEmotions()
-    .then(emotions => {
-      res.json(emotions)
+router.get('/home', (req, res) => {
+  db.getAllCompanies()
+    .then(companies => {
+      res.json(companies)
     })
     .catch(err => {
-    // eslint-disable-next-line
-    console.log(err)
-      res.status(500).send('Unable to find emotion')
+      // eslint-disable-next-line
+      console.log(err)
+      res.status(500).send('Errorr occurred')
     })
 })
 

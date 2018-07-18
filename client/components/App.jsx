@@ -1,15 +1,18 @@
 import React from 'react'
-import {Hashrouter as Router} from 'react-router-dom'
+import {HashRouter as Router, Route} from 'react-router-dom'
 
+import Launch from './Launch'
 import ErrorMessage from './ErrorMessage'
+import WaitIndicator from './WaitIndicator'
 
 const App = () => {
   return (
     <Router>
-      <div container='container'>
+      <div className='container'>
         <ErrorMessage />
-        <div className='container-main'>
-          <h1> Hello </h1>
+        <WaitIndicator />
+        <div className='main-conatiner'>
+          <Route exact path='/' component={Launch} />
         </div>
       </div>
     </Router>
