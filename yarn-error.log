@@ -1,0 +1,36 @@
+Arguments: 
+  /home/sungjin-shane/.nvm/versions/node/v9.11.1/bin/node /usr/share/yarn/bin/yarn.js init
+
+PATH: 
+  /home/sungjin-shane/.nvm/versions/node/v9.11.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/ProgramData/Oracle/Java/javapath_target_603234:/mnt/c/Program Files (x86)/Intel/iCLS Client:/mnt/c/Program Files/Intel/iCLS Client:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/APM_Setup/Server/Apache/bin:/mnt/c/APM_Setup/Server/MySQL5/bin:/mnt/c/APM_Setup/Server/PHP5:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/sjpark1973/AppData/Roaming/nvm:/mnt/c/Users/sjpark1973/AppData/Roaming/nvm/v9.11.1:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/Intel/WiFi/bin:/mnt/c/Program Files/Common Files/Intel/WirelessCommon:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Users/sjpark1973/AppData/Local/Programs/Python/Python37/Scripts:/mnt/c/Users/sjpark1973/AppData/Local/Programs/Python/Python37:/mnt/c/Users/sjpark1973/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/sjpark1973/.babun:/mnt/c/Users/sjpark1973/AppData/Roaming/nvm:/mnt/c/Users/sjpark1973/AppData/Roaming/nvm/v9.11.1:/mnt/c/Program Files/heroku/bin
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  9.11.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/share/yarn/lib/cli.js:131036:13)
+      at Interface.emit (events.js:180:13)
+      at Interface._ttyWrite (readline.js:783:16)
+      at ReadStream.onkeypress (readline.js:163:10)
+      at ReadStream.emit (events.js:180:13)
+      at emitKeys (internal/readline.js:422:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1019:36)
+      at ReadStream.emit (events.js:180:13)
+      at addChunk (_stream_readable.js:274:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,9 +1,9 @@
 {
-  "name": "Emotional_Map 13-08-35-944",
+  "name": "Emotional_Map",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/mamaku-2018/Emotional_Map.git",
-  "author": "MichaelMitch <michael.j.mitchelson@gmail.com>",
+  "author": "sungjin-shane <sjpark731015@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config ./client/webpack.config.js",
@@ -11,11 +11,9 @@
     "knex": "knex --knexfile ./server/db/knexfile.js",
     "test": "jest --watchAll",
     "start": "node server"
-  },
-  "author": "EDA",
-  "license": "ISC",
+    },
   "babel": {
-    "presets": [
+  "presets": [
       "env",
       "react"
     ]
@@ -49,6 +47,6 @@
     "superagent": "^3.8.2",
     "supertest": "^3.0.0",
     "webpack": "^3.11.0",
-    "babel-register": "^6.26.0",
+    "babel-register": "^6.26.0"
   }
 }
