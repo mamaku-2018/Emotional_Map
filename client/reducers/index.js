@@ -1,6 +1,6 @@
-import {combinedReducers} from 'redux'
+import {combineReducers} from 'redux'
 import pinInfo from './pinInfo'
 
-export default combinedReducers({
+export default combineReducers({
   pinInfo
 })
