@@ -1,33 +1,84 @@
 Arguments: 
-  /home/sungjin-shane/.nvm/versions/node/v9.11.1/bin/node /usr/share/yarn/bin/yarn.js init
+  /Users/eda/.nvm/versions/node/v9.11.0/bin/node /usr/local/bin/yarn add leflet
 
 PATH: 
-  /home/sungjin-shane/.nvm/versions/node/v9.11.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/ProgramData/Oracle/Java/javapath_target_603234:/mnt/c/Program Files (x86)/Intel/iCLS Client:/mnt/c/Program Files/Intel/iCLS Client:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/APM_Setup/Server/Apache/bin:/mnt/c/APM_Setup/Server/MySQL5/bin:/mnt/c/APM_Setup/Server/PHP5:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/sjpark1973/AppData/Roaming/nvm:/mnt/c/Users/sjpark1973/AppData/Roaming/nvm/v9.11.1:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/Intel/WiFi/bin:/mnt/c/Program Files/Common Files/Intel/WirelessCommon:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Users/sjpark1973/AppData/Local/Programs/Python/Python37/Scripts:/mnt/c/Users/sjpark1973/AppData/Local/Programs/Python/Python37:/mnt/c/Users/sjpark1973/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/sjpark1973/.babun:/mnt/c/Users/sjpark1973/AppData/Roaming/nvm:/mnt/c/Users/sjpark1973/AppData/Roaming/nvm/v9.11.1:/mnt/c/Program Files/heroku/bin
+  /Users/eda/.nvm/versions/node/v9.11.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 
 Yarn version: 
-  1.7.0
+  1.6.0
 
 Node version: 
-  9.11.1
+  9.11.0
 
 Platform: 
-  linux x64
+  darwin x64
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (/usr/share/yarn/lib/cli.js:131036:13)
-      at Interface.emit (events.js:180:13)
-      at Interface._ttyWrite (readline.js:783:16)
-      at ReadStream.onkeypress (readline.js:163:10)
-      at ReadStream.emit (events.js:180:13)
-      at emitKeys (internal/readline.js:422:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (readline.js:1019:36)
-      at ReadStream.emit (events.js:180:13)
-      at addChunk (_stream_readable.js:274:12)
+  Error: https://registry.yarnpkg.com/leflet: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:65327:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:133155:22)
+      at Request.emit (events.js:180:13)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:134138:10)
+      at Request.emit (events.js:180:13)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:134058:12)
+      at Object.onceWrapper (events.js:272:13)
+      at IncomingMessage.emit (events.js:185:15)
+      at endReadableNT (_stream_readable.js:1106:12)
+      at process._tickCallback (internal/process/next_tick.js:178:19)
 
 npm manifest: 
-  No manifest
+  {
+    "name": "Emotional_Map",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/mamaku-2018/Emotional_Map.git",
+    "author": "MichaelMitch <michael.j.mitchelson@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+      "build": "webpack --config ./client/webpack.config.js",
+      "dev": "nodemon server & yarn build --watch",
+      "knex": "knex --knexfile ./server/db/knexfile.js",
+      "test": "jest --watchAll",
+      "start": "node server"
+    },
+    "babel": {
+      "presets": [
+        "env",
+        "react"
+      ]
+    },
+    "dependencies": {
+      "express": "^4.16.2",
+      "jsdom": "^11.11.0",
+      "knex": "^0.15.0",
+      "react-router": "^4.3.1",
+      "react-router-dom": "^4.3.1",
+      "sqlite3": "^4.0.1"
+    },
+    "devDependencies": {
+      "babel-core": "^6.26.0",
+      "babel-loader": "^7.1.2",
+      "babel-preset-env": "^1.6.1",
+      "babel-preset-react": "^6.24.1",
+      "enzyme": "^3.3.0",
+      "enzyme-adapter-react-16": "^1.1.1",
+      "jest": "^22.2.2",
+      "nodemon": "^1.14.12",
+      "react": "^16.2.0",
+      "react-dom": "^16.2.0",
+      "react-redux": "^5.0.6",
+      "react-router": "^4.3.1",
+      "react-router-dom": "^4.3.1",
+      "redux": "^3.7.2",
+      "redux-mock-store": "^1.5.3",
+      "redux-thunk": "^2.2.0",
+      "sqlite3": "^4.0.1",
+      "superagent": "^3.8.2",
+      "supertest": "^3.0.0",
+      "webpack": "^3.11.0",
+      "babel-register": "^6.26.0"
+    }
+  }
 
 yarn manifest: 
   No manifest
