@@ -36,7 +36,9 @@ class RealMap extends React.Component {
 
           )}
         </Map>
+        {this.state.Marker}
       </div>
+
     )
   }
 }

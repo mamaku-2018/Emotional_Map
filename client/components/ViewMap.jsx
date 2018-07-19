@@ -1,5 +1,3 @@
-
-
 // componentDidMount () {
 //   // create map
 //   this.map = L.map('map', {
