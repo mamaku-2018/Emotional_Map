@@ -13,7 +13,8 @@ class ViewMap extends React.Component {
         })
       ]
     })
-    this.marker = L.marker(this.props.markerPosition).addTo(this.map)
+    // add marker
+    this.marker = L.marker([-36.8484, 174.7622]).addTo(this.map)
   }
 
   render () {
