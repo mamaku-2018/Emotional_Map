@@ -1,19 +1,41 @@
 import React from 'react'
 import connect from 'react-redux'
-import L from 'leaflet'
-class ViewMap extends React.Component {
-  componentDidMount(){
-    this.map()
+import getPinInfo from '../actions/mapping'
+import {Map, TileLayer, Marker,Popup} from 'react-leaflet'
+
+class ViewAreas extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      lat: 51.505,
+      lng: -0.09,
+      zoom: 13
+      }
   }
-  map () {
-    var map  = L.map('map').setView([-36.848460, 174.763332], 12)
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map)
+  render() {
+    const position = [this.state.lat, this.state.lng]
+    return (
+      <Map center={position} zoom={this.state.zoom}>
+        <TileLayer
+          attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      </Map>
+    )
   }
-  render () {
-    return <div className="Map" id="map">xx</div>
+
+
+}
+
+const mapStateToProps = (state) => {
+  return {
+    areaInfo: state.areaInfo
   }
 }
 
-export default ViewMap
+export default connect(mapStateToProps) (ViewAreas)
