@@ -3,7 +3,21 @@
   border: 0.5px solid transparent;
 }
 
+input {
+  border: 1px solid black;
+   width: 100%;
+   padding: 10px; 
+}
+
+
 .Map{
   height: 500px;
   width:500px;
+}
+
+/* INPUT FORM  */
+
+.InputPinForm {
+  text-align: left;
+  font-size: 20px; 
 }
