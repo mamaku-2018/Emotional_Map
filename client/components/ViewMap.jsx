@@ -9,7 +9,6 @@ class ViewAreas extends React.Component {
     }
   }
   render() {
-    const position = [this.state.lat, this.state.lng]
     return (
       <Map className ="Map" center= {[-36.8485,174.7633]} zoom={12}>
         <TileLayer 
