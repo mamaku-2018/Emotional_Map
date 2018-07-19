@@ -4,7 +4,8 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import Launch from './Launch'
 import ErrorMessage from './ErrorMessage'
 import WaitIndicator from './WaitIndicator'
-import AddEmote from './AddEmote'
+// import AddEmote from './AddEmote'
+import InputPin from './InputPin'
 import ViewMap from './ViewMap'
 
 const App = () => {
@@ -16,7 +17,8 @@ const App = () => {
         <div className='main-conatiner'>
           <Route exact path='/' component={Launch} />
           <Route path='/view' component={ViewMap}/>
-          <Route path='/add' component={AddEmote}/>
+          <Route path='/add' component={InputPin} />
+          {/* <Route path='/add' component={AddEmote}/> */}
         </div>
       </div>
     </Router>

@@ -44,12 +44,11 @@ export class InputPin extends React.Component {
             <input onChange={this.changeHandler} name='name' />
             <label>Emotion:
               <select value={this.state.value} onChange={this.changeHandler}>
-                <option value='happy'>Happy</option>
-                <option value='sad'>Sad</option>
-                <option value='angry'>Angry</option>
+                <option value='1'>Happy</option>
+                <option value='2'>Sad</option>
+                <option value='3'>Angry</option>
               </select>
             </label>
-            <input onChange={this.changeHandler} name='emotion' />
             <label>Comments:</label>
             <input onChange={this.changeHandler} name='comments' />
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
