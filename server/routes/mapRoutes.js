@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db/mapping')
 router.get('/map', (req, res) => {
-    db.getPins()
+  db.getPins()
     .then(pins => {
       res.json(pins)
     })
@@ -13,4 +13,3 @@ router.get('/map', (req, res) => {
     })
 })
 module.exports = router
-c
