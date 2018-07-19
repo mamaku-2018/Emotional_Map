@@ -1,7 +1,6 @@
 import React from 'react'
-// import connect from 'react-redux'
+
 import {Map, TileLayer, Marker} from 'react-leaflet'
-// const {Map, TileLayer, Marker} = window.ReactLeaflet
 
 class RealMap extends React.Component {
   constructor () {
@@ -14,9 +13,6 @@ class RealMap extends React.Component {
   }
 
   addMarker (e) {
-    // const markers = this.state.markers
-    // markers.push(e.latlng)
-    // console.log(markers)
     this.setState({
       lat: e.latlng.lat,
       lng: e.latlng.lng
