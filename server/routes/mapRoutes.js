@@ -4,7 +4,6 @@ const db = require('../db/mapping')
 
 router.post('/add', (req, res) => {
   const {name, emotionType, comment, areaId, lat, long} = req.body
-  console.log(req.body)
   const pin = {
     name: name,
     emotionType: emotionType,
@@ -21,6 +20,45 @@ router.post('/add', (req, res) => {
       // eslint-disable-next-line
       console.log(err)
       res.status(500).send('Unable to save newpin')
+    })
+})
+
+router.get('/view', (req, res) => {
+  console.log ('ffffffffffffffffffffffffffff')
+  db.getAllPins()
+    .then(allPins => {
+      res.json(allPins)
+    })
+    .catch(err => {
+      // eslint-disable-next-line
+      console.log(err)
+      res.status(500).send('Unable to find all pins')
+    })
+})
+
+router.get('/view/:pinId', (req, res) => {
+  const pinId = Number(req.params.pinId)
+  db.getPinById(pinId)
+    .then(pin => {
+      res.json(pin)
+    })
+    .catch(err => {
+      // eslint-disable-next-line
+      console.log(err)
+      res.status(500).send('Unable to find pin by pin-id')
+    })
+})
+
+router.get('/view/:areaId', (req, res) => {
+  const areaId = Number(req.params.areaId)
+  db.getPinsByArea(areaId)
+    .then(pinsByAreas => {
+      res.json(pinsByAreas)
+    })
+    .catch(err => {
+      // eslint-disable-next-line
+      console.log(err)
+      res.status(500).send('Unable to find pins by area-id')
     })
 })
 
