@@ -1,10 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-<<<<<<< HEAD
 import {Map, TileLayer} from 'react-leaflet'
-=======
-import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
->>>>>>> 8b96a5edebfd7300cfaa06dee317a023bafe4369
 
 class ViewMap extends React.Component {
   constructor (props) {
@@ -21,7 +17,6 @@ class ViewMap extends React.Component {
       </Map>
     )
   }
-<<<<<<< HEAD
 }
 
 const mapStateToProps = (state) => {
@@ -31,8 +26,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(ViewMap)
-=======
-}
-
-export default ViewMap
->>>>>>> 8b96a5edebfd7300cfaa06dee317a023bafe4369

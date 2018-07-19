@@ -1,4 +1,4 @@
-import {RECEIVE_PIN_INFO} from '../actions/mapping'
+import {RECEIVE_PIN_INFO} from '../actions/pins'
 
 function pinInfo (state = {}, action) {
   switch (action.type) {
