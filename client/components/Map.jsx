@@ -7,16 +7,20 @@ class RealMap extends React.Component {
   constructor () {
     super()
     this.state = {
-      markers: [[-36.8484, 174.7622]]
+      lat: '',
+      lng: ''
     }
     this.addMarker = this.addMarker.bind(this)
   }
 
   addMarker (e) {
-    const markers = this.state.markers
-    markers.push(e.latlng)
-    console.log(markers)
-    this.setState({markers})
+    // const markers = this.state.markers
+    // markers.push(e.latlng)
+    // console.log(markers)
+    this.setState({
+      lat: e.latlng.lat,
+      lng: e.latlng.lng
+    })
   }
 
   render () {
@@ -31,12 +35,10 @@ class RealMap extends React.Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
-          {this.state.markers.map((position, idx) =>
-            <Marker key={`marker-${idx}`} position={position} />
+          <Marker position={this.state} />
 
-          )}
         </Map>
-        {this.state.Marker}
+
       </div>
 
     )
