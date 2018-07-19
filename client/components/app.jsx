@@ -5,6 +5,7 @@ import Launch from './Launch'
 import ErrorMessage from './ErrorMessage'
 import WaitIndicator from './WaitIndicator'
 import ViewMap from './ViewMap'
+import Footer from './Footer'
 const App = () => {
   return (
     <Router>
