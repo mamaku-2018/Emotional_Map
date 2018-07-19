@@ -1,22 +1,28 @@
-// componentDidMount () {
-//   // create map
-//   this.map = L.map('map', {
-//     center: [-36.8484, 174.7622],
-//     zoom: 16,
-//     layers: [
-//       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-//         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-//       })
-//     ]
-//   })
-//   // add marker
-//   this.marker = L.marker([-36.8484, 174.7622]).addTo(this.map)
-//   this.marker = L.marker([-36.8482, 174.7622]).addTo(this.map)
-//   this.marker = L.marker([-36.8470, 174.7628]).addTo(this.map)
+import React from 'react'
+import {connect} from 'react-redux'
+import {Map, TileLayer} from 'react-leaflet'
 
-// }
+class ViewMap extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+    }
+  }
+  render () {
+    return (
+      <Map className ="map" center= {[-36.8485, 174.7633]} zoom={12}>
+        <TileLayer
+          attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+      </Map>
+    )
+  }
+}
 
-// render () {
-//   return <div className="Map" id="map">xx</div>
-// }
-// }
+const mapStateToProps = (state) => {
+  return {
+    areaInfo: state.areaInfo
+  }
+}
+
+export default connect(mapStateToProps)(ViewMap)

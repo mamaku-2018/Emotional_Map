@@ -25,21 +25,19 @@ class RealMap extends React.Component {
 
   render () {
     return (
-      <div id="Map">
-        <Map id="map"
-          center={[-36.8484, 174.7622]}
-          onClick={this.addMarker}
-          zoom={13}
-        >
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-          />
-          <Marker position={this.state} />
 
-        </Map>
+      <Map className="map"
+        center={[-36.8484, 174.7622]}
+        onClick={this.addMarker}
+        zoom={13}
+      >
+        <TileLayer
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+        />
+        <Marker position={this.state} />
 
-      </div>
+      </Map>
 
     )
   }

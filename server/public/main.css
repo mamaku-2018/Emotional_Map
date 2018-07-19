@@ -3,7 +3,7 @@
   border: 0.5px solid transparent;
 }
 
-#map {
+.map {
   height: 500px;
   width:500px;
 }
