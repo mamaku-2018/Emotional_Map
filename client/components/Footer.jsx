@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <div className='footer'>
       <h4>Contact</h4>
-      <a href='mailto:hello@softwareness.io'>hello@softwareness.io</a>
-      <p>© Copyright 2018 Enspiral Dev Academy Ltd. All rights reserved.</p>
+      <a href='mailto:StreetFeel'>hello@streetfeel.co.nz</a>
+      <p>© Copyright 2018 STREETFEEL.LTD . All rights reserved.</p>
     </div>
   )
 }
