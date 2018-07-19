@@ -54,7 +54,7 @@ export class AddPinForm extends React.Component {
               <br />
             </label>
             <label>Comments:</label>
-            <input onChange={this.changeHandler} name='comments' />
+            <input onChange={this.changeHandler} name='comment' />
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
           </div>
         </div>
