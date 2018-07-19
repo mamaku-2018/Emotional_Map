@@ -14,7 +14,6 @@ const App = () => {
         <div className='main-conatiner'>
           <Route exact path='/' component={Launch} />
           <Route path="/view" component={ViewMap}/>
-          <Route path="/viewareas" component = {ViewMap}/>
         </div>
       </div>
     </Router>
