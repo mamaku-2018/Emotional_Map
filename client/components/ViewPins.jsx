@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import L from 'leaflet'
 class ViewMap extends React.Component {
   componentDidMount () {
@@ -16,3 +17,15 @@ class ViewMap extends React.Component {
 }
 
 export default ViewMap
+=======
+
+const ViewPins = () => {
+  return (
+    <div className='view-container'>
+      <h1>view pins</h1>
+    </div>
+  )
+}
+
+export default ViewPins
+>>>>>>> 8b96a5edebfd7300cfaa06dee317a023bafe4369
