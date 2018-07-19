@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/mamaku-2018/Emotional_Map.git",
-  "author": "MichaelMitch <michael.j.mitchelson@gmail.com>",
+  "author": "sungjin-shane <sjpark731015@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config ./client/webpack.config.js",
@@ -13,7 +13,7 @@
     "start": "node server"
   },
   "babel": {
-    "presets": [
+  "presets": [
       "env",
       "react"
     ]
