@@ -4,7 +4,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import Launch from './Launch'
 import ErrorMessage from './ErrorMessage'
 import WaitIndicator from './WaitIndicator'
-import ViewMap from './ViewMap'
+import RealMap from './Map'
 const App = () => {
   return (
     <Router>
@@ -13,7 +13,7 @@ const App = () => {
         <WaitIndicator />
         <div className='main-conatiner'>
           <Route exact path='/' component={Launch} />
-          <Route path="/view" component={ViewMap}/>
+          <Route path="/view" component={RealMap}/>
         </div>
       </div>
     </Router>
