@@ -1,13 +1,8 @@
 exports.seed = (knex, Promise) => {
   return knex('areas').del()
     .then(() => {
-      return knex('companies').insert([
-        {id: 1, name: 'xero', website_url: 'https://www.xero.com/nz/', country_id: 2310},
-        {id: 2, name: 'vend', website_url: 'https://www.vendhq.com/nz/', country_id: 2311},
-        {id: 3, name: 'orion health', website_url: 'https://orionhealth.com/nz/', country_id: 2312},
-        {id: 4, name: 'trade me', website_url: 'https://www.trademe.co.nz', country_id: 2313},
-        {id: 5, name: 'little giant', website_url: 'https://www.littlegiant.co.nz', country_id: 2314},
-        {id: 6, name: 'supply', website_url: 'https://supply.co.nz', country_id: 2315}
+      return knex('areas').insert([
+        {area_id: 1, area_name: 'city center', area_lat1: -36.848461, area_long1: 174.763336, area_lat2: -36.908461, area_long2: 174.903336, area_lat3: -36.748461, area_long3: 174.883336, area_lat4: -36.848461, area_long4: 174.763336, last_update_date: '19-07-2018'}
       ])
     })
 }
