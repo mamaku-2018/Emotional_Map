@@ -5,7 +5,7 @@ const LaunchButtons = () => {
   return (
     <div className='launchbuttons'>
       <Link to='/add' className='button'>Drop Pin</Link>
-      <Link to='view' className='button'>View Map</Link>
+      <Link to='/view' className='button'>View Map</Link>
     </div>
   )
 }
