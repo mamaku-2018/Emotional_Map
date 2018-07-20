@@ -2,13 +2,6 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db/mapping')
 
-// router.get('/map', (req, res) => {
-//   db.getPins()
-//     .then(pins => {
-//       res.json(pins)
-//     })
-// }
-
 router.post('/add', (req, res) => {
   const {name, emotionType, comment, areaId, lat, long} = req.body
   const pin = {
@@ -27,6 +20,31 @@ router.post('/add', (req, res) => {
       // eslint-disable-next-line
       console.log(err)
       res.status(500).send('Unable to save newpin')
+    })
+})
+
+router.get('/view', (req, res) => {
+  db.getAllPins()
+    .then(allPins => {
+      res.json(allPins)
+    })
+    .catch(err => {
+      // eslint-disable-next-line
+      console.log(err)
+      res.status(500).send('Unable to find all pins')
+    })
+})
+
+router.get('/view/:pinId', (req, res) => {
+  const pinId = Number(req.params.pinId)
+  db.getPinById(pinId)
+    .then(pin => {
+      res.json(pin)
+    })
+    .catch(err => {
+      // eslint-disable-next-line
+      console.log(err)
+      res.status(500).send('Unable to find pin by pin-id')
     })
 })
 

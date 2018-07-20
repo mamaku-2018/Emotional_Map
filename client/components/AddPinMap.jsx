@@ -1,10 +1,11 @@
 import React from 'react'
-
+import {connect} from 'react-redux'
+import {sendPinPosition} from '../actions/pins'
 import {Map, TileLayer, Marker} from 'react-leaflet'
 
 class RealMap extends React.Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       lat: '',
       lng: ''
@@ -17,6 +18,7 @@ class RealMap extends React.Component {
       lat: e.latlng.lat,
       lng: e.latlng.lng
     })
+    this.props.dispatch(sendPinPosition(this.state))
   }
 
   render () {
@@ -38,4 +40,5 @@ class RealMap extends React.Component {
     )
   }
 }
-export default RealMap
+// export default RealMap
+export default connect()(RealMap)
