@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 
 import {Map, TileLayer} from 'react-leaflet'
 
-
 class ViewMap extends React.Component {
   constructor (props) {
     super(props)
@@ -21,7 +20,6 @@ class ViewMap extends React.Component {
       </Map>
     )
   }
-
 }
 
 const mapStateToProps = (state) => {
@@ -31,4 +29,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(ViewMap)
-

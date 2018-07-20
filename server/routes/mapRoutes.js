@@ -4,8 +4,6 @@ const db = require('../db/mapping')
 
 router.post('/add', (req, res) => {
   const {name, emotionType, comment, areaId, lat, long} = req.body
-  // eslint-disable-next-line
-  console.log(req.body)
   const pin = {
     name: name,
     emotionType: emotionType,
