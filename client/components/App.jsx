@@ -13,7 +13,7 @@ const App = () => {
       <div className='container'>
         <ErrorMessage />
         <WaitIndicator />
-        <div className='main-conatiner'>
+        <div className='main-container'>
           <Route exact path='/' component={Launch} />
 
           <Route path='/view' component={ViewPins}/>
