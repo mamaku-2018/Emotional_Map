@@ -2,7 +2,9 @@ const config = require('./knexfile').development
 const knex = require('knex')(config)
 
 module.exports = {
-  addPin
+  addPin,
+  getAllPins,
+  getPinById
 }
 
 function addPin (pin, db = knex) {
@@ -17,4 +19,16 @@ function addPin (pin, db = knex) {
       last_update_date: knex.fn.now()
     })
     .then(newPinId => newPinId[0])
+}
+
+function getAllPins (db = knex) {
+  return db('pins')
+    .select('pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'last_update_date')
+    // .orderBy('pin_lat', 'asc')
+}
+
+function getPinById (pinId, db = knex) {
+  return db('pins')
+    .where('pin_id', pinId)
+    .select('pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'last_update_date')
 }

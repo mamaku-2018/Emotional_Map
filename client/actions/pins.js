@@ -2,8 +2,16 @@ import request from 'superagent'
 
 import {showError} from './index'
 
-export const RECEIVE_PIN_INFO = 'RECEIVE_PINS'
-export const REQUEST_PIN_INFO = 'REQUEST_PINS'
+export const REQUEST_PIN_INFO = 'REQUEST_PIN_INFO'
+export const RECEIVE_PIN_INFO = 'RECEIVE_PIN_INFO'
+export const SEND_PIN_POSITION = 'SEND_PIN_POSITION'
+
+export const sendPinPosition = (position) => {
+  return {
+    type: SEND_PIN_POSITION,
+    position
+  }
+}
 
 export function addPin (pin) {
   return (dispatch) => {
