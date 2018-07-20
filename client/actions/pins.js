@@ -15,7 +15,6 @@ export const sendPinPosition = (position) => {
 
 export function addPin (pin) {
   return (dispatch) => {
-    console.log(pin)
     return request
       .post('/api/v1/map/add')
       .send(pin)
