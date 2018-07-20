@@ -6,13 +6,14 @@ import AddPinMap from './AddPinMap'
 class AddPin extends React.Component {
   constructor () {
     super()
-    this.state = {}
+    this.state = {
+      AddPinInfoVis: false
+    }
   }
   render () {
     return (
       <div>
         <AddPinMap />
-        <AddPinInfo />
       </div>
     )
   }
