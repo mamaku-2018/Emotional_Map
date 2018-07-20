@@ -47,7 +47,6 @@ export const getpins = () => {
       .get('api/v1/map/view')
       .then(res => {
         dispatch(receivePinInfo(res.body))
-        console.log(res.body)
       })
       .catch(err => {
         dispatch(showError(err.message))
