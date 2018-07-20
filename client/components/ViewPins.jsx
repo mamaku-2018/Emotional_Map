@@ -2,7 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import ViewPinMap from './ViewPinMap'
 import {getpins} from '../actions/pins'
+
 import ViewPinInfo from './ViewPinInfo'
+
 
 class ViewPins extends React.Component {
   componentDidMount () {
