@@ -1,12 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
+import {Map, TileLayer} from 'react-leaflet'
 
-class ViewMap extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-    }
+class ViewPinMap extends React.Component {
+  componentDidMount() {
+    // this.props.dispatch(getPinLocation())
   }
   render () {
     return (
@@ -19,4 +17,4 @@ class ViewMap extends React.Component {
   }
 }
 
-export default ViewMap
+export default connect () (ViewPinMap)

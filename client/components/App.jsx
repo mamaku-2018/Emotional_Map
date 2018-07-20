@@ -5,7 +5,7 @@ import Launch from './Launch'
 import ErrorMessage from './ErrorMessage'
 import WaitIndicator from './WaitIndicator'
 import AddPinForm from './AddPinForm'
-import ViewMap from './ViewMap'
+import ViewPins from './ViewPins'
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         <WaitIndicator />
         <div className='main-conatiner'>
           <Route exact path='/' component={Launch} />
-          <Route path='/view' component={ViewMap}/>
+          <Route path='/view' component={ViewPins}/>
           <Route path='/add' component={AddPinForm} />
         </div>
       </div>
