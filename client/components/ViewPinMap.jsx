@@ -1,11 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Map, TileLayer} from 'react-leaflet'
-
+import {Map, TileLayer, Marker} from 'react-leaflet'
+import { getpins } from '../actions/pins';
 class ViewPinMap extends React.Component {
-  componentDidMount() {
-    // this.props.dispatch(getPinLocation())
+  componentDidMount () {
+    this.props.dispatch(getpins())
   }
+  
   render () {
     return (
 
@@ -14,10 +15,17 @@ class ViewPinMap extends React.Component {
         <TileLayer
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+          {/* {this.props.pinInfo.map(pin => {
+            <Marker key ={pin.id} position={[pin.lat, pin.long]} /> */}
+          })}
       </Map>
     )
   }
 
 }
-
-export default connect () (ViewPinMap)
+const mapStateToProps = (state) => {
+  return {
+    pinInfo: state.pinInfo
+  }
+}
+export default connect (mapStateToProps) (ViewPinMap)

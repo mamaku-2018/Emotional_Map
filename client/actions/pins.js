@@ -43,7 +43,7 @@ export const getpins = () => {
   return (dispatch) => {
     dispatch(requestPinInfo())
     return request
-      .get('api/v1/map')
+      .get('api/v1/map/view')
       .then(res => {
         dispatch(receivePinInfo(res.body))
       })
