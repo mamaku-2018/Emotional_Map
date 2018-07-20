@@ -21,7 +21,6 @@ class ViewPinMap extends React.Component {
       </Map>
     )
   }
-
 }
 const mapStateToProps = (state) => {
   return {

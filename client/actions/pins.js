@@ -15,7 +15,8 @@ export const sendPinPosition = (position) => {
 
 export function addPin (pin) {
   return (dispatch) => {
-    return request.post('/api/v1/add')
+    return request
+      .post('/api/v1/add')
       .send(pin)
       .then(res => {
         dispatch(requestPinInfo(res.body.newId))

@@ -1,7 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
 
-import AddPinForm from './AddPinForm'
+import AddPinInfo from './AddPinInfo'
 import AddPinMap from './AddPinMap'
 
 class AddPin extends React.Component {
@@ -13,7 +12,7 @@ class AddPin extends React.Component {
     return (
       <div>
         <AddPinMap />
-        <AddPinForm />
+        <AddPinInfo />
       </div>
     )
   }
