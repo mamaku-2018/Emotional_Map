@@ -3,7 +3,7 @@ import {combineReducers} from 'redux'
 import waiting from './waiting'
 import errorMessage from './errorMessage'
 import pinInfo from './pinInfo'
-import pinPosition from './pinPosition'
+// import pinPosition from './pinPosition'
 
 export default combineReducers({
   errorMessage,
