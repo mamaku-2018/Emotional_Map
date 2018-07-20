@@ -3,8 +3,8 @@ import {connect} from 'react-redux'
 import ViewPinMap from './ViewPinMap'
 import {getpins} from '../actions/pins'
 
+import AddButton from './AddButton'
 import ViewPinInfo from './ViewPinInfo'
-
 
 class ViewPins extends React.Component {
   componentDidMount () {
@@ -16,6 +16,7 @@ class ViewPins extends React.Component {
       <div>
         <ViewPinMap/>
         <ViewPinInfo/>
+        <AddButton/>
       </div>
 
     )
