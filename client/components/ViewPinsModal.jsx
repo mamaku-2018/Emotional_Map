@@ -1,11 +1,12 @@
 import React from './react'
 
-const ViewPinsModal = () => {
+class ViewPinsModal extends React.component
+
   return (
 
 
 
-            {/* <!-- Modal --> */}
+    {/* <!-- Modal --> */}
     <div className="viewModal" id="viewModal" tabIndex="-1" role="dialog">
       <div className="modal-dialog" role="document">
         <div className="view-modal-content">
