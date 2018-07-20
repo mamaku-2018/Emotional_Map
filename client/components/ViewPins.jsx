@@ -5,6 +5,7 @@ import {getpins} from '../actions/pins'
 
 import AddButton from './AddButton'
 import ViewPinInfo from './ViewPinInfo'
+import ViewPinsModal from './ViewPinsModal'
 
 class ViewPins extends React.Component {
   componentDidMount () {
@@ -14,6 +15,7 @@ class ViewPins extends React.Component {
   render () {
     return (
       <div>
+        <ViewPinsModal />
         <ViewPinMap/>
         <ViewPinInfo/>
         <AddButton/>
