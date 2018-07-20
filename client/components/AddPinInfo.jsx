@@ -11,8 +11,6 @@ export class AddPinInfo extends React.Component {
       emotionType: 0,
       comment: '',
       areaId: 0,
-      long: 0,
-      lat: 0,
       redirect: false
     }
 
@@ -26,7 +24,16 @@ export class AddPinInfo extends React.Component {
     })
   }
   submitHandler () {
-    this.props.dispatch(addPin(this.state))
+    const pin = {
+      lat: this.props.pinPosition.lat,
+      long: this.props.pinPosition.lng,
+      name: this.state.name,
+      emotionType: this.state.emotionType,
+      comment: this.state.comment,
+      areaId: this.state.areaId
+    }
+
+    this.props.dispatch(addPin(pin))
     this.setState({redirect: true})
   }
 
@@ -43,7 +50,7 @@ export class AddPinInfo extends React.Component {
             <label>Pin name:</label>
             <input onChange={this.changeHandler} name='name' />
             <label>Emotion:
-              <select value={this.state.value} onChange={this.changeHandler}>
+              <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
                 <option value='1'>Joyful</option>
                 <option value='2'>Sad</option>
                 <option value='3'>Mad</option>
@@ -63,4 +70,12 @@ export class AddPinInfo extends React.Component {
   }
 }
 
-export default connect()(AddPinInfo)
+const mapStateToProps = (state) => {
+  return {
+    pinPosition: state.pinPosition
+  }
+}
+
+export default connect(mapStateToProps)(AddPinInfo)
+
+// export default connect()(AddPinInfo)

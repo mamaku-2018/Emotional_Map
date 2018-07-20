@@ -15,8 +15,9 @@ export const sendPinPosition = (position) => {
 
 export function addPin (pin) {
   return (dispatch) => {
+    console.log(pin)
     return request
-      .post('/api/v1/add')
+      .post('/api/v1/map/add')
       .send(pin)
       .then(res => {
         dispatch(requestPinInfo(res.body.newId))
@@ -44,7 +45,7 @@ export const getpins = () => {
   return (dispatch) => {
     dispatch(requestPinInfo())
     return request
-      .get('api/v1/view')
+      .get('api/v1/map/view')
       .then(res => {
         dispatch(receivePinInfo(res.body))
       })
