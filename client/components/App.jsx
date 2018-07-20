@@ -13,10 +13,11 @@ const App = () => {
       <div className='container'>
         <ErrorMessage />
         <WaitIndicator />
-        <div className='main-conatiner'>
+        <div className='main-container'>
           <Route exact path='/' component={Launch} />
-          <Route path="/add" component={AddPin}/>
-          <Route path="/view" component={ViewPins}/>
+
+          <Route path='/view' component={ViewPins}/>
+          <Route path='/add' component={AddPin} />
         </div>
       </div>
     </Router>
