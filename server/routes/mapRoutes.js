@@ -2,6 +2,13 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db/mapping')
 
+// router.get('/map', (req, res) => {
+//   db.getPins()
+//     .then(pins => {
+//       res.json(pins)
+//     })
+// }
+
 router.post('/add', (req, res) => {
   const {name, emotionType, comment, areaId, lat, long} = req.body
   const pin = {
