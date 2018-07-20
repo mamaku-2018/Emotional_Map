@@ -2,13 +2,6 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db/mapping')
 
-// router.get('/map', (req, res) => {
-//   db.getPins()
-//     .then(pins => {
-//       res.json(pins)
-//     })
-// }
-
 router.post('/add', (req, res) => {
   const {name, emotionType, comment, areaId, lat, long} = req.body
   // eslint-disable-next-line
@@ -33,7 +26,6 @@ router.post('/add', (req, res) => {
 })
 
 router.get('/view', (req, res) => {
-  console.log ('ffffffffffffffffffffffffffff')
   db.getAllPins()
     .then(allPins => {
       res.json(allPins)
@@ -55,19 +47,6 @@ router.get('/view/:pinId', (req, res) => {
       // eslint-disable-next-line
       console.log(err)
       res.status(500).send('Unable to find pin by pin-id')
-    })
-})
-
-router.get('/view/:areaId', (req, res) => {
-  const areaId = Number(req.params.areaId)
-  db.getPinsByArea(areaId)
-    .then(pinsByAreas => {
-      res.json(pinsByAreas)
-    })
-    .catch(err => {
-      // eslint-disable-next-line
-      console.log(err)
-      res.status(500).send('Unable to find pins by area-id')
     })
 })
 

@@ -4,8 +4,7 @@ const knex = require('knex')(config)
 module.exports = {
   addPin,
   getAllPins,
-  getPinById,
-  getPinByArea
+  getPinById
 }
 
 function addPin (pin, db = knex) {
@@ -24,19 +23,12 @@ function addPin (pin, db = knex) {
 
 function getAllPins (db = knex) {
   return db('pins')
-    .select('pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'substr(last_update_date,0,11) as date')
+    .select('pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'last_update_date')
     // .orderBy('pin_lat', 'asc')
 }
 
 function getPinById (pinId, db = knex) {
   return db('pins')
     .where('pin_id', pinId)
-    .select('pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'substr(last_update_date,0,11) as date')
-}
-
-function getPinByArea (areaId, db = knex) {
-  return db('pins')
-    .join('areas', 'pins.area_id', 'areas.area_id')
-    .where('area_id', areaId)
-    .select('area_name', 'pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'substr(last_update_date,0,11) as date')
+    .select('pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'last_update_date')
 }
