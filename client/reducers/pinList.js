@@ -1,1 +1,0 @@
-import {RECIEVE_PIN_INFO} from '../actions/mapping'

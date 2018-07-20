@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {addPin} from '../actions/pins'
 import {Redirect} from 'react-router-dom'
 
-export class AddPinForm extends React.Component {
+export class AddPinInfo extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -63,4 +63,4 @@ export class AddPinForm extends React.Component {
   }
 }
 
-export default connect()(AddPinForm)
+export default connect()(AddPinInfo)
