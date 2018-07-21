@@ -20,7 +20,6 @@ class ViewPins extends React.Component {
 }
 
 const mapStateToProps = (state) =>{
-  console.log(state)
   return {
     onePinInfo: state.onePinInfo
   }
