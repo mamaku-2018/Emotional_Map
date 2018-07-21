@@ -14,7 +14,6 @@ class ViewPins extends React.Component {
 
   
       </div>
-
     )
   }
 }
