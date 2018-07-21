@@ -5,6 +5,8 @@ import {showError} from './index'
 export const REQUEST_PIN_INFO = 'REQUEST_PIN_INFO'
 export const RECEIVE_PIN_INFO = 'RECEIVE_PIN_INFO'
 export const SEND_PIN_POSITION = 'SEND_PIN_POSITION'
+export const REQUEST_PIN_INFO = 'REQUEST_PIN_INFO'
+export const RECIEVE_ONE_PIN = 'RECIEVE_ONE_PIN'
 
 export const sendPinPosition = (position) => {
   return {
@@ -47,6 +49,31 @@ export const getpins = () => {
       .get('api/v1/map/view')
       .then(res => {
         dispatch(receivePinInfo(res.body))
+      })
+      .catch(err => {
+        dispatch(showError(err.message))
+      })
+  }
+}
+
+export const requestOnePin = (pinId) => {
+  return {
+    type: REQUEST_ONE_PIN
+  }
+}
+export const recieveOnePin = () => {
+  return {
+    type: RECIEVE_ONE_PIN,
+    pinInfo
+  }
+}
+
+export function getOnePin (id) {
+  return (dispatch) => {
+    return request
+      .get(`/api/v1/map/view/${id}`)
+      .then(res => {
+        dispatch(recieveOnePin(res.body))
       })
       .catch(err => {
         dispatch(showError(err.message))

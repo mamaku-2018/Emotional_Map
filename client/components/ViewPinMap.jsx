@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Map, TileLayer, Marker} from 'react-leaflet'
-import { getpins } from '../actions/pins';
+import { getpins } from '../actions/pins'
+import {Redirect} from 'react-router'
 class ViewPinMap extends React.Component {
   constructor(props){
     super(props)
@@ -15,10 +16,15 @@ class ViewPinMap extends React.Component {
   }
 
   pullPin (pin) {
-    console.log(pin)
+    this.setState({
+      id: pin.pin_id,
+    })
   }
 
   render () {
+    if (!isNaN(this.state.id)){
+      <Redirect to={`/view/${this.state.id}`}/>
+    }
     return (
       <Map className ="map" center= {[-36.8485, 174.7633]} zoom={12}>
         <TileLayer

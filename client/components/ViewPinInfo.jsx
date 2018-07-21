@@ -1,12 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import
 
 class ViewPinInfo extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      
-    }
+  componentDidMount(){
+
   }
 
   render () {
@@ -24,4 +22,10 @@ class ViewPinInfo extends React.Component {
     )
   }
 }
-export default ViewPinInfo
+const mapStateToProps = (state) =>{
+    return {
+      pinInfo: state.pinInfo
+    }
+}
+
+export default connect(mapStateToProps)(ViewPinInfo)

@@ -13,7 +13,7 @@ class ViewPins extends React.Component {
     return (
       <div>
         <ViewPinMap/>
-        <Route path="view/:id" component={ViewPinInfo}/>
+        <Route path="/view/:id" component={ViewPinInfo}/>
       </div>
 
     )
