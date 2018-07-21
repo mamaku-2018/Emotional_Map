@@ -25,9 +25,7 @@ class ViewPinMap extends React.Component {
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
           {this.props.pinInfo.map(pin => {
-            return(<div key={pin.pin_name} onClick={() => {this.pullPin(pin)}}>
-             <Marker position={[pin.pin_lat, pin.pin_long]} />
-            </div>)
+            return <Marker key={pin.pin_name} onClick={()=> {this.pullPin(pin)}} position={[pin.pin_lat, pin.pin_long]} />
           })}
       </Map>
     )
