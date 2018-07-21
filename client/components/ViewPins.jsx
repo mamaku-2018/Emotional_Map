@@ -18,7 +18,6 @@ class ViewPins extends React.Component {
         <ViewPinInfo/>
         <AddButton/>
       </div>
-
     )
   }
 }
