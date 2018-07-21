@@ -40,6 +40,36 @@ class RealMap extends React.Component {
 
         </Map>
         {this.state.showAddInfo ? <AddPinInfo /> : null}
+
+        {/* Modal Button to raise instruction bar */}
+        {/* Need to convert to an onClick event rather than button */}
+        <div className="modal-footer">
+          <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onClick={this.updateAll}>
+             Click
+          </button>
+        </div>
+
+        {/* <!-- Modal --> */}
+        {/* Need to change focus of background */}
+
+        <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">Information notice</h5>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <input className="form-control" type="text" id="staticMsg" value="" readOnly/>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     )
