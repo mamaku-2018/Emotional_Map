@@ -10,7 +10,7 @@ class AddPin extends React.Component {
   }
   render () {
     return (
-      <div>
+      <div id='addMap'>
         <AddPinMap />
       </div>
     )

@@ -1,18 +1,49 @@
-* {
+/* * {
   box-sizing: border-box;
   border: 0.5px solid transparent;
-}
+} */
 
 
-.map {
+/* .map {
 
   height: 500px;
   width:500px;
-}
+} */
 
 /* INPUT FORM  */
 
 .InputPinForm {
   text-align: left;
   font-size: 20px; 
+}
+
+ html, body .map {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+#addPage {
+  display: block;
+}
+.addPinInfo {
+  margin: 0, auto;
+  }
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:25vh;}
+}
+
+/* The element to apply the animation to */
+.inputPin {
+  height: 25vh;
+  bottom: 25vh;
+  z-index: 5000;
+  margin: 0, auto;
+  position: relative;
+  background-color: red;
+  animation-name: slide;
+  animation-duration: 3s;
 }

@@ -26,7 +26,7 @@ class RealMap extends React.Component {
 
   render () {
     return (
-      <div>
+      <div id='addPage'>
         <Map className="map"
           center={[-36.8484, 174.7622]}
           onClick={this.addMarker}
@@ -39,7 +39,9 @@ class RealMap extends React.Component {
           <Marker position={this.state} />
 
         </Map>
-        {this.state.showAddInfo ? <AddPinInfo /> : null}
+        <div className='addPinInfo'>
+          {this.state.showAddInfo ? <AddPinInfo /> : null}
+        </div>
       </div>
 
     )
