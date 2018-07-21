@@ -56,21 +56,22 @@ export const getpins = () => {
   }
 }
 
-export const requestOnePin = (pinId) => {
+export const requestOnePin = () => {
   return {
-    type: REQUEST_ONE_PIN,
-    pinInfo
+    type: REQUEST_ONE_PIN
   }
 }
-export const recieveOnePin = () => {
+export const recieveOnePin = (pinId) => {
   return {
     type: RECIEVE_ONE_PIN,
-    
+    pinInfo
+  }
+
 }
 
-export function getOnePin (id) {
+export const getOnePin = (id) =>  {
   return (dispatch) => {
-    dispatch(requestOnePin(id))
+    dispatch(requestOnePin())
     return request
       .get(`/api/v1/map/view/${id}`)
       .then(res => {
@@ -79,19 +80,6 @@ export function getOnePin (id) {
       .catch(err => {
         dispatch(showError(err.message))
       })
+    }
   }
-}
 
-export function getCompanyProfile (id) {
-  return (dispatch) => {
-    dispatch(requestCompanyInfo())
-    return request
-      .get(`/api/v1/companies/profile/${id}`)
-      .then(res => {
-        dispatch(receiveCompanyProfile(res.body))
-      })
-      .catch(err => {
-        dispatch(showError(err.message))
-      })
-  }
-}

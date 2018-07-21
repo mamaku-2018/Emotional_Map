@@ -1,13 +1,13 @@
-import {RECEIVE_PIN_INFO} from '../actions/pins'
+import {RECIEVE_ONE_PIN} from '../actions/pins'
 
-function pinInfo (state = {}, action) {
+function onePinInfo (state = {}, action) {
   switch (action.type) {
-    case RECEIVE_PIN_INFO:
-      return action.pinInfo
+    case RECIEVE_ONE_PIN:
+      return state.onePin = action.onePin
 
     default:
       return state
   }
 }
 
-export default pinInfo
+export default onePinInfo
