@@ -39,9 +39,9 @@ class RealMap extends React.Component {
           <Marker position={this.state} />
 
         </Map>
-        <div className='addPinInfo'>
-          {this.state.showAddInfo ? <AddPinInfo /> : null}
-        </div>
+
+        {this.state.showAddInfo ? <AddPinInfo /> : null}
+
       </div>
 
     )
