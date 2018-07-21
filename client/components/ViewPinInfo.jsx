@@ -1,10 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import
+import {getOnePin} from '../actions/pins'
 
 class ViewPinInfo extends React.Component {
   componentDidMount(){
-
+    const id = this.props.match.params.id
+    this.props.dispatch(getOnePin(id))
   }
 
   render () {
@@ -12,19 +13,15 @@ class ViewPinInfo extends React.Component {
       <div className='ViewPinInfo'>
         <h3>Pin info</h3>
         <div className='PinInfo'>
-          <p>{this.state.name}</p>
-          <p>{this.state.emotion}</p>
-          <p>{this.state.comment}</p>
-          <p>{this.state.date}</p>
-
         </div>
       </div>
     )
   }
 }
 const mapStateToProps = (state) =>{
+    console.log(state)
     return {
-      pinInfo: state.pinInfo
+      onePinInfo: state.onePinInfo
     }
 }
 

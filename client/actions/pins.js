@@ -5,7 +5,7 @@ import {showError} from './index'
 export const REQUEST_PIN_INFO = 'REQUEST_PIN_INFO'
 export const RECEIVE_PIN_INFO = 'RECEIVE_PIN_INFO'
 export const SEND_PIN_POSITION = 'SEND_PIN_POSITION'
-export const REQUEST_PIN_INFO = 'REQUEST_PIN_INFO'
+export const REQUEST_ONE_PIN = 'REQUEST_PIN_INFO'
 export const RECIEVE_ONE_PIN = 'RECIEVE_ONE_PIN'
 
 export const sendPinPosition = (position) => {
@@ -58,22 +58,37 @@ export const getpins = () => {
 
 export const requestOnePin = (pinId) => {
   return {
-    type: REQUEST_ONE_PIN
+    type: REQUEST_ONE_PIN,
+    pinInfo
   }
 }
 export const recieveOnePin = () => {
   return {
     type: RECIEVE_ONE_PIN,
-    pinInfo
-  }
+    
 }
 
 export function getOnePin (id) {
   return (dispatch) => {
+    dispatch(requestOnePin(id))
     return request
       .get(`/api/v1/map/view/${id}`)
       .then(res => {
         dispatch(recieveOnePin(res.body))
+      })
+      .catch(err => {
+        dispatch(showError(err.message))
+      })
+  }
+}
+
+export function getCompanyProfile (id) {
+  return (dispatch) => {
+    dispatch(requestCompanyInfo())
+    return request
+      .get(`/api/v1/companies/profile/${id}`)
+      .then(res => {
+        dispatch(receiveCompanyProfile(res.body))
       })
       .catch(err => {
         dispatch(showError(err.message))
