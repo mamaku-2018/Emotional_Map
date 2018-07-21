@@ -64,6 +64,7 @@ export class AddPinInfo extends React.Component {
             <input onChange={this.changeHandler} name='comment' />
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
           </div>
+
         </div>
       )
     }
