@@ -2,7 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Map, TileLayer, Marker} from 'react-leaflet'
 import { getpins } from '../actions/pins'
-import {Redirect} from 'react-router'
+import ViewPinInfo from './ViewPinInfo'
+
+import {Route} from 'react-router'
 class ViewPinMap extends React.Component {
   constructor(props){
     super(props)
@@ -23,19 +25,27 @@ class ViewPinMap extends React.Component {
 
   render () {
     let id = this.state.id
-    if (!isNaN(id)){
-      id = id.toString()
-      return <Redirect to={'/view/'+id}/>
+    let strId = ""
+    if (id !== undefined){
+       strId = id.toString()
     }
     return (
-      <Map className ="map" center= {[-36.8485, 174.7633]} zoom={12}>
-        <TileLayer
-          attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-          {this.props.pinInfo.map(pin => {
-            return <Marker key={pin.pin_name} onClick={()=> {this.pullPin(pin)}} position={[pin.pin_lat, pin.pin_long]} />
-          })}
-      </Map>
+      <div>
+        <Map className ="map" center= {[-36.8485, 174.7633]} zoom={12}>
+          <TileLayer
+            attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+            {this.props.pinInfo.map(pin => {
+              return <Marker key={pin.pin_name} onClick={()=> {this.pullPin(pin)}} position={[pin.pin_lat, pin.pin_long]} />
+            })}
+        </Map>
+
+
+        <div>
+            {!isNaN(id) && <Route path={`view/${strId}`} component={ViewPinInfo}/>}
+        </div>
+      </div>
+
     )
   }
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import ViewPinMap from './ViewPinMap'
-import ViewPinInfo from './ViewPinInfo'
 import {Route} from 'react-router'
 class ViewPins extends React.Component {
 
@@ -10,8 +9,6 @@ class ViewPins extends React.Component {
     return (
       <div>
         <ViewPinMap/>
-        <Route path={`/view/:id`} component={ViewPinInfo}/>
-
   
       </div>
     )
