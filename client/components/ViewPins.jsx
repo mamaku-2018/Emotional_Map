@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import ViewPinMap from './ViewPinMap'
 import {getpins} from '../actions/pins'
 import ViewPinInfo from './ViewPinInfo'
-
+import {Route} from 'react-router'
 class ViewPins extends React.Component {
   componentDidMount () {
     this.props.dispatch(getpins())
@@ -13,7 +13,7 @@ class ViewPins extends React.Component {
     return (
       <div>
         <ViewPinMap/>
-        <ViewPinInfo/>
+        <Route path="view/:id" component={ViewPinInfo}/>
       </div>
 
     )
