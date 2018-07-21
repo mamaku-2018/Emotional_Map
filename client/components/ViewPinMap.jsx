@@ -23,7 +23,8 @@ class ViewPinMap extends React.Component {
 
   render () {
     if (!isNaN(this.state.id)){
-      <Redirect to={`/view/${this.state.id}`}/>
+      {var i = 2}
+      <Redirect to={`/view/${toString(this.state.id)}`}/>
     }
     return (
       <Map className ="map" center= {[-36.8485, 174.7633]} zoom={12}>
