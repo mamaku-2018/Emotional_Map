@@ -3,9 +3,6 @@ import {connect} from 'react-redux'
 import {getOnePin} from '../actions/pins'
 
 class ViewPinInfo extends React.Component {
-  componentDidMount(){
-    this.props.dispatch(getOnePin(this.props.pin))
-  }
 
   render () {
     console.log(this.props.onePinInfo)
