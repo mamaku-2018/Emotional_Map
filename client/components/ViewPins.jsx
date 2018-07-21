@@ -9,7 +9,6 @@ class ViewPins extends React.Component {
     return (
       <div>
         <ViewPinMap/>
-  
       </div>
     )
   }

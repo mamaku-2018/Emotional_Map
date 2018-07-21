@@ -9,7 +9,7 @@ class ViewPinMap extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-
+      showPinInfo:false
     }
     this.pullPin = this.pullPin.bind(this)
   }
@@ -19,16 +19,12 @@ class ViewPinMap extends React.Component {
 
   pullPin (pin) {
     this.setState({
-      id: pin.pin_id,
+      pin,
+      showPinInfo: true
     })
   }
 
   render () {
-    let id = this.state.id
-    let strId = ""
-    if (id !== undefined){
-       strId = id.toString()
-    }
     return (
       <div>
         <Map className ="map" center= {[-36.8485, 174.7633]} zoom={12}>
@@ -42,7 +38,7 @@ class ViewPinMap extends React.Component {
 
 
         <div>
-            {!isNaN(id) && <Route path={`view/${strId}`} component={ViewPinInfo}/>}
+          {this.state.showPinInfo ? <Route pin={this.state.pin} /> : null}
         </div>
       </div>
 

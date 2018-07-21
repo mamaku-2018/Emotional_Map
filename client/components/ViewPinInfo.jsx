@@ -4,8 +4,7 @@ import {getOnePin} from '../actions/pins'
 
 class ViewPinInfo extends React.Component {
   componentDidMount(){
-    const id = this.props.match.params.id
-    this.props.dispatch(getOnePin(id))
+    this.props.dispatch(getOnePin(this.props.pin))
   }
 
   render () {
