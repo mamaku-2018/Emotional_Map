@@ -61,7 +61,7 @@ export const requestOnePin = () => {
     type: REQUEST_ONE_PIN
   }
 }
-export const recieveOnePin = (pinId) => {
+export const recieveOnePin = (pinInfo) => {
   return {
     type: RECIEVE_ONE_PIN,
     pinInfo
