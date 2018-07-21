@@ -1,10 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Map, TileLayer, Marker} from 'react-leaflet'
-import { getpins } from '../actions/pins'
-import ViewPinInfo from './ViewPinInfo'
-
-import {Route} from 'react-router'
+import { getpins, getOnePin } from '../actions/pins'
 class ViewPinMap extends React.Component {
   constructor(props){
     super(props)
@@ -18,10 +15,9 @@ class ViewPinMap extends React.Component {
   }
 
   pullPin (pin) {
-    this.setState({
-      pin,
-      showPinInfo: true
-    })
+    let id = pin.pin_id
+    this.props.dispatch(getOnePin(id))
+
   }
 
   render () {
@@ -36,10 +32,6 @@ class ViewPinMap extends React.Component {
             })}
         </Map>
 
-
-        <div>
-          {this.state.showPinInfo ? <Route pin={this.state.pin} /> : null}
-        </div>
       </div>
 
     )

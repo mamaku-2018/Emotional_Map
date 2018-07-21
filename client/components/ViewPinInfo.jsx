@@ -8,6 +8,7 @@ class ViewPinInfo extends React.Component {
   }
 
   render () {
+    console.log(this.props.onePinInfo)
     return (
       <div className='ViewPinInfo'>
         <h3>Pin info</h3>

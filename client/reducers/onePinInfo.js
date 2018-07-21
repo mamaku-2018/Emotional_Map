@@ -3,7 +3,6 @@ import {RECIEVE_ONE_PIN} from '../actions/pins'
 function onePinInfo (state = {}, action) {
   switch (action.type) {
     case RECIEVE_ONE_PIN:
-      console.log(action)
       return state.onePin = action.pinInfo[0]
 
     default:
