@@ -1,26 +1,28 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {getOnePin} from '../actions/pins'
 
 class ViewPinInfo extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-    }
-  }
 
   render () {
+    console.log(this.props.onePinInfo)
     return (
       <div className='ViewPinInfo'>
         <h3>Pin info</h3>
+        <p>{this.props.onePinInfo.pin_name}</p>
+        <p>{this.props.onePinInfo.last_updated_date}</p>
+        <p>{this.props.onePinInfo.emotion_type}</p>
+        <p>{this.props.onePinInfo.comment}</p>
         <div className='PinInfo'>
-          <p>{this.state.name}</p>
-          <p>{this.state.emotion}</p>
-          <p>{this.state.comment}</p>
-          <p>{this.state.date}</p>
-
         </div>
       </div>
     )
   }
 }
-export default ViewPinInfo
+const mapStateToProps = (state) =>{
+    return {
+      onePinInfo: state.onePinInfo
+    }
+}
+
+export default connect(mapStateToProps)(ViewPinInfo)
