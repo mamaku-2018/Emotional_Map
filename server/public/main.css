@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid red;
+  /* border: 0.5px solid red; */
 }
 
  html, body, .map {
@@ -10,6 +10,12 @@
   padding: 0;
   /* background-color: #4F0521; */
  }
+
+ .container {
+  position: relative; 
+  margin: 0;
+  padding: 0;
+}
 
 #app .container .add-container #addMap #addPage{
   height: 100vh;
@@ -37,24 +43,37 @@
 /* VIEW PIN INFO */
 .ViewPinInfo {
   text-align: left;
+  color: black;
   font-size: 20px; 
   height: 25vh;
   bottom: 25vh;
   z-index: 5000;
   margin: 0, auto;
   position: relative;
-  background-color:#deffff;
+  background-color:#C1666B;
   animation-name: slide;
   animation-duration: 2s;
-}
-
-#viewMap {
-  display: block;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  z-index: 10000;
 }
 
 @keyframes slide {
   0%   {bottom:0vh;}
   100% {bottom:25vh;}
+}
+
+#viewPins {
+  display: block;
+  max-height: 100%;
+}
+
+h3 {
+  margin: 0;
+}
+p {
+  margin: 0;
 }
 
 /* INPUT FORM  */
