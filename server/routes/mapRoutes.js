@@ -51,12 +51,23 @@ router.get('/view/:pinId', (req, res) => {
 router.get('/viewArea', (req, res) => {
   db.getAllAreas()
     .then(allAreas => {
-      // res.json(allAreas[0]['positions'].split('_'))
       res.json(allAreas.map(areas => {
-        const area = areas.positions.split('_')
-        return area.map(latlng => {
-          return latlng.split(',')
-        })
+        return {
+          area_id: areas.area_id,
+          area_name: areas.area_name,
+          positions: () => {
+            const area = areas.positions.split('_')
+            return area.map(latlng => {
+              return latlng.split(',')
+            })
+          }
+        }
+
+        // {
+        //   area_id: areas.area_id,
+        //   area_name: areas.area_name,
+        //   positions: latlng.split(',')
+        // }
       }))
     })
     .catch(err => {
