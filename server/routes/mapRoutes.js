@@ -55,12 +55,15 @@ router.get('/viewArea', (req, res) => {
         return {
           area_id: areas.area_id,
           area_name: areas.area_name,
-          positions: () => {
-            const area = areas.positions.split('_')
-            return area.map(latlng => {
-              return latlng.split(',')
-            })
-          }
+          positions: (areas.positions.split('_')).map(latlng => {
+            return latlng.split(',')
+          })
+          // {
+          //   const area = areas.positions.split('_')
+          //   return area.map(latlng => {
+          //     return latlng.split(',')
+          //   })
+          // }
         }
 
         // {
