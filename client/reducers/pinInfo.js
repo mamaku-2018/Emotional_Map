@@ -5,6 +5,7 @@ function pinInfo (state = {}, action) {
     case RECEIVE_PIN_INFO:
       return action.pinInfo
 
+    
     default:
       return state
   }
