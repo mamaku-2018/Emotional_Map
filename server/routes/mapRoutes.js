@@ -51,7 +51,7 @@ router.get('/view/:pinId', (req, res) => {
 router.get('/viewArea', (req, res) => {
   db.getAllAreas()
     .then(allAreas => {
-      res.json(allAreas[0]['positions'].split('_'))
+      res.json(allAreas)
     })
     .catch(err => {
       // eslint-disable-next-line
@@ -60,4 +60,9 @@ router.get('/viewArea', (req, res) => {
     })
 })
 
+function splitAreas (areas) {
+  areas.map(area => {
+    
+  })
+}
 module.exports = router
