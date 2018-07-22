@@ -13,9 +13,13 @@ const App = () => {
       <div className='container'>
         <ErrorMessage />
         <WaitIndicator />
-        <div className='main-container'>
+        <div className='launch-container'>
           <Route exact path='/' component={Launch} />
+        </div>
+        <div className='view-container'>
           <Route path='/view' component={ViewPins}/>
+        </div>
+        <div className='add-container'>
           <Route path='/add' component={AddPin} />
         </div>
       </div>
