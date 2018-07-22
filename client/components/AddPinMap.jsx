@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {sendPinPosition} from '../actions/pins'
+import {sendPinPosition, removePinColour} from '../actions/pins'
 import {Map, TileLayer, Marker} from 'react-leaflet'
 import AddPinInfo from './AddPinInfo'
 import {getIcons} from '../lib/getIcons'
@@ -47,6 +47,10 @@ class RealMap extends React.Component {
       </div>
 
     )
+  }
+  componentWillUnmount(){
+    this.props.dispatch(removePinColour())
+    
   }
 }
 const mapDispatchToProps = (state) => {
