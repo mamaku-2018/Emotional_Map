@@ -4,12 +4,9 @@ import ViewPinMap from './ViewPinMap'
 import ViewPinInfo from './ViewPinInfo'
 import {Route} from 'react-router'
 class ViewPins extends React.Component {
-
-
   render () {
-
     return (
-      <div>
+      <div id='viewPins'>
         <ViewPinMap/>
         {typeof this.props.onePinInfo.pin_name === 'string' && <ViewPinInfo/>}
       </div>
@@ -17,7 +14,7 @@ class ViewPins extends React.Component {
   }
 }
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   return {
     onePinInfo: state.onePinInfo
   }

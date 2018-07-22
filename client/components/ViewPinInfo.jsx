@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {getOnePin} from '../actions/pins'
 
 class ViewPinInfo extends React.Component {
-
   render () {
     console.log(this.props.onePinInfo)
     return (
@@ -19,10 +18,10 @@ class ViewPinInfo extends React.Component {
     )
   }
 }
-const mapStateToProps = (state) =>{
-    return {
-      onePinInfo: state.onePinInfo
-    }
+const mapStateToProps = (state) => {
+  return {
+    onePinInfo: state.onePinInfo
+  }
 }
 
 export default connect(mapStateToProps)(ViewPinInfo)

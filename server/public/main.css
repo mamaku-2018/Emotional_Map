@@ -1,25 +1,68 @@
-/* * {
+* {
   box-sizing: border-box;
-  border: 0.5px solid transparent;
-} */
+  border: 0.5px solid red;
+}
 
+ html, body, .map {
+  max-width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  /* background-color: #4F0521; */
+ }
 
-#app .container .main-container #addMap #addPage {
+#app .container .add-container #addMap #addPage{
+  height: 100vh;
+} 
+
+#app .container .view-container #viewPins #viewMap{
+  height: 100vh;
+} 
+
+.jumbotron {
+  background-color: #AD9191;
+  height: 100vh;
+}  
+
+/* #myCarousel {
+  width: 100vh;
   height: 100vh;
 }
+
+.carousel-inner {
+  width: 100vh;
+  height: 100vh;
+} 
+*/
+/* VIEW PIN INFO */
+.ViewPinInfo {
+  text-align: left;
+  font-size: 20px; 
+  height: 25vh;
+  bottom: 25vh;
+  z-index: 5000;
+  margin: 0, auto;
+  position: relative;
+  background-color:#deffff;
+  animation-name: slide;
+  animation-duration: 2s;
+}
+
+#viewMap {
+  display: block;
+}
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:25vh;}
+}
+
 /* INPUT FORM  */
 
 .InputPinForm {
   text-align: left;
   font-size: 20px; 
 }
-
- html body .map {
-  height: 100vh;
-  width: 100vw;
-}
-
-
 
 #addPage {
   display: block;
@@ -50,4 +93,51 @@
   top: 0;
   right: 0;
   border: 3px solid red;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...} 
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...} 
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+
+
+/* hash item id
+
+#slider {
+  margin-top: 60px;
+}
+
+#slider .item {
+  height: 400px;
+
+}
+#slide1 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+#slide2 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+#slide3 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+.carousel-caption {
+  font-size: 18px;
 }
