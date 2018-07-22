@@ -3,7 +3,7 @@ import L from 'leaflet'
 export function getIcons () {
   const myIcon = L.icon({
     iconUrl: '',
-    iconSize: [38, 95],
+    iconSize: [30, 30],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76]
   })
