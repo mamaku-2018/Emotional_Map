@@ -13,37 +13,39 @@ const About = () => {
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         <div className="carousel-inner" role="listbox">
+          {/* Slide 1 */}
           <div className="carousel-item active">
             <img className="first-slide" src="/images/city1.jpg" alt="First slide"/>
             <div className="container">
               <div className="carousel-caption d-none d-md-block text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a className="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <h1>Street Feel</h1>
+                <p>Instructions</p>
               </div>
             </div>
           </div>
+          {/* Slide 2 */}
           <div className="carousel-item">
             <img className="second-slide" src="/images/city2.jpg" alt="Second slide"/>
             <div className="container">
               <div className="carousel-caption d-none d-md-block">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a className="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                <h1>Add emotions to the map</h1>
+                <p>Instructions</p>
               </div>
             </div>
           </div>
+
+          {/* Slide 3 */}
           <div className="carousel-item">
             <img className="third-slide" src="/images/city3.jpg" alt="Third slide"/>
             <div className="container">
               <div className="carousel-caption d-none d-md-block text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a className="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <h1>Explore emotions on the map</h1>
+                <p>Instructions</p>
               </div>
             </div>
           </div>
         </div>
+        {/* Next-Previous Buttons */}
         <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
           <span className="sr-only">Previous</span>
