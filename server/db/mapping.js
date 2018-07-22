@@ -4,7 +4,8 @@ const knex = require('knex')(config)
 module.exports = {
   addPin,
   getAllPins,
-  getPinById
+  getPinById,
+  getAllAreas
 }
 
 function addPin (pin, db = knex) {
@@ -35,4 +36,5 @@ function getPinById (pinId, db = knex) {
 
 function getAllAreas (db = knex) {
   return db('areas')
+    .select('area_id', 'area_name', 'positions')
 }
