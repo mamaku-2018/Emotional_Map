@@ -4,16 +4,16 @@ import {connect} from 'react-redux'
 import {Polygon, Map, TileLayer} from 'react-leaflet'
 import {getAreas} from '../actions/areas'
 
-
-class AreaMap extends React.Component {
+class ViewAreaMap extends React.Component {
   constructor (props) {
     super(props)
+
     this.state = {
 
     }
-    this.componentDidMount () {
-      this.props.dispatch(getAreas())
-    }
+  }
+  componentDidMount () {
+    this.props.dispatch(getAreas())
   }
 
   render () {
@@ -27,22 +27,15 @@ class AreaMap extends React.Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
-          <Polygon positions={this.state.positions} />
+          <Polygon positions={this.state.areas} />
         </Map>
       </div>
     )
   }
 }
 const mapStateToProps = (state) => {
-  state.map(areasInfo => {
-    return {
-      area_id: state.area_id,
-      area_name: state.area_name,
-       positions: state.positions
-    }
-  })
-  
-   
-  
+  return {
+    areas: state.positions
+  }
 }
-export default connect(mapStateToProps)(AreaMap)
+export default connect(mapStateToProps)(ViewAreaMap)
