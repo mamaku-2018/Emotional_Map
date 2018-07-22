@@ -3,8 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div className='about'>
-      <h1>Kia ora.</h1>
-      <p>Testing</p>
+      <h1>Street Feel</h1>
 
       <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="5000">
         <ol className="carousel-indicators">

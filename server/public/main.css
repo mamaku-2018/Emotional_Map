@@ -1,13 +1,39 @@
 * {
   box-sizing: border-box;
   border: 0.5px solid red;
+<<<<<<< HEAD
 } 
 
 body {
   padding: 0;
 }
+=======
+}
 
-#app .container .main-container #addMap #addPage {
+ html, body, .map {
+  max-width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  /* background-color: #4F0521; */
+ }
+
+#app .container .add-container #addMap #addPage{
+  height: 100vh;
+} 
+>>>>>>> 87a483de68837b01654b26a66c1150401952db1d
+
+#app .container .view-container #viewPins #viewMap{
+  height: 100vh;
+} 
+
+#app .jumbotron {
+  background-color: #AD9191;
+  height: 100vh;
+}  
+
+/* #myCarousel {
+  width: 100vh;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -19,6 +45,7 @@ body {
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
 
 .main-container {
   height: 100vh;
@@ -35,18 +62,43 @@ body {
 }
 
 /* INPUT FORM  */
+=======
+>>>>>>> 87a483de68837b01654b26a66c1150401952db1d
+
+.carousel-inner {
+  width: 100vh;
+  height: 100vh;
+} 
+*/
+/* VIEW PIN INFO */
+.ViewPinInfo {
+  text-align: left;
+  font-size: 20px; 
+  height: 25vh;
+  bottom: 25vh;
+  z-index: 5000;
+  margin: 0, auto;
+  position: relative;
+  background-color:#deffff;
+  animation-name: slide;
+  animation-duration: 2s;
+}
+
+#viewMap {
+  display: block;
+}
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:25vh;}
+}
+
+/* INPUT FORM  */
 
 .InputPinForm {
   text-align: left;
   font-size: 20px; 
 }
-
- html body .map {
-  height: 100vh;
-  width: 100vw;
-}
-
-
 
 #addPage {
   display: block;
@@ -77,4 +129,34 @@ body {
   top: 0;
   right: 0;
   border: 3px solid red;
+<<<<<<< HEAD
+=======
+}
+
+
+/* hash item id
+
+#slider {
+  margin-top: 60px;
+}
+
+#slider .item {
+  height: 400px;
+
+}
+#slide1 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+#slide2 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+#slide3 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+.carousel-caption {
+  font-size: 18px;
+>>>>>>> 87a483de68837b01654b26a66c1150401952db1d
 }

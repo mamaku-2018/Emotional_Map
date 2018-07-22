@@ -24,7 +24,11 @@ class ViewPinMap extends React.Component {
 
   render () {
     return (
+<<<<<<< HEAD
       <div>
+=======
+      <div id='viewMap'>
+>>>>>>> 87a483de68837b01654b26a66c1150401952db1d
         <Map className ="map"
           center= {[-36.8484, 174.7622]}
           zoom={13}>
