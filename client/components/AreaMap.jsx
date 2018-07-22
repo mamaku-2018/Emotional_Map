@@ -11,6 +11,9 @@ class AreaMap extends React.Component {
     this.state = {
 
     }
+    this.componentDidMount () {
+      this.props.dispatch(getAreas())
+    }
   }
 
   render () {
@@ -24,14 +27,22 @@ class AreaMap extends React.Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
-
           <Polygon positions={this.state.positions} />
-
         </Map>
-
       </div>
-
     )
   }
 }
-export default (AreaMap)
+const mapStateToProps = (state) => {
+  state.map(areasInfo => {
+    return {
+      area_id: state.area_id,
+      area_name: state.area_name,
+       positions: state.positions
+    }
+  })
+  
+   
+  
+}
+export default connect(mapStateToProps)(AreaMap)
