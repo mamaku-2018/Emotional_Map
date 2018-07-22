@@ -19,7 +19,7 @@ const App = () => {
 
           <Route path='/view' component={ViewPins}/>
           <Route path='/add' component={AddPin} />
-          <AreaMap />
+          
         </div>
       </div>
     </Router>

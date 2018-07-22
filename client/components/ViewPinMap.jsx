@@ -4,6 +4,7 @@ import {Map, TileLayer, Marker} from 'react-leaflet'
 import {getpins, getOnePin} from '../actions/pins'
 import {getIcons} from '../lib/getIcons'
 import L from 'leaflet'
+import AreaMap from './AreaMap';
 
 class ViewPinMap extends React.Component {
   constructor (props) {
@@ -33,6 +34,7 @@ class ViewPinMap extends React.Component {
             return <Marker key={pin.pin_name} onClick={() => { this.pullPin(pin) }} icon={getIcons(pin.emotion_type)} position={[pin.pin_lat, pin.pin_long]} />
           })}
         </Map>
+        <AreaMap/>
 
       </div>
 
