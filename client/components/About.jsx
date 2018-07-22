@@ -5,6 +5,7 @@ const About = () => {
     <div className='about'>
       <h1>Kia ora.</h1>
       <p>Testing</p>
+
     </div>
   )
 }
