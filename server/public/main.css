@@ -51,3 +51,28 @@
   right: 0;
   border: 3px solid red;
 }
+
+/* hash item id
+#slider {
+  margin-top: 60px;
+}
+
+#slider .item {
+  height: 400px;
+
+}
+#slide1 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+#slide2 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+#slide3 {
+  background: url('images/1.jpg) center no-repeat;
+}
+
+.carousel-caption {
+  font-size: 18px;
+}
