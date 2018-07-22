@@ -51,13 +51,12 @@ router.get('/view/:pinId', (req, res) => {
 router.get('/viewArea', (req, res) => {
   db.getAllAreas()
     .then(allAreas => {
-      allAreas.split('_')
-      Number(allAreas)
+      res.json(allAreas)
     })
     .catch(err => {
       // eslint-disable-next-line
       console.log(err)
-      res.status(500).send('Unable to find pin by pin-id')
+      res.status(500).send('Unable to find Areas')
     })
 })
 module.exports = router
