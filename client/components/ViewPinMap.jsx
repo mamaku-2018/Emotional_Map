@@ -1,12 +1,15 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Map, TileLayer, Marker} from 'react-leaflet'
-import { getpins, getOnePin } from '../actions/pins'
+import {getpins, getOnePin} from '../actions/pins'
+import {getIcons} from '../lib/getIcons'
+import L from 'leaflet'
+
 class ViewPinMap extends React.Component {
-  constructor(props){
+  constructor (props) {
     super(props)
     this.state = {
-      showPinInfo:false
+      showPinInfo: false
     }
     this.pullPin = this.pullPin.bind(this)
   }
@@ -17,7 +20,6 @@ class ViewPinMap extends React.Component {
   pullPin (pin) {
     let id = pin.pin_id
     this.props.dispatch(getOnePin(id))
-
   }
 
   render () {
@@ -27,9 +29,9 @@ class ViewPinMap extends React.Component {
           <TileLayer
             attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-            {this.props.pinInfo.map(pin => {
-              return <Marker key={pin.pin_name} onClick={()=> {this.pullPin(pin)}} position={[pin.pin_lat, pin.pin_long]} />
-            })}
+          {this.props.pinInfo.map(pin => {
+            return <Marker key={pin.pin_name} onClick={() => { this.pullPin(pin) }} icon={getIcons()} position={[pin.pin_lat, pin.pin_long]} />
+          })}
         </Map>
 
       </div>
@@ -46,5 +48,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-
-export default connect (mapStateToProps) (ViewPinMap)
+export default connect(mapStateToProps)(ViewPinMap)
