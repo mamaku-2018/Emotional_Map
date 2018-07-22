@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {sendPinPosition} from '../actions/pins'
 import {Map, TileLayer, Marker} from 'react-leaflet'
 import AddPinInfo from './AddPinInfo'
+import {getIcons} from '../lib/getIcons'
 
 class RealMap extends React.Component {
   constructor (props) {
@@ -37,7 +38,7 @@ class RealMap extends React.Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
-          <Marker position={this.state} />
+          <Marker position={this.state} icon={getIcons(this.props.pinColour)}/>
 
         </Map>
 
@@ -48,5 +49,10 @@ class RealMap extends React.Component {
     )
   }
 }
+const mapDispatchToProps = (state) => {
+  return {
+    pinColour: state.pinColour
+  }
+}
 // export default RealMap
-export default connect()(RealMap)
+export default connect(mapDispatchToProps)(RealMap)

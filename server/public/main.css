@@ -41,3 +41,13 @@
   animation-name: slide;
   animation-duration: 2s;
 }
+
+/* ADDBUTTON on /VIEW */
+
+.addButton {
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 3px solid red;
+}
