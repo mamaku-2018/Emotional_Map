@@ -13,5 +13,3 @@ exports.seed = (knex, Promise) => {
       ])
     })
 }
-
-
