@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addPin} from '../actions/pins'
+import {addPin, receivePinColour} from '../actions/pins'
 import {Redirect} from 'react-router-dom'
 
 export class AddPinInfo extends React.Component {
@@ -22,6 +22,9 @@ export class AddPinInfo extends React.Component {
     this.setState({
       [e.target.name]: e.target.value
     })
+    if (e.target.name === 'emotionType') {
+      this.props.dispatch(receivePinColour(e.target.value))
+    }
   }
   submitHandler () {
     const pin = {
