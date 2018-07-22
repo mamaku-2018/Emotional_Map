@@ -1,12 +1,39 @@
-/* * {
+* {
   box-sizing: border-box;
-  border: 0.5px solid transparent;
-} */
+  border: 0.5px solid red;
+} 
 
+body {
+  padding: 0;
+}
 
 #app .container .main-container #addMap #addPage {
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
+
+.container {
+  height: 100vh;
+  width: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron {
+  height: 100vh;
+  width: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 /* INPUT FORM  */
 
 .InputPinForm {
@@ -50,51 +77,4 @@
   top: 0;
   right: 0;
   border: 3px solid red;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...} 
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...} 
-
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
-
-
-
-/* hash item id
-
-#slider {
-  margin-top: 60px;
-}
-
-#slider .item {
-  height: 400px;
-
-}
-#slide1 {
-  background: url('images/1.jpg) center no-repeat;
-}
-
-#slide2 {
-  background: url('images/1.jpg) center no-repeat;
-}
-
-#slide3 {
-  background: url('images/1.jpg) center no-repeat;
-}
-
-.carousel-caption {
-  font-size: 18px;
 }

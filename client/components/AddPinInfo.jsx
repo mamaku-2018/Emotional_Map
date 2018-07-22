@@ -81,5 +81,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(AddPinInfo)
-
-// export default connect()(AddPinInfo)
