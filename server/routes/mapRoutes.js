@@ -51,7 +51,7 @@ router.get('/view/:pinId', (req, res) => {
 router.get('/viewArea', (req, res) => {
   db.getAllAreas()
     .then(allAreas => {
-      res.json(allAreas)
+      res.json(allAreas[0]['positions'].split('_'))
     })
     .catch(err => {
       // eslint-disable-next-line
@@ -59,4 +59,5 @@ router.get('/viewArea', (req, res) => {
       res.status(500).send('Unable to find Areas')
     })
 })
+
 module.exports = router
