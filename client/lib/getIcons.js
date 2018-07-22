@@ -1,8 +1,8 @@
 import L from 'leaflet'
 
 export function getIcons (id) {
+  id = parseInt(id)
   const myIcon = L.icon({
-    iconUrl: '',
     iconSize: [30, 38],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76]
@@ -26,6 +26,8 @@ export function getIcons (id) {
     case 6:
       myIcon.options.iconUrl = '/images/Yellow.png'
       break
+    default:
+      myIcon.options.iconUrl = '/images/Dark.png'
   }
   return myIcon
 }
