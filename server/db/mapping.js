@@ -32,3 +32,7 @@ function getPinById (pinId, db = knex) {
     .where('pin_id', pinId)
     .select('pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'last_update_date')
 }
+
+function getAllAreas (db = knex) {
+  return db('areas')
+}

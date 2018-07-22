@@ -22,13 +22,6 @@ class AreaMap extends React.Component {
     }
   }
 
-  addMarker (e) {
-    this.setState({
-      lat: e.latlng.lat,
-      lng: e.latlng.lng
-    })
-  }
-
   render () {
     return (
       <div id='addPage'>
