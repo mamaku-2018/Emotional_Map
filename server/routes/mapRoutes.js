@@ -56,7 +56,9 @@ router.get('/viewArea', (req, res) => {
           area_id: areas.area_id,
           area_name: areas.area_name,
           positions: (areas.positions.split('_')).map(latlng => {
-            return latlng.split(',') // NOTE* need to turn
+            return (latlng.split(',').map(int => {
+              return parseFloat(int)
+            })) // NOTE* need to turn
           })
 
         }
