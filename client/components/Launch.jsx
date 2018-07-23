@@ -7,10 +7,12 @@ import LaunchButtons from './LaunchButtons'
 const Launch = () => {
   return (
 
-    <div className='about'>
+    <div className='jumbotron'>
       <Route path='/' component={About} />
       <Route path='/' component={LaunchButtons} />
+
     </div>
+
   )
 }
 

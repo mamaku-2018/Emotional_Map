@@ -1,4 +1,314 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid transparent;
+  /* border: 0.5px solid red; */
+}
+
+ html, body {
+  max-width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #4F0521; */
+ }
+
+ .container {
+  position: relative; 
+  margin: 0;
+  padding: 0;
+}
+
+#app .container .add-container #addMap #addPage{
+  height: 100vh;
+} 
+
+#app .container .view-container #viewPins #viewMap{
+  height: 100vh;
+} 
+
+#app .jumbotron {
+  background-color: #AD9191;
+  height: 100vh;
+}  
+
+/* NAV BAR */
+
+img.nav-icon {
+  height: 4rem;
+  border: 2px solid #AD9191;
+
+}
+
+img.logo {
+  height: 4rem;
+  float: right;
+  display: block;
+  position: relative;
+  z-index: 600000;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 6000;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4F0521;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+li {
+  float: left; 
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #ad9191;
+}
+a:focus, a:hover {
+  color: #D37D52;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* VIEW PIN MAP */
+
+#viewPins {
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+}
+
+.viewMap  {
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+}
+
+.addMap {
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+}
+
+.leaflet-container { 
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.leaflet-popup-content-wrapper {
+  text-align: center;
+}
+
+/* ADD PAGE FORM */
+
+input {
+  width: 100%;
+}
+
+.InputPinForm {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  font-size: 20px; 
+}
+
+#addPage {
+  display: block;
+}
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:25vh;}
+}
+
+.inputPin select {
+  color: #4F0521;
+  border: 2px solid #AD9191;
+  margin-left: 1rem;
+
+}
+
+.inputPin button {
+  color: #4F0521;
+  border: 2px solid #AD9191;
+  margin-top: 1rem;
+}
+
+.inputPin h3 {
+  color: #AD9191;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom:5px solid #AD9191;
+}
+
+.inputPin label {
+  text-align: right;
+  clear: both;
+  float:left;
+  margin-right:15px;
+  color: #AD9191;
+  margin: 0;
+}
+
+.inputPin {
+  position: relative;
+  padding: 1rem;
+  font-size: 20px; 
+  text-align: left;
+  height: 60vh;
+  bottom: 60vh;
+  width: 100%;
+  z-index: 5000;
+  border-radius: 15px;
+  background-color:#4F0521;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  animation-name: slide;
+  animation-duration: 2s;
+}
+
+/* VIEW PIN INFO */
+
+.ViewPinInfo {
+  height: 40vh;
+  bottom: 40vh;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 20px; 
+  border-radius: 15px;
+  position: relative;
+  background-color:#4F0521;
+  animation-name: slide;
+  animation-duration: 2s;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  z-index: 5000;
+}
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:25vh;}
+}
+
+.ViewPinInfo h3 {
+  color: #AD9191;
+  margin: 0;
+  margin-bottom: 1rem;
+  border-bottom:5px solid #AD9191;
+}
+.ViewPinInfo p {
+  color: #AD9191;
+  margin: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 400px) {
+  .inputPin {
+    position: relative;
+    padding: 1rem;
+    font-size: 20px; 
+    text-align: left;
+    height: 50vh;
+    bottom: 50vh;
+    width: 100%;
+    z-index: 5000;
+    border-radius: 15px;
+    background-color:#4F0521;
+    overflow: hidden;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+  /* .navbar-brand img {
+    width: 22%; 
+  }
+
+  .field.has-addons {
+    width: 60%; */
+
+}  
+
+@media only screen and (min-width: 640px) {
+  .navbar-brand img {
+    width: 18%; 
+  }
+
+  .field.has-addons {
+    width: 40%;
+  }  
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    height: 100vh;
+  }
+
+  .navbarmenu .button {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .companyList {
+    text-align: left;
+  }
+
+  .companyList ul {
+    text-align: left; 
+  }
+
+  .companyList h3 {
+    margin-left: 1rem;
+  }
+
+  .field.has-addons {
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .about p {
+    font-size: 1.6rem;
+  }  
+}
+
+@media only screen and (min-width: 900px) {
+  .navbar-brand img {
+    width: 15%; 
+  }
 }
