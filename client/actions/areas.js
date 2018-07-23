@@ -13,7 +13,7 @@ export const requestAreasInfo = () => {
 
 export const recieveAreasInfo = (areaInfo) => {
   return {
-    type: RECIEVE_AREAS_INFO
+    type: RECIEVE_AREAS_INFO,
     areasInfo
   }
 }

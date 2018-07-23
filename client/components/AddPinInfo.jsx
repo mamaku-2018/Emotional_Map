@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addPin, receivePinColour} from '../actions/pins'
 import {Redirect} from 'react-router-dom'
+import isPolygon from '../lib/isPolygon'
 
 export class AddPinInfo extends React.Component {
   constructor (props) {
@@ -16,6 +17,7 @@ export class AddPinInfo extends React.Component {
 
     this.submitHandler = this.submitHandler.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
+    this.polygonTest = this.polygonTest.bind(this)
   }
 
   changeHandler (e) {
@@ -33,13 +35,9 @@ export class AddPinInfo extends React.Component {
       name: this.state.name,
       emotionType: this.state.emotionType,
       comment: this.state.comment,
-      areaId: this.state.areaId
+      areaId: isPolygon(this.props.pinPosition.lat, this.props.pinPosition.lng, this.props.area)
     }
-
-    this.props.dispatch(addPin(pin))
-    this.setState({redirect: true})
   }
-
   render () {
     if (this.state.redirect) {
       return (
@@ -65,7 +63,7 @@ export class AddPinInfo extends React.Component {
             </label>
             <label>Comments:</label>
             <input onChange={this.changeHandler} name='comment' />
-            <button className='button' onClick={this.submitHandler}>SUBMIT</button>
+            <button className='button' onClick={this.polygonTest}>SUBMIT</button>
           </div>
         </div>
       )
@@ -75,7 +73,8 @@ export class AddPinInfo extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    pinPosition: state.pinPosition
+    pinPosition: state.pinPosition,
+    area: state.areaInfo
   }
 }
 

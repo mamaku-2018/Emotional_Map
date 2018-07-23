@@ -21,7 +21,7 @@ class RealMap extends React.Component {
       lat: e.latlng.lat,
       lng: e.latlng.lng,
       showAddInfo: true
-      
+
     })
     this.props.dispatch(sendPinPosition(this.state))
   }
@@ -48,9 +48,8 @@ class RealMap extends React.Component {
 
     )
   }
-  componentWillUnmount(){
+  componentWillUnmount () {
     this.props.dispatch(removePinColour())
-    
   }
 }
 const mapDispatchToProps = (state) => {
