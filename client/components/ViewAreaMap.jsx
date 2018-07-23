@@ -2,18 +2,28 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {Polygon, Map, TileLayer} from 'react-leaflet'
-import {getAreas} from '../actions/areas'
+import {getAreas, receiveAreaId} from '../actions/areas'
+import ViewAreaInfo from './ViewAreaInfo'
 
 class ViewAreaMap extends React.Component {
   constructor (props) {
     super(props)
 
     this.state = {
+      showInfo: false
 
     }
   }
   componentDidMount () {
     this.props.dispatch(getAreas())
+  }
+
+  showInfo (area) {
+    this.props.dispatch(receiveAreaId(area.area_id))
+    this.setState = {
+      area_id: area.area_id,
+      showInfo: true
+    }
   }
 
   render () {
@@ -28,11 +38,12 @@ class ViewAreaMap extends React.Component {
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
           { this.props.area.map(area => {
-            return <Polygon key={area.area_id} positions={area.positions} />
+            return <Polygon key={area.area_id} positions={area.positions} onClick={() => { this.showInfo(area) }} />
           })
 
           }
         </Map>
+        {this.state.showinfo ? <ViewAreaInfo /> : null}
 
       </div>
     )

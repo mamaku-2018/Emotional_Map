@@ -70,5 +70,17 @@ router.get('/viewArea', (req, res) => {
       res.status(500).send('Unable to find Areas')
     })
 })
+router.get('/viewArea/:id', (req, res) => {
+  const areaId = req.params.id
+  db.getAreaById(areaId)
+    .then(area => {
+      res.json(area)
+    })
+    .catch(err => {
+      // eslint-disable-next-line
+      console.log(err)
+      res.status(500).send('Unable to find AreaId')
+    })
+})
 
 module.exports = router
