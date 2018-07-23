@@ -9,7 +9,6 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  /* background-color: #4F0521; */
  }
 
  .container {
@@ -34,15 +33,16 @@
 /* NAV BAR */
 
 img.nav-icon {
-  height: 4rem;
+  height: 5rem;
   border: 2px solid #AD9191;
+  display: inline-block;
 
 }
 
 img.logo {
   height: 4rem;
   float: right;
-  display: block;
+  display: inline-block;
   position: relative;
   z-index: 600000;
 }
@@ -63,10 +63,11 @@ img.logo {
 
 ul {
   font-family: 'Roboto', sans-serif;
+  text-align: center;
   display: inline-block;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 0.75rem;
   overflow: hidden;
   background-color: #4F0521;
   filter: alpha(opacity=80);
@@ -78,10 +79,10 @@ li {
 }
 
 li a {
-  display: block;
+  display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.5rem;
   text-decoration: none;
 }
 
