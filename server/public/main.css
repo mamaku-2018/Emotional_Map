@@ -47,16 +47,66 @@
   background-color: #4F0521;
 } 
 
-img {
+.launch-page {
+  position: relative;
+  width: 100%;
+}
+
+.Logo {
 position: absolute;
-width: 100%;
-height: auto;
+display: block;
+margin-top: 5%;
+margin-left: 5%;
+width: 30%;
 background-size: contain;
 z-index: 5000;
 }
 
 .about {
   height: 560px;
+}
+
+#myCarousel {
+  width: fixed;
+  height: auto;
+  background: #4F0521;
+  margin-top: 20%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0;
+}
+.carousel-item active {
+  z-index: -1;
+}
+.first-slide {
+  width: fixed;
+  height: auto;
+  z-index: 10;
+}
+.carousal-container {
+  z-index: 10000;
+}
+.carousel1 p {
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 40px;
+z-index: 5000;
+}
+
+.carousel2 p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  z-index: 5000;
+  background-color: aquamarine;
+}
+
+.carousel3 p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;font-size: 10;
+  font-size: 10px;
+  z-index: 5000;
 }
 
 .launchbuttons {
@@ -73,25 +123,24 @@ z-index: 5000;
   display: inline-block;
   width: 30%;
   height: 100%;
-  margin-left: 48%;
+  margin-left: 60%;
   background-color: #C1666B;
   color: #E4DFDA;
   padding: 0;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 20px;
   border-radius: 8px;
-  padding: 5px;
+  padding: 4px;
 }
 
 .launchExploreButt {
   position: absolute;
   display: inline-block;
-  text-align: left;
+  text-align: center;
   padding: 0;
   width: 30%;
-  margin-left: 5%;
+  margin-left: 10%;
   height: 100%;
   background-color: #C1666B;
   color: #E4DFDA;
@@ -100,14 +149,15 @@ z-index: 5000;
   display: inline-block;
   font-size: 20px;
   border-radius: 8px;
+  padding: 4px;
 }
 
-/* NOT WORKING */
+/* NOT WORKING needs to select but element
 .launchExploreButt :hover {
   background-color: #C1666B;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   color: #E4DFDA;
-} 
+}  */
 
 /* #myCarousel {
   width: 100vh;
