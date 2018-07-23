@@ -78,7 +78,7 @@ export class AddPinInfo extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    area: (state.areasInfo),
+    area: state.areasInfo,
     pinPosition: state.pinPosition
   }
 }
