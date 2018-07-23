@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getOnePin} from '../actions/pins'
-import emotionReturn from '../lib/emotionReturn'
+import {emotionReturn} from '../lib/emotionReturn'
 class ViewPinInfo extends React.Component {
   render () {
     const emotInfo = emotionReturn(this.props.onePinInfo.emotion_type)
