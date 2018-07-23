@@ -10,16 +10,19 @@ class ViewAreaMap extends React.Component {
     super(props)
 
     this.state = {
-      showInfo: false
+      showInfo: false,
+      area_id: []
     }
   }
   componentDidMount () {
     this.props.dispatch(getAreas())
   }
 
-  showinfo () {
+  showinfo (id) {
+    
     this.setState({
-      showInfo: true
+      showInfo: true,
+      area_id: id
     })
   }
 

@@ -70,5 +70,8 @@ router.get('/viewArea', (req, res) => {
       res.status(500).send('Unable to find Areas')
     })
 })
+router.get('/viewArea/:id', (req, res) => {
+  db.getAllAreas()
+})
 
 module.exports = router

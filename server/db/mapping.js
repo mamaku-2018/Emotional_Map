@@ -24,7 +24,7 @@ function addPin (pin, db = knex) {
 
 function getAllPins (db = knex) {
   return db('pins')
-    .select('pin_id','pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'last_update_date')
+    .select('pin_id', 'pin_name', 'pin_lat', 'pin_long', 'area_id', 'emotion_type', 'comment', 'last_update_date')
     // .orderBy('pin_lat', 'asc')
 }
 
@@ -37,4 +37,9 @@ function getPinById (pinId, db = knex) {
 function getAllAreas (db = knex) {
   return db('areas')
     .select('area_id', 'area_name', 'positions')
+}
+function getAreaById (areaId, db = knex) {
+  return db('areas')
+    .where('area_id', areaId)
+    .select('area_id')
 }
