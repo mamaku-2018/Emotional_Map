@@ -6,6 +6,7 @@ import ErrorMessage from './ErrorMessage'
 import WaitIndicator from './WaitIndicator'
 import AddPin from './AddPin'
 import ViewPins from './ViewPins'
+import Nav from './Nav'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <ErrorMessage />
         <WaitIndicator />
         <div className='launch-container'>
+          <Route path='/' component={Nav}/>
           <Route exact path='/' component={Launch} />
         </div>
         <div className='view-container'>

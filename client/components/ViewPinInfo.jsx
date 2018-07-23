@@ -6,11 +6,11 @@ class ViewPinInfo extends React.Component {
   render () {
     return (
       <div className='ViewPinInfo'>
-        <h3>Pin Story</h3>
-        <p>{this.props.onePinInfo.pin_name}</p>
+        <h3>{this.props.onePinInfo.pin_name}</h3>
+        {/* <p>{this.props.onePinInfo.pin_name}</p> */}
         <p>{this.props.onePinInfo.last_updated_date}</p>
-        <p>{this.props.onePinInfo.emotion_type}</p>
-        <p>{this.props.onePinInfo.comment}</p>
+        <p>Emotion: {this.props.onePinInfo.emotion_type}</p>
+        <p>Experience: {this.props.onePinInfo.comment}</p>
         <div className='PinInfo'>
         </div>
       </div>
