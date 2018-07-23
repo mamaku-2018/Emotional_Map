@@ -45,11 +45,11 @@ export const receiveAreaId = (areaid) => {
 
   }
 }
-export const getAreaId = () => {
+export const getAreaId = (id) => {
   return (dispatch) => {
     dispatch(requestAreaId())
     return request
-      .get('api/v1/map/viewArea/:id')
+      .get(`api/v1/map/viewArea/${id}`)
       .then(res => {
         dispatch(receiveAreaId(res.body))
       })
