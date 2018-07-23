@@ -27,15 +27,26 @@ class ViewAreaMap extends React.Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
-          <Polygon positions={this.state.areas} />
+          { this.props.area.map(area => {
+            return <Polygon key={area.area_id} positions={area.positions} />
+          })
+
+          }
         </Map>
+
       </div>
     )
   }
 }
 const mapStateToProps = (state) => {
-  return {
-    areas: state.positions
+  if (state.areasInfo.length > 0) {
+    return {
+      area: (state.areasInfo)
+    }
+  } else {
+    return {
+      area: []
+    }
   }
 }
 export default connect(mapStateToProps)(ViewAreaMap)
