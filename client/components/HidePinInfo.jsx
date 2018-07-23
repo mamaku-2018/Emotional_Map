@@ -13,7 +13,7 @@ class HidePinInfo extends React.Component {
   render () {
     return (
       <div>
-        <img src="/images/DownArrow.png" alt="Hide Pin" onClick={hidePin}/>
+        <img src="/images/DownArrow.png" alt="Hide Pin" onClick={this.hidePin}/>
       </div>
     )
   }
