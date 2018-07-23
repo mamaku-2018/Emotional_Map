@@ -4,10 +4,7 @@ import ViewPinMap from './ViewPinMap'
 import ViewPinInfo from './ViewPinInfo'
 import {removeOnePin} from '../actions/pins'
 class ViewPins extends React.Component {
-
-
   render () {
-
     return (
       <div>
         <ViewPinMap/>
@@ -20,7 +17,7 @@ class ViewPins extends React.Component {
   }
 }
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   return {
     onePinInfo: state.onePinInfo
   }

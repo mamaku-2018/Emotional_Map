@@ -16,7 +16,6 @@ const App = () => {
         <WaitIndicator />
         <div className='main-container'>
           <Route exact path='/' component={Launch} />
-
           <Route path='/view' component={ViewPins}/>
           <Route path='/add' component={AddPin} />
           <Route path='/area' component={ViewAreas} />
