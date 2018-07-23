@@ -1,6 +1,5 @@
-
-export function emotionReturn(id) {
-  var iconUrl = ""
+export function emotionReturn (id, value) {
+  var iconUrl = ''
   switch (id) {
     case 1:
       iconUrl = {
@@ -39,5 +38,5 @@ export function emotionReturn(id) {
       }
       break
   }
-  return iconUrl
+  if (value) { return iconUrl.path } else { return iconUrl }
 }

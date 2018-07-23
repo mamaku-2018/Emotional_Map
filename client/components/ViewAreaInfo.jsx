@@ -23,7 +23,7 @@ class ViewAreaInfo extends React.Component {
             <div key={pin.pin_id}>
               <h4> pin name </h4>
               <p> {pin.pin_name} </p>
-              <img src={emotionReturn(pin.emotion_type)}/>
+              <img src={emotionReturn(pin.emotion_type, true)}/>
               <h4>Comments</h4>
               <p> {pin.comment} </p>
             </div>
