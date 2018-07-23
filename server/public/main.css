@@ -123,6 +123,10 @@ a:focus, a:hover {
 
 /* ADD PAGE FORM */
 
+input {
+  width: 100%;
+}
+
 .InputPinForm {
   font-family: 'Roboto', sans-serif;
   text-align: left;
@@ -139,11 +143,13 @@ a:focus, a:hover {
 }
 
 .inputPin select {
-  color: #AD9191;
+  color: #4F0521;
+  border: 2px solid #AD9191;
+
 }
 
 .inputPin button {
-  color: #AD9191;
+  color: #4F0521;
   border: 2px solid #AD9191;
 }
 
@@ -155,7 +161,6 @@ a:focus, a:hover {
 
 .inputPin label {
   color: #AD9191;
-  padding: 0rem 1rem 0rem 1rem;
   margin: 0;
 }
 
@@ -164,8 +169,8 @@ a:focus, a:hover {
   padding: 1rem;
   font-size: 20px; 
   text-align: left;
-  height: 50vh;
-  bottom: 50vh;
+  height: 60vh;
+  bottom: 60vh;
   width: 100%;
   z-index: 5000;
   border-radius: 15px;
@@ -181,7 +186,7 @@ a:focus, a:hover {
 
 .ViewPinInfo {
   height: 40vh;
-  bottom: 30vh;
+  bottom: 40vh;
   padding: 1rem;
   width: 100%;
   text-align: left;
@@ -205,6 +210,7 @@ a:focus, a:hover {
 .ViewPinInfo h3 {
   color: #AD9191;
   margin: 0;
+  margin-bottom: 1rem;
   border-bottom:5px solid #AD9191;
 }
 .ViewPinInfo p {
@@ -221,7 +227,7 @@ a:focus, a:hover {
     font-size: 20px; 
     text-align: left;
     height: 50vh;
-    bottom: 40vh;
+    bottom: 50vh;
     width: 100%;
     z-index: 5000;
     border-radius: 15px;

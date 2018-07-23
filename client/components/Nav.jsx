@@ -10,6 +10,7 @@ const Nav = () => {
         <li><Link to='/add'><img className='nav-icon' src='/images/pinicon.png' /></Link></li>
         <li><Link to='/'><img className='nav-icon' src='/images/homeicon.png' /> </Link></li>
       </ul>
+
     </div>
   )
 }

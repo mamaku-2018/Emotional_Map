@@ -61,8 +61,8 @@ export class AddPinInfo extends React.Component {
                 <option value='5'>Powerful</option>
                 <option value='6'>Peaceful</option>
               </select>
-              <br />
             </label>
+            <br />
             <label>Comments:</label>
             <input onChange={this.changeHandler} name='comment' />
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
