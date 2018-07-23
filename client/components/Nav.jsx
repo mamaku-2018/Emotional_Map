@@ -5,9 +5,10 @@ const Nav = () => {
   return (
     <div className='navbar'>
       <ul>
-        <li><Link to='/view'>EXPLORE</Link></li>
-        <li><Link to='/viewarea'>AREAS</Link></li>
-        <li><Link to='/add'>SHARE</Link></li>
+        <li><Link to='/view'><img className='nav-icon' src='/images/exploreicons.png' /></Link></li>
+        <li><Link to='/viewarea'><img className='nav-icon' src='/images/emotiicon.png' /></Link></li>
+        <li><Link to='/add'><img className='nav-icon' src='/images/pinicon.png' /></Link></li>
+        <li><Link to='/'><img className='nav-icon' src='/images/homeicon.png' /> </Link></li>
       </ul>
     </div>
   )

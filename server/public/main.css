@@ -3,11 +3,12 @@
   /* border: 0.5px solid red; */
 }
 
- html, body, .map {
+ html, body {
   max-width: 100%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
   /* background-color: #4F0521; */
  }
 
@@ -30,18 +31,13 @@
   height: 100vh;
 }  
 
-/* #myCarousel {
-  width: 100vh;
-  height: 100vh;
-}
-
-.carousel-inner {
-  width: 100vh;
-  height: 100vh;
-} 
-*/
-
 /* NAV BAR */
+
+img.nav-icon {
+  height: 4rem;
+  border: 2px solid #AD9191;
+
+}
 
 .navbar {
   overflow: hidden;
@@ -54,9 +50,12 @@
   font-size: 1.25rem;
   text-align: center;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -82,53 +81,19 @@ li a:hover {
   background-color: #ad9191;
 }
 a:focus, a:hover {
-  color: #4F0521;
+  color: #D37D52;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* VIEW PIN INFO */
-
-.ViewPinInfo {
-  text-align: left;
-  color: black;
-  font-size: 20px; 
-  height: 40vh;
-  bottom: 30vh;
-  z-index: 5000;
-  margin: 0.5rem;
-  padding: 1rem;
-  border-radius: 15px;
-  position: relative;
-  background-color:#4F0521;
-  animation-name: slide;
-  animation-duration: 2s;
-  overflow: hidden;
-  filter: alpha(opacity=80);
-  opacity: 0.8;
-  z-index: 5000;
-}
-
-@keyframes slide {
-  0%   {bottom:0vh;}
-  100% {bottom:25vh;}
-}
+/* VIEW PIN MAP */
 
 #viewPins {
-  display: block;
-  max-height: 100%;
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
 }
-
-.ViewPinInfo h3 {
-  color: #AD9191;
-  margin: 0;
-  border-bottom:5px solid #AD9191;
-}
-.ViewPinInfo p {
-  color: #AD9191;
-  margin: 0;
-}
-/* VIEW PIN MAP */
 
 .viewMap  {
   height: 100vh; 
@@ -156,9 +121,10 @@ a:focus, a:hover {
   text-align: center;
 }
 
-/* INPUT FORM  */
+/* ADD PAGE FORM */
 
 .InputPinForm {
+  font-family: 'Roboto', sans-serif;
   text-align: left;
   font-size: 20px; 
 }
@@ -172,51 +138,156 @@ a:focus, a:hover {
   100% {bottom:25vh;}
 }
 
-/* The element to apply the animation to */
+.inputPin select {
+  color: #AD9191;
+}
+
+.inputPin button {
+  color: #AD9191;
+  border: 2px solid #AD9191;
+}
+
+.inputPin h3 {
+  color: #AD9191;
+  margin-bottom: 1rem;
+  border-bottom:5px solid #AD9191;
+}
+
+.inputPin label {
+  color: #AD9191;
+  padding: 0rem 1rem 0rem 1rem;
+  margin: 0;
+}
+
 .inputPin {
-  height: 25vh;
-  bottom: 25vh;
-  z-index: 5000;
-  margin: 0, auto;
   position: relative;
-  background-color:#deffff;
+  padding: 1rem;
+  font-size: 20px; 
+  text-align: left;
+  height: 50vh;
+  bottom: 50vh;
+  width: 100%;
+  z-index: 5000;
+  border-radius: 15px;
+  background-color:#4F0521;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
   animation-name: slide;
   animation-duration: 2s;
 }
 
-/* ADDBUTTON on /VIEW */
+/* VIEW PIN INFO */
 
-.addButton {
+.ViewPinInfo {
+  height: 40vh;
+  bottom: 30vh;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 20px; 
+  border-radius: 15px;
+  position: relative;
+  background-color:#4F0521;
+  animation-name: slide;
+  animation-duration: 2s;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
   z-index: 5000;
-  position: fixed;
-  top: 0;
-  right: 0;
-  border: 3px solid red;
 }
 
-
-/* hash item id
-
-#slider {
-  margin-top: 60px;
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:25vh;}
 }
 
-#slider .item {
-  height: 400px;
-
+.ViewPinInfo h3 {
+  color: #AD9191;
+  margin: 0;
+  border-bottom:5px solid #AD9191;
 }
-#slide1 {
-  background: url('images/1.jpg) center no-repeat;
-}
-
-#slide2 {
-  background: url('images/1.jpg) center no-repeat;
+.ViewPinInfo p {
+  color: #AD9191;
+  margin: 0;
 }
 
-#slide3 {
-  background: url('images/1.jpg) center no-repeat;
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 400px) {
+  .inputPin {
+    position: relative;
+    padding: 1rem;
+    font-size: 20px; 
+    text-align: left;
+    height: 50vh;
+    bottom: 40vh;
+    width: 100%;
+    z-index: 5000;
+    border-radius: 15px;
+    background-color:#4F0521;
+    overflow: hidden;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+  /* .navbar-brand img {
+    width: 22%; 
+  }
+
+  .field.has-addons {
+    width: 60%; */
+
+}  
+
+@media only screen and (min-width: 640px) {
+  .navbar-brand img {
+    width: 18%; 
+  }
+
+  .field.has-addons {
+    width: 40%;
+  }  
 }
 
-.carousel-caption {
-  font-size: 18px;
+@media only screen and (min-width: 800px) {
+  .container {
+    height: 100vh;
+  }
+
+  .navbarmenu .button {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .companyList {
+    text-align: left;
+  }
+
+  .companyList ul {
+    text-align: left; 
+  }
+
+  .companyList h3 {
+    margin-left: 1rem;
+  }
+
+  .field.has-addons {
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .about p {
+    font-size: 1.6rem;
+  }  
+}
+
+@media only screen and (min-width: 900px) {
+  .navbar-brand img {
+    width: 15%; 
+  }
 }
