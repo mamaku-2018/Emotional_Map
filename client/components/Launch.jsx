@@ -12,6 +12,7 @@ const Launch = () => {
       <Route path='/' component={Logo}/>
       <Route path='/' component={About} />
       <Route path='/' component={LaunchButtons} />
+
     </div>
 
   )

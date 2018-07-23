@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import ViewPinMap from './ViewPinMap'
 import ViewPinInfo from './ViewPinInfo'
-import {Route} from 'react-router'
+import {removeOnePin} from '../actions/pins'
 
 class ViewPins extends React.Component {
   render () {
@@ -12,6 +12,9 @@ class ViewPins extends React.Component {
         {typeof this.props.onePinInfo.pin_name === 'string' && <ViewPinInfo/>}
       </div>
     )
+  }
+  componentWillUnmount () {
+    this.props.dispatch(removeOnePin())
   }
 }
 
