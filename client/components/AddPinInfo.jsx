@@ -57,7 +57,7 @@ export class AddPinInfo extends React.Component {
             <input onChange={this.changeHandler} name='name' placeholder='name your experience'/>
             <label>feeling:
               <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
-                <option value='1'>Joyful</option>
+                <option value='1'>Happy</option>
                 <option value='2'>Sad</option>
                 <option value='3'>Mad</option>
                 <option value='4'>Scared</option>
@@ -85,5 +85,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(AddPinInfo)
-
-// export default connect()(AddPinInfo)
