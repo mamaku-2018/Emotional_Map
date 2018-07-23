@@ -1,6 +1,6 @@
 
 export function emotionReturn(id) {
-  var iconUrl = ""
+  iconUrl = ""
   switch (id) {
     case 1:
       iconUrl = '/images/Happy.png'
