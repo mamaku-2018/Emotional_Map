@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  /* border: 0.5px solid red; */
+  border: 0.5px solid red;
 }
 
  html, body, .map {
@@ -86,12 +86,14 @@ a:focus, a:hover {
   font-weight: bold;
   text-decoration: none;
 }
+
 /* VIEW PIN INFO */
+
 .ViewPinInfo {
   text-align: left;
   color: black;
   font-size: 20px; 
-  height: 30vh;
+  height: 40vh;
   bottom: 30vh;
   z-index: 5000;
   margin: 0.5rem;
@@ -126,7 +128,16 @@ a:focus, a:hover {
   color: #AD9191;
   margin: 0;
 }
+/* VIEW PIN MAP */
 
+.viewMap {
+  height: 100vh;
+  width: 100vh;
+}
+.leaflet-container {
+  height: 100vh;
+  width: 100vh; 
+}
 /* INPUT FORM  */
 
 .InputPinForm {
