@@ -3,97 +3,111 @@
   border: 0.5px solid red;
 }
 
- html, body, .map {
-  max-width: 100%;
+ html {
+  position: relative;
+  width: 100%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
-  /* background-color: #4F0521; */
+  margin: 0;
  }
 
-#app .container .add-container #addMap #addPage{
-  height: 100vh;
-} 
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+ }
 
-#app .container .view-container #viewPins #viewMap{
-  height: 100vh;
-} 
+ body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+ }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 /* LAUNCH PAGE  */
 
-#app .container {
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
 .launch-container {
   position: relative;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 666px;
-  width: 374px;
-}
-
-#app .jumbotron {
   background-color: #4F0521;
-  height: 666px;
-}  
+} 
+
+img {
+position: absolute;
+width: 100%;
+height: auto;
+background-size: contain;
+z-index: 5000;
+}
 
 .about {
   height: 560px;
 }
 
-.button{
-  background-color: #4F0521;
-}
-
 .launchbuttons {
   position: absolute;
   display: inline-block;
-  width: 340px;
+  width: 100%;
   height: 40px;
   margin: 5 10 0 0;
   padding: 0;
 }
 
-.launchShareButt {
-  position: relative;
-  margin: 10 0 0 0;
-  width: 20vh;
+.launchShareButt{
+  position: absolute;
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  margin-left: 48%;
   background-color: #C1666B;
-  border: none;
   color: #E4DFDA;
   padding: 0;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 10px;
+  font-size: 20px;
   border-radius: 8px;
-  padding: 15px;
+  padding: 5px;
 }
 
 .launchExploreButt {
-  position: ab;
-  margin: 2 0 0 60;
-  width: 20vh;
-  background-color: #C1666B;
-  border: none;
-  color: #E4DFDA;
+  position: absolute;
+  display: inline-block;
+  text-align: left;
   padding: 0;
+  width: 30%;
+  margin-left: 5%;
+  height: 100%;
+  background-color: #C1666B;
+  color: #E4DFDA;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 10px;
+  font-size: 20px;
   border-radius: 8px;
-  padding: 15px;
 }
 
-.launchButt:hover {
+/* NOT WORKING */
+.launchExploreButt :hover {
   background-color: #C1666B;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   color: #E4DFDA;
-}
+} 
 
 /* #myCarousel {
   width: 100vh;
@@ -173,31 +187,4 @@
   top: 0;
   right: 0;
   border: 3px solid red;
-}
-
-
-/* hash item id
-
-#slider {
-  margin-top: 60px;
-}
-
-#slider .item {
-  height: 400px;
-
-}
-#slide1 {
-  background: url('images/1.jpg) center no-repeat;
-}
-
-#slide2 {
-  background: url('images/1.jpg) center no-repeat;
-}
-
-#slide3 {
-  background: url('images/1.jpg) center no-repeat;
-}
-
-.carousel-caption {
-  font-size: 18px;
 }

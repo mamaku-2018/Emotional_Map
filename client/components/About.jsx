@@ -2,9 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='about'>
-      <h1>Street Feel</h1>
-
+    <div className='carousel-container'>
       <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="5000">
         <ol className="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
