@@ -123,7 +123,6 @@ a:focus, a:hover {
   width: 100vw;
   position: relative;
   overflow: auto;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .leaflet-popup-content-wrapper {
@@ -186,7 +185,7 @@ input {
   font-size: 20px; 
   text-align: left;
   height: 60vh;
-  bottom: 60vh;
+  bottom: 80vh;
   width: 100%;
   z-index: 5000;
   border-radius: 15px;
