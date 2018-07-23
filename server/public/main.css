@@ -109,6 +109,10 @@ z-index: 5000;
   padding: 2% 0 2% 0;
 }
 
+.sf {
+  color: #D37D52
+}
+
 #slide2 {
   margin:0;
   padding: 0;
@@ -164,9 +168,14 @@ z-index: 5000;
 }
 
 button {
-  background-color: #C1666B;
+  background-color: transparent;
   color: #E4DFDA;
   text-align: center;
+}
+
+button:hover {
+  background-color: #D37D52 ;
+  color: #4F0521;
 }
 
 #launchShareButt{
@@ -183,7 +192,6 @@ button {
   font-size: 25px;
   border-radius: 8px;
   padding: 4px;
-
 }
 
 #launchExploreButt {
@@ -205,11 +213,25 @@ button {
   box-shadow: 0 2px 3px rgb(56, 40, 41);
 }
 
+#launchShareButt:hover{
+  background-color: #D37D52 ;
+  color: #4F0521;
+  text-align: center;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#launchExploreButt:hover{
+  background-color: #D37D52 ;
+  color: #4F0521;
+  text-align: center;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 /* Responsive text on carousal */
 @media (min-width: 300px) {
   .d-md-block {
     display: block!important;
-  }
+    }
 }
 
 @media (max-width: 480px) {
@@ -217,27 +239,20 @@ button {
     color: transparent
   }
   #slide1 p {
-    font-size: 28px;
+    font-size: 25px;
   }
   #slide2 h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
   #slide2 p {
-    font-size: 28px;
+    font-size: 25px;
   }
   #slide3 h1 {
-    font-size: 30px;
-  }
-  #slide3 p {
     font-size: 28px;
   }
-}
-
-
-.button:hover {
-  background-color:#4F0521;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  color: #E4DFDA;
+  #slide3 p {
+    font-size: 25px;
+  }
 }
 
 /* VIEW PIN INFO */
