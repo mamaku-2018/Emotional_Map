@@ -6,6 +6,7 @@ import ErrorMessage from './ErrorMessage'
 import WaitIndicator from './WaitIndicator'
 import AddPin from './AddPin'
 import ViewPins from './ViewPins'
+import ViewAreas from './ViewAreas'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
 
           <Route path='/view' component={ViewPins}/>
           <Route path='/add' component={AddPin} />
+          <Route path='/area' component={ViewAreas} />
 
         </div>
       </div>
