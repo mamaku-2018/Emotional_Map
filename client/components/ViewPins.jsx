@@ -8,6 +8,7 @@ class ViewPins extends React.Component {
     return (
       <div>
         <ViewPinMap/>
+        
         {typeof this.props.onePinInfo.pin_name === 'string' && <ViewPinInfo/>}
       </div>
     )
