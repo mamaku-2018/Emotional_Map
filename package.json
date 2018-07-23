@@ -5,6 +5,13 @@
   "repository": "https://github.com/mamaku-2018/Emotional_Map.git",
   "author": "sungjin-shane <sjpark731015@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --config ./client/webpack.config.js",
+    "dev": "nodemon server & yarn build --watch",
+    "knex": "knex --knexfile ./server/db/knexfile.js",
+    "test": "jest --watchAll",
+    "start": "node server"
+  },
   "babel": {
     "presets": [
       "env",
