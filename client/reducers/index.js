@@ -7,6 +7,7 @@ import onePinInfo from './onePinInfo'
 import pinPosition from './pinPosition'
 import pinColour from './pinColour'
 import areasInfo from './areasInfo'
+import areaId from './areaId'
 export default combineReducers({
   errorMessage,
   waiting,
@@ -14,5 +15,6 @@ export default combineReducers({
   pinColour,
   onePinInfo,
   pinPosition,
-  areasInfo
+  areasInfo,
+  areaId
 })

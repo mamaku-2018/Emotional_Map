@@ -1,4 +1,4 @@
-import RECEIVE_AREA_ID from '../actions/areas'
+import {RECEIVE_AREA_ID} from '../actions/areas'
 
 function areaId (state = {}, action) {
   switch (action.type) {

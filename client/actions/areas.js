@@ -38,10 +38,10 @@ export const requestAreaId = () => {
     type: REQUEST_AREA_ID
   }
 }
-export const receiveAreaId = (areaid) => {
+export const receiveAreaId = (areaId) => {
   return {
     type: RECEIVE_AREA_ID,
-    areaid
+    areaId
 
   }
 }

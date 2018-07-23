@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {Polygon, Map, TileLayer} from 'react-leaflet'
-import {getAreas} from '../actions/areas'
+import {getAreas, receiveAreaId} from '../actions/areas'
 import ViewAreaInfo from './ViewAreaInfo'
 
 class ViewAreaMap extends React.Component {
@@ -10,24 +10,20 @@ class ViewAreaMap extends React.Component {
     super(props)
 
     this.state = {
-      showInfo: false,
-      area_id: []
+      showInfo: false
+
     }
-    this.showInfo = this.showInfo.bind(this)
   }
   componentDidMount () {
     this.props.dispatch(getAreas())
   }
 
   showInfo (area) {
+    this.props.dispatch(receiveAreaId(area.area_id))
     this.setState = {
-      area_id: area.area_id
+      area_id: area.area_id,
+      showInfo: true
     }
-    // this.props.dispatch(getAreaId(area))
-    // this.setState({
-    //   showInfo: true,
-    //   area_id: area
-    // })
   }
 
   render () {
