@@ -48,8 +48,12 @@ export const getAreaId = () => {
   return (dispatch) => {
     dispatch(requestAreaId())
     return request
-    .then(res => {
-      dispatch(receiveAreaId(res.body.area_id))
-    })
+      .get('api/v1/map/viewArea/:id')
+      .then(res => {
+        dispatch(receiveAreaId(res.body))
+      })
+      .catch(err => {
+        dispatch(showError(err.message))
+      })
   }
 }
