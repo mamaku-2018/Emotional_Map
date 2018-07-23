@@ -2,6 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addPin, receivePinColour} from '../actions/pins'
 import {Redirect} from 'react-router-dom'
+import {isPolygon} from '../lib/isPolygon'
+import {getAreas} from '../actions/areas'
 
 export class AddPinInfo extends React.Component {
   constructor (props) {
@@ -17,7 +19,9 @@ export class AddPinInfo extends React.Component {
     this.submitHandler = this.submitHandler.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
   }
-
+  componentDidMount () {
+    this.props.dispatch(getAreas())
+  }
   changeHandler (e) {
     this.setState({
       [e.target.name]: e.target.value
@@ -27,19 +31,18 @@ export class AddPinInfo extends React.Component {
     }
   }
   submitHandler () {
+    const areaId = isPolygon(this.props.pinPosition.lat, this.props.pinPosition.lng, this.props.area)
     const pin = {
       lat: this.props.pinPosition.lat,
       long: this.props.pinPosition.lng,
       name: this.state.name,
       emotionType: this.state.emotionType,
       comment: this.state.comment,
-      areaId: this.state.areaId
+      areaId: areaId
     }
-
     this.props.dispatch(addPin(pin))
     this.setState({redirect: true})
   }
-
   render () {
     if (this.state.redirect) {
       return (
@@ -76,6 +79,7 @@ export class AddPinInfo extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
+    area: (state.areasInfo),
     pinPosition: state.pinPosition
   }
 }

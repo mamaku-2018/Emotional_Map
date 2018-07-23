@@ -2,13 +2,14 @@ import React from 'react'
 
 import Logo from './Logo'
 import AddPinMap from './AddPinMap'
-
+import {connect} from 'react-redux'
 class AddPin extends React.Component {
   constructor () {
     super()
     this.state = {
     }
   }
+
   render () {
     return (
       <div id='addMap'>
@@ -18,4 +19,4 @@ class AddPin extends React.Component {
   }
 }
 
-export default AddPin
+export default connect()(AddPin)

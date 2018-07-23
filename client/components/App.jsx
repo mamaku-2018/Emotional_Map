@@ -7,6 +7,7 @@ import WaitIndicator from './WaitIndicator'
 import AddPin from './AddPin'
 import ViewPins from './ViewPins'
 import Nav from './Nav'
+import ViewAreas from './ViewAreas'
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
         <div className='add-container'>
           <Route exact path='/add' component={Nav}/>
           <Route path='/add' component={AddPin} />
+          <Route path='/area' component={ViewAreas} />
+
         </div>
       </div>
     </Router>
