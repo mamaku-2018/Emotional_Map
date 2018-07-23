@@ -16,15 +16,16 @@ const App = () => {
         <ErrorMessage />
         <WaitIndicator />
         <div className='launch-container'>
-          <Route path='/' component={Nav}/>
+          {/* <Route path='/' component={Nav}/> */}
           <Route exact path='/' component={Launch} />
         </div>
         <div className='view-container'>
-          {/* <Route exact path='/view' component={Nav}/> */}
+          <Route exact path='/view' component={Nav}/>
           <Route path='/view' component={ViewPins}/>
         </div>
         <div className='add-container'>
           <Route path='/add' component={AddPin} />
+          <Route path='/add' component={Nav}/>
           <Route path='/area' component={ViewAreas} />
         </div>
       </div>

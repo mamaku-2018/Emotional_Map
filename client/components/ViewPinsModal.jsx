@@ -4,8 +4,6 @@
 
 //   return (
 
-
-
 //     {/* <!-- Modal --> */}
 //     <div className="viewModal" id="viewModal" tabIndex="-1" role="dialog">
 //       <div className="modal-dialog" role="document">
