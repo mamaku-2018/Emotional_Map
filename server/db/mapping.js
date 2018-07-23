@@ -5,7 +5,8 @@ module.exports = {
   addPin,
   getAllPins,
   getPinById,
-  getAllAreas
+  getAllAreas,
+  getAreaById
 }
 
 function addPin (pin, db = knex) {
