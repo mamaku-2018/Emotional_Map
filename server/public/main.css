@@ -131,13 +131,23 @@ a:focus, a:hover {
 /* VIEW PIN MAP */
 
 .viewMap {
-  height: 100vh;
-  width: 100vh;
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
 }
-.leaflet-container {
-  height: 100vh;
-  width: 100vh; 
+.leaflet-container { 
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+.leaflet-popup-content-wrapper {
+  text-align: center;
+}
+
 /* INPUT FORM  */
 
 .InputPinForm {
