@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {Map, TileLayer, Marker} from 'react-leaflet'
 import {getpins, getOnePin} from '../actions/pins'
 import {getIcons} from '../lib/getIcons'
-import L from 'leaflet'
 
 class ViewPinMap extends React.Component {
   constructor (props) {

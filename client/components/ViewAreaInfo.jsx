@@ -1,10 +1,9 @@
 import React from 'react'
-import { connect } from 'net';
-import {emotionReturn} from 'emotionReturn'
+import {connect} from 'react-redux'
+import {emotionReturn} from '../lib/emotionReturn'
 
 class ViewAreaInfo extends React.Component {
-
-  render(){
+  render () {
     let pinArr = this.props.pinInfo.filter(pin => {
       return pinInfo.area_id === this.props.areaId
     })
@@ -22,17 +21,14 @@ class ViewAreaInfo extends React.Component {
         })}
       </div>
 
-
     )
   }
-
 }
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   return {
     pinInfo: state.pinInfo,
     areaId: state.areaId
   }
 }
-
 
 export default connect(mapStateToProps)(ViewAreaInfo)
