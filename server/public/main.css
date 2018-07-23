@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid red;
+  /* border: 0.5px solid red; */
 }
 
  html, body, .map {
@@ -130,12 +130,20 @@ a:focus, a:hover {
 }
 /* VIEW PIN MAP */
 
-.viewMap {
+.viewMap  {
   height: 100vh; 
   width: 100vw;
   position: relative;
   overflow: auto;
 }
+
+.addMap {
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+}
+
 .leaflet-container { 
   height: 100vh; 
   width: 100vw;
