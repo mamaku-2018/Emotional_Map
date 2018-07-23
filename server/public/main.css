@@ -39,6 +39,14 @@ img.nav-icon {
 
 }
 
+img.logo {
+  height: 4rem;
+  float: right;
+  display: block;
+  position: relative;
+  z-index: 600000;
+}
+
 .navbar {
   overflow: hidden;
   position: fixed;
@@ -145,21 +153,28 @@ input {
 .inputPin select {
   color: #4F0521;
   border: 2px solid #AD9191;
+  margin-left: 1rem;
 
 }
 
 .inputPin button {
   color: #4F0521;
   border: 2px solid #AD9191;
+  margin-top: 1rem;
 }
 
 .inputPin h3 {
   color: #AD9191;
+  margin-top: 0;
   margin-bottom: 1rem;
   border-bottom:5px solid #AD9191;
 }
 
 .inputPin label {
+  text-align: right;
+  clear: both;
+  float:left;
+  margin-right:15px;
   color: #AD9191;
   margin: 0;
 }
