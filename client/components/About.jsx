@@ -14,7 +14,7 @@ const About = () => {
         <div className="carousel-inner" role="listbox">
           {/* Slide 1 */}
           <div className="carousel-item active">
-            <img className="first-slide" src="/images/city1.jpg" alt="First slide"/>
+            <img className="first-slide" src="/images/Slide1Trans.png" alt="First slide"/>
             <div className="container">
               <div className="carousel-caption d-none d-md-block text-left">
                 <h1>Street Feel</h1>
@@ -24,7 +24,7 @@ const About = () => {
           </div>
           {/* Slide 2 */}
           <div className="carousel-item">
-            <img className="second-slide" src="/images/city2.jpg" alt="Second slide"/>
+            <img className="second-slide" src="/images/Slide2Trans.png" alt="Second slide"/>
             <div className="container">
               <div className="carousel-caption d-none d-md-block">
                 <h1>Add emotions to the map</h1>
@@ -35,7 +35,7 @@ const About = () => {
 
           {/* Slide 3 */}
           <div className="carousel-item">
-            <img className="third-slide" src="/images/city3.jpg" alt="Third slide"/>
+            <img className="third-slide" src="/images/Slide3Trans.png" alt="Third slide"/>
             <div className="container">
               <div className="carousel-caption d-none d-md-block text-right">
                 <h1>Explore emotions on the map</h1>

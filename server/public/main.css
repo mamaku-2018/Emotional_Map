@@ -19,15 +19,80 @@
   height: 100vh;
 } 
 
-#app .jumbotron {
-  background-color: #AD9191;
-  height: 100vh;
-}  
+/* LAUNCH PAGE  */
 
 #app .container {
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+.launch-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 666px;
+  width: 374px;
+}
+
+#app .jumbotron {
+  background-color: #4F0521;
+  height: 666px;
+}  
+
+.about {
+  height: 560px;
+}
+
+.button{
+  background-color: #4F0521;
+}
+
+.launchbuttons {
+  position: absolute;
+  display: inline-block;
+  width: 340px;
+  height: 40px;
+  margin: 5 10 0 0;
+  padding: 0;
+}
+
+.launchShareButt {
+  position: relative;
+  margin: 10 0 0 0;
+  width: 20vh;
+  background-color: #C1666B;
+  border: none;
+  color: #E4DFDA;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.launchExploreButt {
+  position: ab;
+  margin: 2 0 0 60;
+  width: 20vh;
+  background-color: #C1666B;
+  border: none;
+  color: #E4DFDA;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.launchButt:hover {
+  background-color: #C1666B;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: #E4DFDA;
 }
 
 /* #myCarousel {
