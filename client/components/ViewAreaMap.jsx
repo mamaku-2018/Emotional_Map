@@ -13,18 +13,21 @@ class ViewAreaMap extends React.Component {
       showInfo: false,
       area_id: []
     }
+    this.showInfo = this.showInfo.bind(this)
   }
   componentDidMount () {
     this.props.dispatch(getAreas())
   }
 
-  showinfo (area) {
-    let id = area.area_id
-    this.props.dispatch(getAreaId(id))
-    this.setState({
-      showInfo: true,
-      area_id: id
-    })
+  showInfo (area) {
+    this.setState = {
+      area_id: area.area_id
+    }
+    // this.props.dispatch(getAreaId(area))
+    // this.setState({
+    //   showInfo: true,
+    //   area_id: area
+    // })
   }
 
   render () {
@@ -39,7 +42,7 @@ class ViewAreaMap extends React.Component {
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
           { this.props.area.map(area => {
-            return <Polygon key={area.area_id} positions={area.positions} onlcick={this.showInfo} />
+            return <Polygon key={area.area_id} positions={area.positions} onlcick={this.showInfo(area)} />
           })
 
           }
