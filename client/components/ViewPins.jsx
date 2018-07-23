@@ -1,25 +1,26 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import ViewPinMap from './ViewPinMap'
-import {getpins} from '../actions/pins'
-
-import AddButton from './AddButton'
 import ViewPinInfo from './ViewPinInfo'
-
+import {removeOnePin} from '../actions/pins'
 class ViewPins extends React.Component {
-  componentDidMount () {
-    this.props.dispatch(getpins())
-  }
-
   render () {
     return (
       <div>
         <ViewPinMap/>
-        <ViewPinInfo/>
-        <AddButton/>
+        {typeof this.props.onePinInfo.pin_name === 'string' && <ViewPinInfo/>}
       </div>
     )
   }
+  componentWillUnmount() {
+    this.props.dispatch(removeOnePin())
+  }
 }
 
-export default connect()(ViewPins)
+const mapStateToProps = (state) => {
+  return {
+    onePinInfo: state.onePinInfo
+  }
+}
+
+export default connect(mapStateToProps)(ViewPins)

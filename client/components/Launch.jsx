@@ -10,6 +10,7 @@ const Launch = () => {
     <div className='jumbotron'>
       <Route path='/' component={About} />
       <Route path='/' component={LaunchButtons} />
+
     </div>
 
   )
