@@ -4,8 +4,11 @@ import {connect} from 'react-redux'
 
 const HidePinInfo = (props) => {
 
+
   return (
-  
+    <div>
+      <img src="" alt=""/>
+    </div>
   )
 }
 
