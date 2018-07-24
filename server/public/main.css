@@ -376,13 +376,10 @@ input {
   display: block;
 }
 
-
-
 .inputPin select {
   color: #4F0521;
   border: 2px solid #AD9191;
   margin-left: 1rem;
-
 }
 
 .inputPin button {
@@ -437,13 +434,12 @@ input {
   display: inline-block;
   width: 80%;
   height: 40vh;
-  bottom: 65vh;
+  bottom: 26vh;
   padding: 1rem;
   margin: 2rem;
   text-align: left;
   font-size: 20px; 
   border-radius: 15px;
-  position: relative;
   background-color:#4F0521;
   animation-name: slide;
   animation-duration: 4s;
@@ -452,11 +448,11 @@ input {
   opacity: 0.8;
   z-index: 5000;
 }
-
+/* 
 @keyframes slide {
   0%   {bottom:0vh;}
   100% {bottom:65vh;}
-}
+} */
 
 .ViewPinInfo h3 {
   color: #AD9191;
@@ -516,6 +512,7 @@ input {
     0%   {bottom:0vh;}
     100% {bottom:28vh;}
   }
+}
 
 @media only screen and (min-width: 640px) {
   .navbar-brand img {
