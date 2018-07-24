@@ -18,6 +18,10 @@ html, body {
   height: 100vh;
 } 
 
+.add-container {
+  text-align: center;
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -259,14 +263,14 @@ button:hover {
 /* NAV BAR */
 
 img.nav-icon {
-  height: 4rem;
+  height: 5rem;
   border: 2px solid #AD9191;
 }
 
 /* img.logo {
   height: 4rem;
   float: right;
-  display: block;
+  display: inline-block;
   position: relative;
   z-index: 600000;
 } */
@@ -287,10 +291,11 @@ img.nav-icon {
 
 ul {
   font-family: 'Roboto', sans-serif;
+  text-align: center;
   display: inline-block;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 0.75rem;
   overflow: hidden;
   background-color: #4F0521;
   filter: alpha(opacity=80);
@@ -302,10 +307,10 @@ li {
 }
 
 li a {
-  display: block;
+  display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.5rem;
   text-decoration: none;
 }
 
@@ -344,9 +349,9 @@ a:focus, a:hover {
 .leaflet-container { 
   height: 100vh; 
   width: 100vw;
+  text-align: center;
   position: relative;
   overflow: auto;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .leaflet-popup-content-wrapper {
@@ -404,12 +409,12 @@ input {
 }
 
 .inputPin {
-  position: relative;
+  position: absolute;
   padding: 1rem;
   font-size: 20px; 
   text-align: left;
-  height: 60vh;
-  bottom: 60vh;
+  height: 50vh;
+  bottom: 26vh;
   width: 100%;
   z-index: 5000;
   border-radius: 15px;
@@ -424,10 +429,13 @@ input {
 /* VIEW PIN INFO */
 
 .ViewPinInfo {
+  position: absolute;
+  display: inline-block;
+  width: 80%;
   height: 40vh;
-  bottom: 40vh;
+  bottom: 60vh;
   padding: 1rem;
-  width: 100%;
+  margin: 2rem;
   text-align: left;
   font-size: 20px; 
   border-radius: 15px;
@@ -461,13 +469,33 @@ input {
 
 @media only screen and (min-width: 400px) {
   .inputPin {
-    position: relative;
-    padding: 1rem;
+    position: absolute;
+    padding-left: 3rem;
+    padding-right: 3rem;
     font-size: 20px; 
     text-align: left;
-    height: 50vh;
-    bottom: 50vh;
-    width: 100%;
+    height: 40vh;
+    bottom: 28vh;
+    /* width: 100%; */
+    z-index: 5000;
+    border-radius: 15px;
+    background-color:#4F0521;
+    overflow: hidden;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+
+  .ViewPinInfo {
+    position: absolute;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 20px; 
+    width: 80%;
+    text-align: left;
+    height: 40vh;
+    bottom: 28vh;
     z-index: 5000;
     border-radius: 15px;
     background-color:#4F0521;

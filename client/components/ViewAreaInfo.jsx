@@ -16,19 +16,21 @@ class ViewAreaInfo extends React.Component {
       return pin.area_id === this.props.areaId
     })
     return (
-      <div>
+      <div className='viewInfo'>
         <h3> Area Information </h3>
-        {pinArr.map(pin => {
-          return (
-            <div key={pin.pin_id}>
-              <h4> pin name </h4>
-              <p> {pin.pin_name} </p>
-              <img src={emotionReturn(pin.emotion_type, true)}/>
-              <h4>Comments</h4>
-              <p> {pin.comment} </p>
-            </div>
-          )
-        })}
+        <div className='ViewAreaInfo'>
+          {pinArr.map(pin => {
+            return (
+              <div key={pin.pin_id}>
+                <h4> pin name </h4>
+                <p> {pin.pin_name} </p>
+                <img src={emotionReturn(pin.emotion_type, true)}/>
+                <h4>Comments</h4>
+                <p> {pin.comment} </p>
+              </div>
+            )
+          })}
+        </div>
       </div>
 
     )
