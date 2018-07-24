@@ -11,7 +11,7 @@
     "knex": "knex --knexfile ./server/db/knexfile.js",
     "test": "jest --watchAll",
     "start": "node server",
-    "postinstall": "webpack && knex migrate:latest"
+    "postinstall": "postinstall"
   },
   "babel": {
     "presets": [
@@ -19,6 +19,7 @@
       "react"
     ]
   },
+  "postinstall": "webpack && knex migrate:latest",
   "dependencies": {
     "@turf/turf": "^5.1.6",
     "anime": "^0.1.2",
