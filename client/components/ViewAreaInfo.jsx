@@ -4,7 +4,7 @@ import {emotionReturn} from '../lib/emotionReturn'
 import {getpins} from '../actions/pins'
 import {removeAreaId} from '../actions/areas'
 
-class ViewAreaInfo extends React.Component {
+export class ViewAreaInfo extends React.Component {
   componentDidMount () {
     this.props.dispatch(getpins())
   }
