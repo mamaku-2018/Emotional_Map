@@ -11,7 +11,6 @@ class ViewPins extends React.Component {
       <div>
         <ViewFilterEmotion/>
         <ViewPinMap/>
-        
         {typeof this.props.onePinInfo.pin_name === 'string' && <ViewPinInfo/>}
       </div>
     )
