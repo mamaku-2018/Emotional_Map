@@ -5,7 +5,7 @@ import {Map, TileLayer, Marker} from 'react-leaflet'
 import AddPinInfo from './AddPinInfo'
 import {getIcons} from '../lib/getIcons'
 
-class RealMap extends React.Component {
+export class RealMap extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
