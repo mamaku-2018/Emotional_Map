@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid transparent
+  border: 0.5px solid red;
 }
 
  /* GLOBAL CSS */
@@ -520,13 +520,20 @@ input {
   overflow: scroll;
 }
 
+.pinName {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  height: auto;
+  width: 80%;
+  float: right;
+}
 
-
-
-
-
-
-
+.comments {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(221, 196, 196);
+  padding: 0 0 0 20%;
+}
 
 /* MEDIA QUERIES */
 
