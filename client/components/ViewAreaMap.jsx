@@ -31,11 +31,12 @@ class ViewAreaMap extends React.Component {
       <div id='addPage'>
         <Map className="map"
           center={[-36.8484, 174.7622]}
+          style={{height: '100vh'}}
           zoom={13}
         >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            url='https://api.mapbox.com/styles/v1/caitlynbayley/cjjz5qbg30rno2sp1672pkjun/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2FpdGx5bmJheWxleSIsImEiOiJjamp6Mm54ajYwMnp1M2tvOW1hOXFpOGQ2In0.jPESzZHHCsCCNOJka8GAlQ'
           />
           { this.props.area.map(area => {
             return <Polygon key={area.area_id} positions={area.positions} onClick={() => { this.showInfo(area) }} />
