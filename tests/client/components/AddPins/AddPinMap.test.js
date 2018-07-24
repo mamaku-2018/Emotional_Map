@@ -18,3 +18,9 @@ test('renders a map', () => {
   const wrapper = shallow(<RealMap dispatch = {mockFn} />)
   expect(wrapper.find(Map).length).toEqual(1)
 })
+
+test('onclick fires', () => {
+  const wrapper = shallow(<RealMap dispatch = {mockFn} />)
+  wrapper.find('Map').simulate('click')
+  expect(wrapper.find('.clicks').length).toEqual(1)
+})
