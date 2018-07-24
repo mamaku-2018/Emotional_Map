@@ -1,25 +1,374 @@
-/* * {
+* {
   box-sizing: border-box;
-  border: 0.5px solid transparent;
+  border: 0.5px solid transparent
+}
+
+ /* GLOBAL CSS */
+ 
+html, body {
+  max-width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+ }
+
+
+#app .container .add-container #addMap #addPage{
+  height: 100vh;
+} 
+
+.add-container {
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* LAUNCH PAGE  */
+
+.launch-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #4F0521;
+} 
+
+.launch-page {
+  position: relative;
+  background-color: #4F0521;
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  display: block;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 50%;
+  background-size: contain;
+  z-index: 5000;
+}
+
+.about {
+  height: 560px;
+}
+
+#myCarousel {
+  width: fixed;
+  height: auto;
+  background: #4F0521;
+  margin-top: 20%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0;
+}
+.carousel-item active {
+  z-index: -1;
+}
+
+.first-slide {
+  width: fixed;
+  height: auto;
+  z-index: 10;
+}
+
+#slide1 {
+  margin:0;
+  padding: 0;
+}
+
+#slide1 h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align:center;
+  font-weight:bold;
+  margin:0;
+  padding: 0;
+}
+
+#slide1 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align:center;
+  margin: 0;
+  padding: 2% 0 2% 0;
+}
+
+.sf {
+  color: #D37D52
+}
+
+#slide2 {
+  margin:0;
+  padding: 0;
+}
+
+#slide2 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align:left;
+  font-weight:bold;
+  margin:0;
+  padding: 2% 0 2% 0;
+}
+
+#slide2 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align:left;
+  margin: 0;
+  padding: 0;
+}
+
+#slide3 {
+  margin:0;
+  padding: 0;
+}
+
+#slide3 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align:right;
+  font-weight:bold;
+  margin:0;
+  padding: 2% 0 2% 0;
+}
+
+#slide3 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align:right;
+  margin: 0;
+  padding: 0;
+}
+
+.launchbuttons {
+  position: absolute;
+  display: inline-block;
+  background-color: #4F0521;
+  width: 100%;
+  height: 50px;
+  margin: 5 10 0 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  color: #E4DFDA;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #D37D52 ;
+  color: #4F0521;
+}
+
+#launchShareButt{
+  position: absolute;
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  margin-left: 60%;
+  background-color: #C1666B;
+  color: #E4DFDA;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+#launchExploreButt {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  width: 30%;
+  margin-left: 9%;
+  height: 100%;
+  background-color: #C1666B;
+  color: #E4DFDA;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 2px 3px rgb(56, 40, 41);
+}
+
+#launchShareButt:hover{
+  background-color: #D37D52 ;
+  color: #4F0521;
+  text-align: center;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#launchExploreButt:hover{
+  background-color: #D37D52 ;
+  color: #4F0521;
+  text-align: center;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Responsive text on carousal */
+
+@media (min-width: 300px) {
+.launch-page .d-md-block {
+    display: block!important;
+    }
+}
+
+@media (max-width: 480px) {
+.launch-page #slide1 h1 {
+    color: transparent
+  }
+.launch-page #slide1 p {
+    font-size: 25px;
+  }
+.launch-page #slide2 h1 {
+    font-size: 28px;
+  }
+.launch-page #slide2 p {
+    font-size: 25px;
+  }
+.launch-page #slide3 h1 {
+    font-size: 28px;
+  }
+.launch-page  #slide3 p {
+    font-size: 25px;
+  }
+}
+
+/* VIEW PIN INFO */
+
+.ViewPinInfo {
+  text-align: left;
+  font-size: 20px; 
+  height: 25vh;
+  bottom: 25vh;
+  z-index: 5000;
+  margin: 0, auto;
+}
+/* NAV BAR */
+
+img.nav-icon {
+  height: 5rem;
+  border: 2px solid #AD9191;
+}
+
+/* img.logo {
+  height: 4rem;
+  float: right;
+  display: inline-block;
+  position: relative;
+  z-index: 600000;
 } */
 
-
-#app .container .main-container #addMap #addPage {
-  height: 100vh;
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 6000;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
-/* INPUT FORM  */
+
+ul {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0.75rem;
+  overflow: hidden;
+  background-color: #4F0521;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+li {
+  float: left; 
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #ad9191;
+}
+a:focus, a:hover {
+  color: #D37D52;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* VIEW PIN MAP */
+
+#viewPins {
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+}
+
+.viewMap  {
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+}
+
+.addMap {
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+}
+
+.leaflet-container { 
+  height: 100vh; 
+  width: 100vw;
+  text-align: center;
+  position: relative;
+  overflow: auto;
+}
+
+.leaflet-popup-content-wrapper {
+  text-align: center;
+}
+
+/* ADD PAGE FORM */
+
+input {
+  width: 100%;
+}
 
 .InputPinForm {
+  font-family: 'Roboto', sans-serif;
   text-align: left;
   font-size: 20px; 
 }
-
- html body .map {
-  height: 100vh;
-  width: 100vw;
-}
-
-
 
 #addPage {
   display: block;
@@ -30,24 +379,192 @@
   100% {bottom:25vh;}
 }
 
-/* The element to apply the animation to */
+.inputPin select {
+  color: #4F0521;
+  border: 2px solid #AD9191;
+  margin-left: 1rem;
+
+}
+
+.inputPin button {
+  color: #4F0521;
+  border: 2px solid #AD9191;
+  margin-top: 1rem;
+}
+
+.inputPin h3 {
+  color: #AD9191;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom:5px solid #AD9191;
+}
+
+.inputPin label {
+  text-align: right;
+  clear: both;
+  float:left;
+  margin-right:15px;
+  color: #AD9191;
+  margin: 0;
+}
+
 .inputPin {
-  height: 25vh;
-  bottom: 25vh;
+  position: absolute;
+  padding: 1rem;
+  font-size: 20px; 
+  text-align: left;
+  height: 50vh;
+  bottom: 26vh;
+  width: 100%;
   z-index: 5000;
-  margin: 0, auto;
-  position: relative;
-  background-color:#deffff;
+  border-radius: 15px;
+  background-color:#4F0521;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
   animation-name: slide;
   animation-duration: 2s;
 }
 
-/* ADDBUTTON on /VIEW */
+/* VIEW PIN INFO */
 
-.addButton {
+.ViewPinInfo {
+  position: absolute;
+  display: inline-block;
+  width: 80%;
+  height: 40vh;
+  bottom: 60vh;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: left;
+  font-size: 20px; 
+  border-radius: 15px;
+  position: relative;
+  background-color:#4F0521;
+  animation-name: slide;
+  animation-duration: 2s;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
   z-index: 5000;
-  position: fixed;
-  top: 0;
-  right: 0;
-  border: 3px solid red;
+}
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:25vh;}
+}
+
+.ViewPinInfo h3 {
+  color: #AD9191;
+  margin: 0;
+  margin-bottom: 1rem;
+  border-bottom:5px solid #AD9191;
+}
+.ViewPinInfo p {
+  color: #AD9191;
+  margin: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 400px) {
+  .inputPin {
+    position: absolute;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 20px; 
+    text-align: left;
+    height: 40vh;
+    bottom: 28vh;
+    /* width: 100%; */
+    z-index: 5000;
+    border-radius: 15px;
+    background-color:#4F0521;
+    overflow: hidden;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+
+  .ViewPinInfo {
+    position: absolute;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 20px; 
+    width: 80%;
+    text-align: left;
+    height: 40vh;
+    bottom: 28vh;
+    z-index: 5000;
+    border-radius: 15px;
+    background-color:#4F0521;
+    overflow: hidden;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+  /* .navbar-brand img {
+    width: 22%; 
+  }
+
+  .field.has-addons {
+    width: 60%; */
+
+}  
+
+@media only screen and (min-width: 640px) {
+  .navbar-brand img {
+    width: 18%; 
+  }
+
+  .field.has-addons {
+    width: 40%;
+  }  
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }  
+
+  .navbarmenu .button {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .companyList {
+    text-align: left;
+  }
+
+  .companyList ul {
+    text-align: left; 
+  }
+
+  .companyList h3 {
+    margin-left: 1rem;
+  }
+
+  .field.has-addons {
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .about p {
+    font-size: 1.6rem;
+  }  
+}
+
+@media only screen and (min-width: 900px) {
+  .navbar-brand img {
+    width: 15%; 
+  }
 }
