@@ -33,7 +33,7 @@ class ViewFilterEmotion extends React.Component {
 
   render () {
     return (
-      <div className='ViewFilterEmotion'>
+      <div className='ViewFilterEmotion pull-right'>
         <label>Emotion:
           <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
             <option value='1'>Happy</option>
