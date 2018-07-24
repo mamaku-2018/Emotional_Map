@@ -18,6 +18,10 @@ html, body {
   height: 100vh;
 } 
 
+.add-container {
+  text-align: center;
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -345,6 +349,7 @@ a:focus, a:hover {
 .leaflet-container { 
   height: 100vh; 
   width: 100vw;
+  text-align: center;
   position: relative;
   overflow: auto;
 }
@@ -404,12 +409,12 @@ input {
 }
 
 .inputPin {
-  position: relative;
+  position: absolute;
   padding: 1rem;
   font-size: 20px; 
   text-align: left;
-  height: 60vh;
-  bottom: 80vh;
+  height: 50vh;
+  bottom: 26vh;
   width: 100%;
   z-index: 5000;
   border-radius: 15px;
@@ -424,8 +429,10 @@ input {
 /* VIEW PIN INFO */
 
 .ViewPinInfo {
-  height: 40vh;
-  bottom: 40vh;
+  position: absolute;
+  display: inline-block;
+  /* height: 40vh;
+  bottom: 40vh; */
   padding: 1rem;
   width: 100%;
   text-align: left;
@@ -461,13 +468,14 @@ input {
 
 @media only screen and (min-width: 400px) {
   .inputPin {
-    position: relative;
-    padding: 1rem;
+    position: absolute;
+    padding-left: 3rem;
+    padding-right: 3rem;
     font-size: 20px; 
     text-align: left;
-    height: 50vh;
-    bottom: 50vh;
-    width: 100%;
+    height: 40vh;
+ bottom: 28vh;
+    width: 70%;
     z-index: 5000;
     border-radius: 15px;
     background-color:#4F0521;
