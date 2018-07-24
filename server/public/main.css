@@ -385,6 +385,15 @@ a:focus, a:hover {
   text-decoration: none;
 }
 
+#home-icon {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+#areas-icon {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
 /* VIEW PIN MAP */
 
 #viewPins {
