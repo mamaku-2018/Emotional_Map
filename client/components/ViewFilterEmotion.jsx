@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {setFileterEmotion, keepPins} from '../actions/pins'
-import {emotionReturn} from '../lib/emotionReturn'
 
 class ViewFilterEmotion extends React.Component {
   constructor (props) {
@@ -40,7 +39,6 @@ class ViewFilterEmotion extends React.Component {
             <option value='2'>Sad</option>
             <option value='3'>Mad</option>
             <option value='4'>Scared</option>
-            <img src='/images/Scared.png'/>
             <option value='5'>Powerful</option>
             <option value='6'>Peaceful</option>
             <option value='99'>ALL</option>
