@@ -1,13 +1,15 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import ViewPinMap from './ViewPinMap'
+import ViewFilterEmotion from './ViewFilterEmotion'
 import ViewPinInfo from './ViewPinInfo'
 import {removeOnePin} from '../actions/pins'
 
 class ViewPins extends React.Component {
   render () {
     return (
-      <div id='viewPins'>
+      <div>
+        <ViewFilterEmotion/>
         <ViewPinMap/>
         {typeof this.props.onePinInfo.pin_name === 'string' && <ViewPinInfo/>}
       </div>
