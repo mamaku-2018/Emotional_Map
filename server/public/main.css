@@ -147,6 +147,56 @@ html, body {
   padding: 0;
 }
 
+#slide4 {
+  margin:0;
+  padding: 0;
+}
+
+#slide4 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align:left;
+  font-weight:bold;
+  margin:0;
+  padding: 2% 0 2% 0;
+}
+
+#slide4 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align:left;
+  margin: 0;
+  padding: 0;
+}
+
+#slide5 {
+  margin:0;
+  padding: 0;
+}
+
+#slide5 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align:right;
+  font-weight:bold;
+  margin:0;
+  padding: 2% 0 2% 0;
+}
+
+#slide5 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align:right;
+  margin: 0;
+  padding: 0;
+}
+
+.launch-page ul {
+  width: 100%
+}
+
+
+/* BUTTONS NOT CURRENTLY BEING USED
 .launchbuttons {
   position: absolute;
   display: inline-block;
@@ -215,7 +265,7 @@ button:hover {
   color: #4F0521;
   text-align: center;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
+} */
 
 /* Responsive text on carousal */
 
@@ -244,6 +294,18 @@ button:hover {
 .launch-page  #slide3 p {
     font-size: 25px;
   }
+  .launch-page #slide4 h1 {
+    font-size: 28px;
+  }
+.launch-page #slide4 p {
+    font-size: 25px;
+  }
+  .launch-page #slide5 h1 {
+    font-size: 28px;
+  }
+.launch-page #slide5 p {
+  font-size: 28px;
+}
 }
 
 /* VIEW PIN INFO */
