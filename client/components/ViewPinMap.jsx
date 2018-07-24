@@ -40,7 +40,8 @@ class ViewPinMap extends React.Component {
 }
 const mapStateToProps = (state) => {
   if (state.pinInfo.length > 0) {
-    return {pinInfo: state.pinInfo
+    return {
+      pinInfo: state.pinInfo
     }
   } else {
     return {pinInfo: []}
