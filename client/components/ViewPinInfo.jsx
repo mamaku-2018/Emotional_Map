@@ -13,8 +13,11 @@ class ViewPinInfo extends React.Component {
         <p>{emotInfo.name}</p>
         {/* <p>{this.props.onePinInfo.emotion_type}</p> */}
         <p>{this.props.onePinInfo.comment}</p>
-        <div className='PinInfo'>
-        </div>
+        <button className='closeButton'
+
+        >
+          Close
+        </button>
       </div>
     )
   }
