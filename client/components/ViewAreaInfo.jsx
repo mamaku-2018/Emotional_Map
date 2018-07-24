@@ -15,6 +15,7 @@ class ViewAreaInfo extends React.Component {
     let pinArr = this.props.pinInfo.filter(pin => {
       return pin.area_id === this.props.areaId
     })
+    
     return (
       <div className='viewInfo'>
         <h3> Area Information </h3>
