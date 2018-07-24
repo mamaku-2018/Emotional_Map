@@ -40,6 +40,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #4F0521;
+  border-radius: 25px;
 } 
 
 .launch-page {
