@@ -20,11 +20,6 @@ test('renders a map', () => {
   expect(wrapper.find(Map).length).toEqual(1)
 })
 
-test('renders a map', () => {
-  const wrapper = shallow(<RealMap dispatch = {mockFn} />)
-  expect(wrapper.find(Map).length).toEqual(1)
-})
-
 test('state changes', () => {
   const wrapper = shallow(<RealMap dispatch = {mockFn} />)
   expect(wrapper.state('lat')).toEqual('')
@@ -33,7 +28,7 @@ test('state changes', () => {
 })
 
 // test('onclick fires', () => {
-//   const 
+//   const
 //   const wrapper = shallow(<RealMap />)
 //   expect(wrapper.find('addMarker').length).toEqual(0)
 //   wrapper.find('Map').simulate('click')

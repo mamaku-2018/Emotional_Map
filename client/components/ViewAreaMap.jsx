@@ -5,7 +5,7 @@ import {Polygon, Map, TileLayer} from 'react-leaflet'
 import {getAreas, receiveAreaId} from '../actions/areas'
 import ViewAreaInfo from './ViewAreaInfo'
 
-class ViewAreaMap extends React.Component {
+export class ViewAreaMap extends React.Component {
   constructor (props) {
     super(props)
 
