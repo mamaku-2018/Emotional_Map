@@ -1,25 +1,42 @@
-
-export function emotionReturn(id) {
-  var iconUrl = ""
+export function emotionReturn (id, value) {
+  var iconUrl = ''
   switch (id) {
     case 1:
-      iconUrl = '/images/Happy.png'
+      iconUrl = {
+        path: '/images/Happy.png',
+        name: 'Happy'
+      }
       break
     case 2:
-      iconUrl = '/images/Sad.png'
+      iconUrl = {
+        path: '/images/Sad.png',
+        name: 'Sad'
+      }
       break
     case 3:
-      iconUrl = '/images/Mad.png'
+      iconUrl = {
+        path: '/images/Mad.png',
+        name: 'Mad'
+      }
       break
     case 4:
-      iconUrl = '/images/Scared.png'
+      iconUrl = {
+        path: '/images/Scared.png',
+        name: 'Scared'
+      }
       break
     case 5:
-      iconUrl = '/images/Powerful.png'
+      iconUrl = {
+        path: '/images/Powerful.png',
+        name: 'Powerful'
+      }
       break
     case 6:
-      iconUrl = '/images/Peaceful.png'
+      iconUrl = {
+        path: '/images/Peaceful.png',
+        name: 'Peaceful'
+      }
       break
   }
-  return iconUrl
+  if (value) { return iconUrl.path } else { return iconUrl }
 }
