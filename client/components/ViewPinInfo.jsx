@@ -13,7 +13,7 @@ class ViewPinInfo extends React.Component {
         <p>{this.props.onePinInfo.last_updated_date}</p>
         <img src={emotInfo.path} alt={emotInfo.name}/>
         <p>{emotInfo.name}</p>
-        <p>{this.props.onePinInfo.emotion_type}</p>
+        {/* <p>{this.props.onePinInfo.emotion_type}</p> */}
         <p>{this.props.onePinInfo.comment}</p>
         <div className='PinInfo'>
         </div>
