@@ -4,8 +4,17 @@ import {Link} from 'react-router-dom'
 const LaunchButtons = () => {
   return (
     <div className='launchbuttons'>
-      <p> <Link to='/add' className='btn btn-lg btn-success'>SHARE</Link> </p>
-      <p> <Link to='/view' className='btn btn-lg btn-success'>EXPLORE</Link> </p>
+      <Link to='/add' className='button' id='launchShareButt'>
+        <button type='button'>
+        share
+        </button>
+      </Link>
+
+      <Link to='/view' className='button' id='launchExploreButt'>
+        <button type='button'>
+        explore
+        </button>
+      </Link>
     </div>
   )
 }

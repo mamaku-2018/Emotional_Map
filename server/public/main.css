@@ -1,51 +1,279 @@
 * {
   box-sizing: border-box;
-  /* border: 0.5px solid red; */
+  border: 0.5px solid transparent
 }
 
- html, body {
+ /* GLOBAL CSS */
+ 
+html, body {
   max-width: 100%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  /* background-color: #4F0521; */
  }
 
- .container {
-  position: relative; 
-  margin: 0;
-  padding: 0;
-}
 
 #app .container .add-container #addMap #addPage{
   height: 100vh;
 } 
 
-#app .container .view-container #viewPins #viewMap{
-  height: 100vh;
+.add-container {
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* LAUNCH PAGE  */
+
+.launch-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #4F0521;
 } 
 
-#app .jumbotron {
-  background-color: #AD9191;
-  height: 100vh;
-}  
+.launch-page {
+  position: relative;
+  background-color: #4F0521;
+  width: 100%;
+}
 
+.logo {
+  position: absolute;
+  display: block;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 50%;
+  background-size: contain;
+  z-index: 5000;
+}
+
+.about {
+  height: 560px;
+}
+
+#myCarousel {
+  width: fixed;
+  height: auto;
+  background: #4F0521;
+  margin-top: 20%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0;
+}
+.carousel-item active {
+  z-index: -1;
+}
+
+.first-slide {
+  width: fixed;
+  height: auto;
+  z-index: 10;
+}
+
+#slide1 {
+  margin:0;
+  padding: 0;
+}
+
+#slide1 h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align:center;
+  font-weight:bold;
+  margin:0;
+  padding: 0;
+}
+
+#slide1 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align:center;
+  margin: 0;
+  padding: 2% 0 2% 0;
+}
+
+.sf {
+  color: #D37D52
+}
+
+#slide2 {
+  margin:0;
+  padding: 0;
+}
+
+#slide2 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align:left;
+  font-weight:bold;
+  margin:0;
+  padding: 2% 0 2% 0;
+}
+
+#slide2 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align:left;
+  margin: 0;
+  padding: 0;
+}
+
+#slide3 {
+  margin:0;
+  padding: 0;
+}
+
+#slide3 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align:right;
+  font-weight:bold;
+  margin:0;
+  padding: 2% 0 2% 0;
+}
+
+#slide3 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align:right;
+  margin: 0;
+  padding: 0;
+}
+
+.launchbuttons {
+  position: absolute;
+  display: inline-block;
+  background-color: #4F0521;
+  width: 100%;
+  height: 50px;
+  margin: 5 10 0 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  color: #E4DFDA;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #D37D52 ;
+  color: #4F0521;
+}
+
+#launchShareButt{
+  position: absolute;
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  margin-left: 60%;
+  background-color: #C1666B;
+  color: #E4DFDA;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+#launchExploreButt {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  width: 30%;
+  margin-left: 9%;
+  height: 100%;
+  background-color: #C1666B;
+  color: #E4DFDA;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 2px 3px rgb(56, 40, 41);
+}
+
+#launchShareButt:hover{
+  background-color: #D37D52 ;
+  color: #4F0521;
+  text-align: center;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#launchExploreButt:hover{
+  background-color: #D37D52 ;
+  color: #4F0521;
+  text-align: center;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Responsive text on carousal */
+
+@media (min-width: 300px) {
+.launch-page .d-md-block {
+    display: block!important;
+    }
+}
+
+@media (max-width: 480px) {
+.launch-page #slide1 h1 {
+    color: transparent
+  }
+.launch-page #slide1 p {
+    font-size: 25px;
+  }
+.launch-page #slide2 h1 {
+    font-size: 28px;
+  }
+.launch-page #slide2 p {
+    font-size: 25px;
+  }
+.launch-page #slide3 h1 {
+    font-size: 28px;
+  }
+.launch-page  #slide3 p {
+    font-size: 25px;
+  }
+}
+
+/* VIEW PIN INFO */
+
+.ViewPinInfo {
+  text-align: left;
+  font-size: 20px; 
+  height: 25vh;
+  bottom: 25vh;
+  z-index: 5000;
+  margin: 0, auto;
+}
 /* NAV BAR */
 
 img.nav-icon {
-  height: 4rem;
+  height: 5rem;
   border: 2px solid #AD9191;
-
 }
 
-img.logo {
+/* img.logo {
   height: 4rem;
   float: right;
-  display: block;
+  display: inline-block;
   position: relative;
   z-index: 600000;
-}
+} */
 
 .navbar {
   overflow: hidden;
@@ -63,10 +291,11 @@ img.logo {
 
 ul {
   font-family: 'Roboto', sans-serif;
+  text-align: center;
   display: inline-block;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 0.75rem;
   overflow: hidden;
   background-color: #4F0521;
   filter: alpha(opacity=80);
@@ -78,10 +307,10 @@ li {
 }
 
 li a {
-  display: block;
+  display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.5rem;
   text-decoration: none;
 }
 
@@ -120,9 +349,9 @@ a:focus, a:hover {
 .leaflet-container { 
   height: 100vh; 
   width: 100vw;
+  text-align: center;
   position: relative;
   overflow: auto;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .leaflet-popup-content-wrapper {
@@ -180,12 +409,12 @@ input {
 }
 
 .inputPin {
-  position: relative;
+  position: absolute;
   padding: 1rem;
   font-size: 20px; 
   text-align: left;
-  height: 60vh;
-  bottom: 60vh;
+  height: 50vh;
+  bottom: 26vh;
   width: 100%;
   z-index: 5000;
   border-radius: 15px;
@@ -200,10 +429,13 @@ input {
 /* VIEW PIN INFO */
 
 .ViewPinInfo {
+  position: absolute;
+  display: inline-block;
+  width: 80%;
   height: 40vh;
-  bottom: 40vh;
+  bottom: 60vh;
   padding: 1rem;
-  width: 100%;
+  margin: 2rem;
   text-align: left;
   font-size: 20px; 
   border-radius: 15px;
@@ -237,13 +469,33 @@ input {
 
 @media only screen and (min-width: 400px) {
   .inputPin {
-    position: relative;
-    padding: 1rem;
+    position: absolute;
+    padding-left: 3rem;
+    padding-right: 3rem;
     font-size: 20px; 
     text-align: left;
-    height: 50vh;
-    bottom: 50vh;
-    width: 100%;
+    height: 40vh;
+    bottom: 28vh;
+    /* width: 100%; */
+    z-index: 5000;
+    border-radius: 15px;
+    background-color:#4F0521;
+    overflow: hidden;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+
+  .ViewPinInfo {
+    position: absolute;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 20px; 
+    width: 80%;
+    text-align: left;
+    height: 40vh;
+    bottom: 28vh;
     z-index: 5000;
     border-radius: 15px;
     background-color:#4F0521;
@@ -274,8 +526,12 @@ input {
 
 @media only screen and (min-width: 800px) {
   .container {
-    height: 100vh;
-  }
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }  
 
   .navbarmenu .button {
     width: 6rem;

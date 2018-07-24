@@ -12,15 +12,15 @@ class ViewAreas extends React.Component {
   render () {
     return (
       <div>
-      <ViewAreaMap/>
-      {typeof this.props.areaId === 'number' && <ViewAreaInfo/>}
+        <ViewAreaMap/>
+        {typeof this.props.areaId === 'number' && <ViewAreaInfo/>}
       </div>
     )
   }
 }
 const mapStateToProps = (state) => {
   return {
-    areaId: state.areaId,
+    areaId: state.areaId
   }
 }
-export default connect(mapStateToProps) (ViewAreas)
+export default connect(mapStateToProps)(ViewAreas)
