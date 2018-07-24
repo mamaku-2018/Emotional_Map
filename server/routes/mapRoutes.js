@@ -60,7 +60,6 @@ router.get('/viewArea', (req, res) => {
               return parseFloat(int)
             })) // NOTE* need to turn
           })
-
         }
       }))
     })
