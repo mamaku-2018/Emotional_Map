@@ -431,10 +431,11 @@ input {
 .ViewPinInfo {
   position: absolute;
   display: inline-block;
-  /* height: 40vh;
-  bottom: 40vh; */
+  width: 80%;
+  height: 40vh;
+  bottom: 60vh;
   padding: 1rem;
-  width: 100%;
+  margin: 2rem;
   text-align: left;
   font-size: 20px; 
   border-radius: 15px;
@@ -474,8 +475,27 @@ input {
     font-size: 20px; 
     text-align: left;
     height: 40vh;
- bottom: 28vh;
-    width: 70%;
+    bottom: 28vh;
+    /* width: 100%; */
+    z-index: 5000;
+    border-radius: 15px;
+    background-color:#4F0521;
+    overflow: hidden;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+
+  .ViewPinInfo {
+    position: absolute;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 20px; 
+    width: 80%;
+    text-align: left;
+    height: 40vh;
+    bottom: 28vh;
     z-index: 5000;
     border-radius: 15px;
     background-color:#4F0521;
