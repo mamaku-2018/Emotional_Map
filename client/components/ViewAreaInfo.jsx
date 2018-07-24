@@ -5,10 +5,10 @@ import {getpins} from '../actions/pins'
 import {removeAreaId} from '../actions/areas'
 
 class ViewAreaInfo extends React.Component {
-  componentDidMount(){
+  componentDidMount () {
     this.props.dispatch(getpins())
   }
-  componentWillUnmount(){
+  componentWillUnmount () {
     this.props.dispatch(removeAreaId())
   }
   render () {
@@ -23,7 +23,7 @@ class ViewAreaInfo extends React.Component {
             <div key={pin.pin_id}>
               <h4> pin name </h4>
               <p> {pin.pin_name} </p>
-              <img src={emotionReturn(pin.emotion_type)}/>
+              <img src={emotionReturn(pin.emotion_type, true)}/>
               <h4>Comments</h4>
               <p> {pin.comment} </p>
             </div>
@@ -38,8 +38,7 @@ const mapStateToProps = (state) => {
   if (state.pinInfo.length > 0) {
     return {
       pinInfo: state.pinInfo,
-      areaId:  state.areaId
-
+      areaId: state.areaId
 
     }
   } else {

@@ -51,25 +51,26 @@ export class AddPinInfo extends React.Component {
     } else {
       return (
         <div className='inputPin'>
-          <h3>Add Pin</h3>
+          <h3>share your street feel</h3>
           <div className='InputPinForm'>
-            <label>Pin name:</label>
-            <input onChange={this.changeHandler} name='name' />
-            <label>Emotion:
+            <label>name:</label>
+            <input onChange={this.changeHandler} name='name' placeholder='name your experience'/>
+            <label>feeling:
               <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
-                <option value='1'>Joyful</option>
+                <option value='1'>Happy</option>
                 <option value='2'>Sad</option>
                 <option value='3'>Mad</option>
                 <option value='4'>Scared</option>
                 <option value='5'>Powerful</option>
                 <option value='6'>Peaceful</option>
               </select>
-              <br />
             </label>
-            <label>Comments:</label>
-            <input onChange={this.changeHandler} name='comment' />
+            <br />
+            <label>musings:</label>
+            <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
           </div>
+
         </div>
       )
     }
@@ -84,5 +85,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(AddPinInfo)
-
-// export default connect()(AddPinInfo)
