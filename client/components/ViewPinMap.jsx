@@ -4,7 +4,7 @@ import {Map, TileLayer, Marker} from 'react-leaflet'
 import {getpins, getOnePin} from '../actions/pins'
 import {getIcons} from '../lib/getIcons'
 
-class ViewPinMap extends React.Component {
+export class ViewPinMap extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
