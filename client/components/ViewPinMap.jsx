@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Map, TileLayer, Marker} from 'react-leaflet'
+import {Map, TileLayer, Marker, Polygon} from 'react-leaflet'
 import {getpins, getOnePin} from '../actions/pins'
+import {getAreas} from '../actions/areas'
 import {getIcons} from '../lib/getIcons'
 
 export class ViewPinMap extends React.Component {
@@ -14,6 +15,7 @@ export class ViewPinMap extends React.Component {
   }
   componentDidMount () {
     this.props.dispatch(getpins())
+    this.props.dispatch(getAreas())
   }
 
   pullPin (pin) {
@@ -35,6 +37,10 @@ export class ViewPinMap extends React.Component {
           {this.props.pinInfo.map(pin => {
             return <Marker key={pin.pin_id} onClick={() => { this.pullPin(pin) }} icon={getIcons(pin.emotion_type)} position={[pin.pin_lat, pin.pin_long]} />
           })}
+
+          { this.props.area.map(area => {
+            return <Polygon key={area.area_id} positions={area.positions} />
+          }) }
         </Map>
 
       </div>
@@ -43,12 +49,18 @@ export class ViewPinMap extends React.Component {
   }
 }
 const mapStateToProps = (state) => {
-  if (state.pinInfo.length > 0) {
+  var tmpArea = []
+  let tmpPinInfo = []
+  if (state.areasInfo.length > 0 && state.pinInfo.length > 0) {
     return {
+      area: state.areasInfo,
       pinInfo: state.pinInfo
     }
   } else {
-    return {pinInfo: []}
+    return {
+      area: tmpArea,
+      pinInfo: tmpPinInfo
+    }
   }
 }
 
