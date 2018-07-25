@@ -13,6 +13,9 @@ export const RECIEVE_ONE_PIN = 'RECIEVE_ONE_PIN'
 export const RECEIVE_PIN_COLOUR = 'RECEIVE_PIN_COLOUR'
 export const REMOVE_ONE_PIN = 'REMOVE_ONE_PIN'
 export const REMOVE_PIN_COLOUR = 'REMOVE_PIN_COLOUR'
+export const REMOVE_PIN_FORM = 'REMOVE_PIN_FORM'
+export const SHOW_INFO = 'SHOW_INFO'
+export const SHOW_PIN_FORM = 'SHOW_PIN_FORM'
 
 export const sendPinPosition = (position) => {
   return {
@@ -129,7 +132,7 @@ export const receivePinColour = (pinColour) => {
   }
 }
 
-export  const removeOnePin = () => {
+export const removeOnePin = () => {
   return {
     type: REMOVE_ONE_PIN
   }
@@ -138,5 +141,12 @@ export  const removeOnePin = () => {
 export const removePinColour = () => {
   return {
     type: REMOVE_PIN_COLOUR
+  }
+}
+
+export const removePinForm = (val) => {
+  return {
+    type: REMOVE_PIN_FORM,
+    showAddInfo: val
   }
 }

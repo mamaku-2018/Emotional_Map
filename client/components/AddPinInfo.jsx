@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addPin, receivePinColour} from '../actions/pins'
+import {addPin, receivePinColour, removePinForm} from '../actions/pins'
 import {Redirect} from 'react-router-dom'
 import {isPolygon} from '../lib/isPolygon'
 import {getAreas} from '../actions/areas'
@@ -13,16 +13,19 @@ export class AddPinInfo extends React.Component {
       emotionType: 0,
       comment: '',
       areaId: 0,
-      redirect: false,
-      close: false
+      redirect: false
     }
 
     this.submitHandler = this.submitHandler.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
-    this.closeInfo = this.closeInfo.bind(this)
+    this.closeFrom = this.closeFrom.bind(this)
   }
   componentDidMount () {
     this.props.dispatch(getAreas())
+  }
+
+  closeFrom () {
+    this.props.dispatch(removePinForm(true))
   }
   changeHandler (e) {
     this.setState({
@@ -32,13 +35,6 @@ export class AddPinInfo extends React.Component {
       this.props.dispatch(receivePinColour(e.target.value))
     }
   }
-
-  closeInfo () {
-    this.setState({
-      close: true
-    })
-  }
-
   submitHandler () {
     const areaId = isPolygon(this.props.pinPosition.lat, this.props.pinPosition.lng, this.props.area)
     const pin = {
@@ -49,6 +45,7 @@ export class AddPinInfo extends React.Component {
       comment: this.state.comment,
       areaId: areaId
     }
+
     this.props.dispatch(addPin(pin))
     this.setState({redirect: true})
   }
@@ -59,31 +56,28 @@ export class AddPinInfo extends React.Component {
       )
     } else {
       return (
-        <div>
-          {!this.state.close
-            ? <div className='inputPin'>
-              <h3>share your street feel</h3>
-              <div className='InputPinForm'>
-                <label>name:</label>
-                <input onChange={this.changeHandler} name='name' placeholder='name your experience'/>
-                <label>feeling:
-                  <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
-                    <option value='1'>Happy</option>
-                    <option value='2'>Sad</option>
-                    <option value='3'>Mad</option>
-                    <option value='4'>Scared</option>
-                    <option value='5'>Powerful</option>
-                    <option value='6'>Peaceful</option>
-                  </select>
-                </label>
-                <br />
-                <label>musings:</label>
-                <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
-                <button className='button' onClick={this.submitHandler}>SUBMIT</button>
-                <button className='button' onClick={this.closeInfo}>Close</button>
-              </div>
-            </div>
-            : null}
+        <div className='inputPin'>
+          <h3>share your street feel</h3>
+          <div className='InputPinForm'>
+            <label>name:</label>
+            <input onChange={this.changeHandler} name='name' placeholder='name your experience'/>
+            <label>feeling:
+              <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
+                <option value='1'>Happy</option>
+                <option value='2'>Sad</option>
+                <option value='3'>Mad</option>
+                <option value='4'>Scared</option>
+                <option value='5'>Powerful</option>
+                <option value='6'>Peaceful</option>
+              </select>
+            </label>
+            <br />
+            <label>musings:</label>
+            <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
+            <button className='button' onClick={this.submitHandler}>SUBMIT</button>
+            <button className='button' onClick={this.closeFrom}> close </button>
+          </div>
+
         </div>
       )
     }
