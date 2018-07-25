@@ -1,9 +1,6 @@
 {
   "name": "EmotionalMap",
   "version": "1.0.0",
-  "engines": {
-    "node": "8.9.4"
-  },
   "main": "index.js",
   "repository": "https://github.com/mamaku-2018/Emotional_Map.git",
   "author": "sungjin-shane <sjpark731015@gmail.com>",
@@ -52,9 +49,6 @@
     "babel-register": "^6.26.0",
     "react-redux": "^5.0.6",
     "superagent": "^3.8.2"
-
-
-
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
