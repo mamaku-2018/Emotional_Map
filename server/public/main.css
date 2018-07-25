@@ -283,6 +283,7 @@ html, body {
   height: 50px;
   padding: 1% 2% 1% 0;
   margin: 2% 18% 0 0;
+  margin-top: 0;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -506,7 +507,7 @@ input {
   width: 80%;
   height: 40vh;
   bottom: 26vh;
-  padding: 0 1% 1% 1%;
+  padding: 1rem;
   margin: 2rem;
   text-align: left;
   font-size: 20px; 
@@ -559,7 +560,7 @@ input {
 }
 
 .closeIcon {
-  width: 15%;
+  width: 1.5rem;
   float: right;
 }
 
@@ -571,6 +572,7 @@ input {
   width: 100%;
   background-color: transparent;
   float: right;
+  padding-top: 1rem;
 }
 
 .inputPin .hidepin {
@@ -580,12 +582,12 @@ input {
 }
 
 .inputPin h3 {
-  margin-top: 10%;
+  margin-top: 1rem;
 }
 
 .hidepin .closeIcon {
   width: 2.5rem;
-  margin-right: 4%;
+  padding-right: 1rem;
 }
 /* AREA PAGE */
 
@@ -594,7 +596,8 @@ input {
   width: 25%;
   height: 40vh;
   bottom: 26vh;
-  padding: 2rem;
+  padding: 1rem;
+  padding-top: 0rem; 
   margin-right: 70%;
   margin-left: 5%;
   text-align: left;
@@ -668,7 +671,6 @@ input {
 
   .ViewPinInfo {
     position: absolute;
-    padding-left: 2rem;
     padding-right: 2rem;
     font-size: 20px; 
     width: 30%;
