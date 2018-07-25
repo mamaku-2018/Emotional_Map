@@ -535,11 +535,11 @@ input {
 
 .ViewAreaInfo {
   position: absolute;
-  width: 30%;
+  width: 25%;
   height: 40vh;
   bottom: 26vh;
   padding: 2rem;
-  margin-right: 75%;
+  margin-right: 70%;
   margin-left: 5%;
   text-align: left;
   font-size: 20px; 
@@ -639,6 +639,15 @@ input {
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .ViewAreaInfo {
+    width: 85%;
+    margin-left: 8%;
+    margin-right: 5%;
+    padding: 0.75rem;
+  }
+}
+
 @media only screen and (max-width: 750px) {
 #myCarousel {
   max-width: 590px;
@@ -687,4 +696,5 @@ input {
   .navbar-brand img {
     width: 15%; 
   }
+}
 }
