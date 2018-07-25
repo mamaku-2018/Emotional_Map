@@ -112,18 +112,19 @@ html, body {
 
 .addCarousal {
   margin-right: 35%;
-  z-index: 5000%;
   width: 202px;
+  z-index: 5000;
 }
 
 .viewCarousal {
   z-index: 5000%;
   width: 202px;
-}
+
 
 .areaCarousal {
   z-index: 5000%;
   width: 202px;
+
 }
 
 #slide2 {
