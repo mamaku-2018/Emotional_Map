@@ -6,7 +6,7 @@ import {getAreas, getPinsByAreaId, removePinsByAreaId} from '../actions/areas'
 import ViewAreaInfo from './ViewAreaInfo'
 import {getIcons, setPolyColor} from '../lib/getIcons'
 
-class ViewAreaMap extends React.Component {
+export class ViewAreaMap extends React.Component {
   constructor (props) {
     super(props)
 
