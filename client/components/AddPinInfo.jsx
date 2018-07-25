@@ -78,8 +78,7 @@ export class AddPinInfo extends React.Component {
             <br />
             <label>musings:</label>
             <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
-            <button className='button' onClick={this.submitHandler}>SUBMIT</button>
-            <button className='button' onClick={this.closeFrom}> close </button>
+            <button className='button' onClick={this.submitHandler}>submit</button>
           </div>
         </div>
       )
