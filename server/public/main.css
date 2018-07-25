@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid red;
+  border: 0.5px solid transparent;
 }
 
  /* GLOBAL CSS */
@@ -393,6 +393,11 @@ a:focus, a:hover {
   overflow: auto;
 }
 
+.viewInfo {
+ 
+
+}
+
 .leaflet-container { 
   height: 100vh; 
   width: 100vw;
@@ -530,24 +535,28 @@ input {
 
 .ViewAreaInfo {
   position: absolute;
-  display: inline-block;
-  width: 80%;
+  width: 30%;
   height: 40vh;
-  bottom: 60vh;
-  padding: 1rem;
-  margin: 2rem;
+  bottom: 26vh;
+  padding: 2rem;
+  margin-right: 75%;
+  margin-left: 5%;
   text-align: left;
   font-size: 20px; 
   border-radius: 15px;
-  position: relative;
   background-color:#4F0521;
   animation-name: slide;
-  animation-duration: 2s;
+  animation-duration: 4s;
   overflow: hidden;
   filter: alpha(opacity=80);
   opacity: 0.8;
   z-index: 5000;
   overflow: scroll;
+}
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:26vh;}
 }
 
 .pinName {
