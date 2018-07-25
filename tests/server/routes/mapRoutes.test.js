@@ -32,7 +32,7 @@ test('GET /api/v1/map/view/:pinId', () => {
     .expect('Content-Type', /json/)
     .expect(200)
     .then(res => {
-      expect(res.body.length).toBe(1)
+      expect(res.body[0].pin_name).toBe('QueesSt505')
     })
 })
 

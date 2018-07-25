@@ -24,7 +24,7 @@ export class RealMap extends React.Component {
     this.props.dispatch(sendPinPosition(this.state))
     this.props.dispatch(removePinForm(false))
   }
-
+z
   render () {
     return (
       <div className='addMap'>
