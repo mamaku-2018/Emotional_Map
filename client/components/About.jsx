@@ -7,10 +7,12 @@ const About = () => {
         <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
       </ol>
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
-          <img className="first-slide" src="/images/S1.png" alt="First slide"/>
+          <img className="first-slide" src="/images/Slide1.png" alt="First slide"/>
           <div className="container">
             <div className="carousel-caption d-none d-md-block text-left" id='slide1'>
               <h1 className='txt'>streetfeel</h1>
@@ -19,20 +21,38 @@ const About = () => {
           </div>
         </div>
         <div className="carousel-item">
-          <img className="second-slide" src="/images/S2.png" alt="Second slide"/>
+          <img className="second-slide" src="/images/Slide2.png" alt="Second slide"/>
           <div className="container">
-            <div className="carousel-caption d-none d-md-block" id='slide2'>
-              <h1 className='txt'>explore</h1>
+            <div className="carousel-caption d-none d-md-block text-right" id='slide2'>
+              <h1 className='txt'>share</h1>
+              <p className='txt'>click the share button to tag your own emotional response to a space</p>
+            </div>
+          </div>
+        </div>
+        <div className="carousel-item">
+          <img className="third-slide" src="/images/Slide3.png" alt="Third slide"/>
+          <div className="container">
+            <div className="carousel-caption d-none d-md-block" id='slide3'>
+              <h1 className='txt'>explore all</h1>
               <p className='txt'>click explore to view the emotional landscapes that have been mapped by others</p>
             </div>
           </div>
         </div>
         <div className="carousel-item">
-          <img className="third-slide" src="/images/Slide3Trans.png" alt="Third slide"/>
+          <img className="forth-slide" src="/images/Slide4.png" alt="Forth slide"/>
           <div className="container">
-            <div className="carousel-caption d-none d-md-block text-right" id='slide3'>
-              <h1 className='txt'>share</h1>
-              <p className='txt'>click the share button to tag your own emotional response to a space</p>
+            <div className="carousel-caption d-none d-md-block" id='slide4'>
+              <h1 className='txt'>explore by area</h1>
+              <p className='txt'>click to explore the emotional experiences by area</p>
+            </div>
+          </div>
+        </div>
+        <div className="carousel-item">
+          <img className="fifth-slide" src="/images/Slide5.png" alt="Fifth slide"/>
+          <div className="container">
+            <div className="carousel-caption d-none d-md-block" id='slide5'>
+              <h1 className='txt'>explore by emotion</h1>
+              <p className='txt'>click to explore the map by using the emotional filter</p>
             </div>
           </div>
         </div>
