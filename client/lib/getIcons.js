@@ -43,8 +43,26 @@ export function setPolyColor (id) {
     case 2:
       polyColor = 'blue'
       break
+    case 3:
+      polyColor = 'white'
+      break
+    case 4:
+      polyColor = 'yellow'
+      break
+    case 5:
+      polyColor = 'orange'
+      break
+    case 6:
+      polyColor = 'navy'
+      break
+    case 7:
+      polyColor = 'black'
+      break
+    case 8:
+      polyColor = 'navy'
+      break
 
-    default:
+    default: polyColor = 'gray'
   }
   return polyColor
 }

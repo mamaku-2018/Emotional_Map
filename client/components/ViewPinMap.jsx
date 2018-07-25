@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Map, TileLayer, Marker, Polygon} from 'react-leaflet'
+import {Map, TileLayer, Marker, Polygon, Popup, Tooltip} from 'react-leaflet'
 import {getpins, getOnePin} from '../actions/pins'
 import {getAreas} from '../actions/areas'
 import {getIcons, setPolyColor} from '../lib/getIcons'
@@ -24,23 +24,6 @@ export class ViewPinMap extends React.Component {
   }
 
   render () {
-    let style = (id) => {
-      id = parseInt(id)
-      let polyColor = ''
-
-      switch (id) {
-        case 1:
-          polyColor = 'red'
-          break
-        case 2:
-          polyColor = 'blue'
-          break
-
-        default:
-      }
-      return polyColor
-    }
-
     return (
       <div className='viewMap'>
         <Map className ="map"
@@ -51,13 +34,21 @@ export class ViewPinMap extends React.Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='https://api.mapbox.com/styles/v1/caitlynbayley/cjjz5qbg30rno2sp1672pkjun/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2FpdGx5bmJheWxleSIsImEiOiJjamp6Mm54ajYwMnp1M2tvOW1hOXFpOGQ2In0.jPESzZHHCsCCNOJka8GAlQ'
           />
+
           {this.props.pinInfo.map(pin => {
-            return <Marker key={pin.pin_id} onClick={() => { this.pullPin(pin) }} icon={getIcons(pin.emotion_type)} position={[pin.pin_lat, pin.pin_long]} />
+            return <Marker key={pin.pin_id} onClick={() => { this.pullPin(pin) }} icon={getIcons(pin.emotion_type)} position={[pin.pin_lat, pin.pin_long]}>
+              <Tooltip>{pin.comment}</Tooltip>
+            </Marker>
           })}
 
           { this.props.area.map(area => {
-            return <Polygon key={area.area_id} positions={area.positions} color={setPolyColor(area.area_id)} />
-          }) }
+            return <Polygon key={area.area_id} positions={area.positions} color={setPolyColor(area.area_id)} >
+              <Popup>
+                {area.area_name}
+              </Popup>
+            </Polygon>
+          })}
+
         </Map>
 
       </div>
