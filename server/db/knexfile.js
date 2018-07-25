@@ -1,66 +1,57 @@
-// Update with your config settings.
 const path = require('path')
 
-module.exports = {
+const defaults = {
+  migrations: {
+    tableName: 'knex_migrations',
+    directory: path.join(__dirname, '/migrations')
+  }
+}
 
-  development: {
-    client: 'sqlite3',
-    connection: {
-      filename: path.join(__dirname, './dev.sqlite3')
-    },
-    migrations: {
-      directory: path.join(__dirname, './migrations')
-    },
-    seeds: {
-      directory: path.join(__dirname, '../../tests/server/db/seeds')
-    },
-    useNullAsDefault: true
+const sqliteDefaults = Object.assign({
+  client: 'sqlite3',
+  useNullAsDefault: true,
+  seeds: {
+    directory: path.join(__dirname, '../../test/server/db/seeds')
   },
+  pool: {
+    afterCreate: (conn, cb) =>
+      conn.run('PRAGMA foreign_keys = ON', cb)
+  }
+}, defaults)
 
-  test: {
-    client: 'sqlite3',
+const postgresDefaults = Object.assign({
+  client: 'postgresql',
+  pool: {
+    min: 2,
+    max: 10
+  }
+}, defaults)
+
+module.exports = {
+  development: Object.assign({
+    connection: {
+      filename: path.join(__dirname, 'dev.sqlite')
+    }
+  }, sqliteDefaults),
+
+  test: Object.assign({
     connection: {
       filename: ':memory:'
-    },
-    migrations: {
-      directory: path.join(__dirname, './migrations')
-    },
-    seeds: {
-      directory: path.join(__dirname, '../../tests/server/db/seeds')
-    },
-    useNullAsDefault: true
-  },
+    }
+  }, sqliteDefaults),
 
-  staging: {
-    client: 'postgresql',
+  staging: Object.assign({
     connection: {
       database: 'my_db',
       user: 'username',
       password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
     }
-  },
+  }, postgresDefaults),
 
-  production: {
-    client: 'postgresql',
-    connection: process.env.Database_URL,
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    },
+  production: Object.assign({
+    connection: process.env.DATABASE_URL,
     seeds: {
-      directory: path.join(__dirname, '../../tests/server/db/seeds')
-    },
-    useNullAsDefault: true
-  }
-
+      directory: path.join(__dirname, '../../test/server/db/seeds')
+    }
+  }, postgresDefaults)
 }
