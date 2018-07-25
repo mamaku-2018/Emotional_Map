@@ -58,12 +58,12 @@ export class AddPinInfo extends React.Component {
             <input onChange={this.changeHandler} name='name' placeholder='name your experience'/>
             <label>feeling:
               <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
-                <option value='1'>Happy</option>
-                <option value='2'>Sad</option>
-                <option value='3'>Mad</option>
-                <option value='4'>Scared</option>
-                <option value='5'>Powerful</option>
-                <option value='6'>Peaceful</option>
+                <option value='1'>happy</option>
+                <option value='2'>sad</option>
+                <option value='3'>mad</option>
+                <option value='4'>scared</option>
+                <option value='5'>powerful</option>
+                <option value='6'>peaceful</option>
               </select>
             </label>
             <br />
