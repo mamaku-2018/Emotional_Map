@@ -14,7 +14,7 @@
     "knex": "knex --knexfile ./server/db/knexfile.js",
     "test": "jest --watchAll",
     "start": "node server",
-    "postinstall": "yarn build && yarn knex migrate:latest"
+    "postinstall": "yarn npm build && knex migrate:latest"
   },
   "babel": {
     "presets": [
