@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid red;
+  border: 0.5px solid transparent;
 }
 
  /* GLOBAL CSS */
@@ -350,6 +350,19 @@ a:focus, a:hover {
   text-decoration: none;
 }
 
+.leaflet-bar a {
+  background-color: #4F0521;
+
+}
+
+.leaflet-control-zoom-in {
+ background-color: #D37D52;
+}
+
+.leaflet-control-zoom-out {
+
+}
+
 /* VIEW PIN MAP */
 
 #viewPins {
@@ -553,6 +566,12 @@ input {
   color: rgb(221, 196, 196);
   padding: 0 0 0 20%;
   overflow: scroll;
+}
+
+.leaflet-interactive {
+  stroke: #D37D52;
+  fill: #D37D52;
+  fill-opacity: .4;
 }
 
 /* MEDIA QUERIES */
