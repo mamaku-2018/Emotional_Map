@@ -13,7 +13,7 @@ class HidePinInfo extends React.Component {
   render () {
     return (
       <div>
-        <button className='hidepin' onClick={this.hidePin}>Close</button>
+        <button className='hidepin' onClick={this.hidePin}><img src='/images/close.png' className='closeIcon'/></button>
       </div>
     )
   }

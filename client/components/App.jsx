@@ -20,7 +20,6 @@ const App = () => {
           <Route exact path='/' component={Launch} />
         </div>
         <div className='view-container'>
-          <Route path='/' component={Nav}/>
           <Route path='/view' component={ViewPins}/>
         </div>
         <div className='add-container'>

@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid transparent
+  border: 0.5px solid transparent;
 }
 
  /* GLOBAL CSS */
@@ -40,6 +40,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #4F0521;
+  border-radius: 25px;
 } 
 
 .launch-page {
@@ -47,12 +48,12 @@ html, body {
   background-color: #4F0521;
   width: 100%;
   height: 100%;
+  margin-bottom: -50px; 
 }
 
 .logo {
   position: absolute;
   display: block;
-  margin-top: 2%;
   margin-left: 3%;
   width: 65%;
   background-size: contain;
@@ -67,7 +68,7 @@ html, body {
   width: fixed;
   height: auto;
   background: #4F0521;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-bottom: 5%;
   margin-left: 10%;
   margin-right: 10%;
@@ -107,6 +108,23 @@ html, body {
 
 .sf {
   color: rgb(231, 167, 136);
+}
+
+.addCarousal {
+  margin-right: 35%;
+  width: 202px;
+  z-index: 5000;
+}
+
+.viewCarousal {
+  z-index: 5000%;
+  width: 202px;
+}
+
+.areaCarousal {
+  z-index: 5000%;
+  width: 202px;
+
 }
 
 #slide2 {
@@ -205,78 +223,6 @@ html, body {
   width: 100%
 }
 
-
-/* BUTTONS NOT CURRENTLY BEING USED
-.launchbuttons {
-  position: absolute;
-  display: inline-block;
-  background-color: #4F0521;
-  width: 100%;
-  height: 50px;
-  margin: 5 10 0 0;
-  padding: 0;
-}
-
-button {
-  background-color: transparent;
-  color: #E4DFDA;
-  text-align: center;
-}
-
-button:hover {
-  background-color: #D37D52 ;
-  color: #4F0521;
-}
-
-#launchShareButt{
-  position: absolute;
-  display: inline-block;
-  width: 30%;
-  height: 100%;
-  margin-left: 60%;
-  background-color: #C1666B;
-  color: #E4DFDA;
-  padding: 0;
-  text-align: center;
-  text-decoration: none;
-  font-size: 25px;
-  border-radius: 8px;
-  padding: 4px;
-}
-
-#launchExploreButt {
-  position: absolute;
-  display: inline-block;
-  text-align: center;
-  padding: 0;
-  width: 30%;
-  margin-left: 9%;
-  height: 100%;
-  background-color: #C1666B;
-  color: #E4DFDA;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  border-radius: 8px;
-  padding: 5px;
-  box-shadow: 0 2px 3px rgb(56, 40, 41);
-}
-
-#launchShareButt:hover{
-  background-color: #D37D52 ;
-  color: #4F0521;
-  text-align: center;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-#launchExploreButt:hover{
-  background-color: #D37D52 ;
-  color: #4F0521;
-  text-align: center;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-} */
-
 /* Responsive text on carousal */
 
 @media (min-width: 300px) {
@@ -328,6 +274,47 @@ button:hover {
   z-index: 5000;
   margin: 0, auto;
 }
+
+/* FILTER BY EMOTION */
+
+.ViewFilterEmotion {
+  float: right;
+  width: 250px;
+  height: 50px;
+  padding: 1% 2% 1% 0;
+  margin: 2% 18% 0 0;
+  margin-top: 0;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  z-index: 5000;
+}
+
+.ViewFilterEmotion label {
+  float:right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #ad9191;
+}
+
+.ViewFilterEmotion select {
+  font-family: Arial, Helvetica, sans-serif;
+  float:right;
+  font-size: 20px;
+  margin: 0 0 0 0;
+  background-color: #ad9191;
+  color: rgb(71, 4, 30);
+}
+
+.leaflet-popup-content-wrapper {
+  text-align: center;
+} 
+
+.emo {
+  color: #ad9191;
+}
+
 /* NAV BAR */
 
 img.nav-icon {
@@ -385,6 +372,11 @@ a:focus, a:hover {
   text-decoration: none;
 }
 
+.leaflet-bar a {
+  background-color: #4F0521;
+
+}
+
 #home-icon {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -394,6 +386,13 @@ a:focus, a:hover {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+
+.col-md-12 {
+  padding: 0; 
+  background-color: transparent;
+  border: none;
+}
+
 /* VIEW PIN MAP */
 
 #viewPins {
@@ -429,6 +428,10 @@ a:focus, a:hover {
   text-align: center;
 }
 
+.col-md-12 {
+  background-color: transparent;
+  border: transparent;
+}
 /* ADD PAGE FORM */
 
 input {
@@ -517,20 +520,132 @@ input {
   filter: alpha(opacity=80);
   opacity: 0.8;
   z-index: 5000;
+  overflow: scroll
 }
 
 .ViewPinInfo h3 {
-  color: #AD9191;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E4DFDA;
   margin: 0;
   margin-bottom: 1rem;
-  border-bottom:5px solid #AD9191;
+  border-bottom:5px solid #E4DFDA;
+  width: 80%;
+  float: right;
 }
 .ViewPinInfo p {
   color: #AD9191;
   margin: 0;
 }
 
+.commentsView {
+  width: 100%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(221, 196, 196);
+  padding: 0 0 0 20%;
+  overflow: scroll;
+}
+
+.viewEmo {
+  margin: 0 0 0 2%;
+}
+
+.hidepin {
+  position: absolute;
+  background-color: transparent;
+  z-index: 5000;
+  margin: 0;
+  float: right;
+  width: 100%;
+}
+
+.closeIcon {
+  width: 1.5rem;
+  float: right;
+}
+
+.ViewPinInfoBox {
+  margin: 10% 0 0 0;
+}
+
+.hidearea {
+  width: 100%;
+  background-color: transparent;
+  float: right;
+  padding-top: 1rem;
+}
+
+.inputPin .hidepin {
+  border: transparent;
+  margin-right: 2%;
+  margin-top: 0;
+}
+
+.inputPin h3 {
+  margin-top: 1rem;
+}
+
+.hidepin .closeIcon {
+  width: 2.5rem;
+  padding-right: 1rem;
+}
+/* AREA PAGE */
+
+.ViewAreaInfo {
+  position: absolute;
+  width: 25%;
+  height: 40vh;
+  bottom: 26vh;
+  padding: 1rem;
+  padding-top: 0rem; 
+  margin-right: 70%;
+  margin-left: 5%;
+  text-align: left;
+  font-size: 20px; 
+  border-radius: 15px;
+  background-color:#4F0521;
+  animation-name: slide;
+  animation-duration: 4s;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  z-index: 5000;
+  overflow: scroll;
+}
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:26vh;}
+}
+
+.pinName {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E4DFDA;
+  margin-bottom: 1rem;
+  border-bottom:5px solid #E4DFDA;
+  height: auto;
+  width: 80%;
+  float: right;
+}
+
+.comments {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(221, 196, 196);
+  padding: 0 0 0 20%;
+  overflow: scroll;
+}
+
+.leaflet-interactive {
+  stroke: #D37D52;
+  fill: #D37D52;
+  fill-opacity: .4;
+}
+
 /* MEDIA QUERIES */
+
+/* MIN-WIDTH */
 
 @media only screen and (min-width: 400px) {
   .inputPin {
@@ -557,7 +672,6 @@ input {
 
   .ViewPinInfo {
     position: absolute;
-    padding-left: 2rem;
     padding-right: 2rem;
     font-size: 20px; 
     width: 30%;
@@ -579,6 +693,8 @@ input {
   }
 }
 
+/* MAX-WIDTH */
+
 @media only screen and (max-width: 320px) {
   img.nav-icon {
   height: 4rem;
@@ -586,17 +702,20 @@ input {
   margin-top: 0.5rem;
   margin-bottom: 0.75rem;
   }
+}
+
+@media only screen and (max-width: 375px) {
+  .ViewAreaInfo {
+    width: 85%;
+    margin-left: 8%;
+    margin-right: 5%;
+    padding: 0.75rem;
   }
+}
 
-
-@media only screen and (min-width: 640px) {
-  .navbar-brand img {
-    width: 18%; 
-  }
-
-  .field.has-addons {
-    width: 40%;
-  }  
+@media only screen and (max-width: 750px) {
+#myCarousel {
+  max-width: 590px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -642,4 +761,5 @@ input {
   .navbar-brand img {
     width: 15%; 
   }
+}
 }
