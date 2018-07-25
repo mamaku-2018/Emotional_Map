@@ -15,7 +15,7 @@ class HideAddPin extends React.Component {
   render () {
     return (
       <div>
-        <button className='hidepin' onClick={this.hidePinForm}>Close</button>
+        <button className='hidepin' onClick={this.hidePinForm}><img src='/images/close.png' className='closeIcon'/></button>
       </div>
     )
   }
