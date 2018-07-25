@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid transparent;
 }
 
  /* GLOBAL CSS */
@@ -119,8 +118,8 @@ html, body {
 .viewCarousal {
   z-index: 5000%;
   width: 202px;
-}
 
+}
 .areaCarousal {
   z-index: 5000%;
   width: 202px;
