@@ -59,7 +59,7 @@ export class AddPinInfo extends React.Component {
       return (
         <div className='inputPin'>
           <div className='AddPinClose'>
-            <HideAddPin />
+            <button className='button' onClick={this.closeFrom}><img src='/images/close.png' className='closeIcon'/></button>
           </div>
           <h3>share your street feel</h3>
           <div className='InputPinForm'>
@@ -79,7 +79,6 @@ export class AddPinInfo extends React.Component {
             <label>musings:</label>
             <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
-            <button className='button' onClick={this.closeFrom}> close </button>
           </div>
         </div>
       )
