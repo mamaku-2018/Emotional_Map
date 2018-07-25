@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid transparent
+  border: 0.5px solid red;
 }
 
  /* GLOBAL CSS */
@@ -204,78 +204,6 @@ html, body {
 .launch-page ul {
   width: 100%
 }
-
-
-/* BUTTONS NOT CURRENTLY BEING USED
-.launchbuttons {
-  position: absolute;
-  display: inline-block;
-  background-color: #4F0521;
-  width: 100%;
-  height: 50px;
-  margin: 5 10 0 0;
-  padding: 0;
-}
-
-button {
-  background-color: transparent;
-  color: #E4DFDA;
-  text-align: center;
-}
-
-button:hover {
-  background-color: #D37D52 ;
-  color: #4F0521;
-}
-
-#launchShareButt{
-  position: absolute;
-  display: inline-block;
-  width: 30%;
-  height: 100%;
-  margin-left: 60%;
-  background-color: #C1666B;
-  color: #E4DFDA;
-  padding: 0;
-  text-align: center;
-  text-decoration: none;
-  font-size: 25px;
-  border-radius: 8px;
-  padding: 4px;
-}
-
-#launchExploreButt {
-  position: absolute;
-  display: inline-block;
-  text-align: center;
-  padding: 0;
-  width: 30%;
-  margin-left: 9%;
-  height: 100%;
-  background-color: #C1666B;
-  color: #E4DFDA;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  border-radius: 8px;
-  padding: 5px;
-  box-shadow: 0 2px 3px rgb(56, 40, 41);
-}
-
-#launchShareButt:hover{
-  background-color: #D37D52 ;
-  color: #4F0521;
-  text-align: center;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-#launchExploreButt:hover{
-  background-color: #D37D52 ;
-  color: #4F0521;
-  text-align: center;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-} */
 
 /* Responsive text on carousal */
 
@@ -560,17 +488,77 @@ input {
   filter: alpha(opacity=80);
   opacity: 0.8;
   z-index: 5000;
+  overflow: scroll;
+
 }
 
 .ViewPinInfo h3 {
-  color: #AD9191;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E4DFDA;
   margin: 0;
   margin-bottom: 1rem;
-  border-bottom:5px solid #AD9191;
+  border-bottom:5px solid #E4DFDA;
+  width: 80%;
+  float: right;
 }
 .ViewPinInfo p {
   color: #AD9191;
   margin: 0;
+}
+
+.commentsView {
+  width: 100%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(221, 196, 196);
+  padding: 0 0 0 20%;
+  overflow: scroll;
+}
+
+.viewEmo {
+  margin: 0 0 0 2%;
+}
+/* AREA PAGE */
+
+.ViewAreaInfo {
+  position: absolute;
+  display: inline-block;
+  width: 80%;
+  height: 40vh;
+  bottom: 60vh;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: left;
+  font-size: 20px; 
+  border-radius: 15px;
+  position: relative;
+  background-color:#4F0521;
+  animation-name: slide;
+  animation-duration: 2s;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  z-index: 5000;
+  overflow: scroll;
+}
+
+.pinName {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E4DFDA;
+  margin-bottom: 1rem;
+  border-bottom:5px solid #E4DFDA;
+  height: auto;
+  width: 80%;
+  float: right;
+}
+
+.comments {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(221, 196, 196);
+  padding: 0 0 0 20%;
+  overflow: scroll;
 }
 
 /* MEDIA QUERIES */
