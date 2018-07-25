@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid transparent;
+  /* border: 0.5px solid transparent; */
 }
 
  /* GLOBAL CSS */
@@ -500,6 +500,12 @@ input {
   100% {bottom:26vh;}
 }
 
+.button {
+  background-color: transparent;
+  margin-bottom: 2%;
+  float: right;
+}
+
 /* VIEW PIN INFO */
 
 .ViewPinInfo {
@@ -558,6 +564,7 @@ input {
   margin: 0;
   float: right;
   width: 100%;
+  border: transparent;
 }
 
 .closeIcon {
@@ -590,6 +597,11 @@ input {
   width: 2.5rem;
   padding-right: 1rem;
 }
+
+.inputPin .button {
+ color: #ad9191;
+}
+
 /* AREA PAGE */
 
 .ViewAreaInfo {
@@ -641,6 +653,10 @@ input {
   stroke: #D37D52;
   fill: #D37D52;
   fill-opacity: .4;
+}
+
+.hidearea {
+  border: transparent;
 }
 
 /* MEDIA QUERIES */
