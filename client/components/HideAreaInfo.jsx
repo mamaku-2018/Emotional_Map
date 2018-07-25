@@ -13,7 +13,7 @@ class HideAreaInfo extends React.Component {
   render () {
     return (
       <div>
-        <button className='hidearea' onClick={this.hidePin}>Close</button>
+        <button className='hidearea' onClick={this.hidePin}><img src='/images/close.png' className='closeIcon'/></button>
       </div>
     )
   }

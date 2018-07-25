@@ -566,6 +566,11 @@ input {
   margin: 10% 0 0 0;
 }
 
+.hidearea {
+  width: 100%;
+  background-color: transparent;
+  float: right;
+}
 /* AREA PAGE */
 
 .ViewAreaInfo {
