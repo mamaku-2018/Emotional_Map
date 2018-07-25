@@ -14,7 +14,7 @@ const About = () => {
           <img className="first-slide" src="/images/Slide1.png" alt="First slide"/>
           <div className="container">
             <div className="carousel-caption d-none d-md-block text-left" id='slide1'>
-              <h1 className='txt'>streetfeel</h1>
+              <h1 className='txt'></h1>
               <p className='txt'><b className='sf'>streelfeel</b> is a digital space to help make sense of our collective emotions and experiences, reflecting particular ways of behaving, thinking and being.</p>
             </div>
           </div>
