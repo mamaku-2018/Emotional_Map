@@ -500,6 +500,17 @@ input {
   100% {bottom:26vh;}
 }
 
+.button {
+    background-color: transparent;
+    margin-bottom: 2%;
+    float: right;
+    border: transparent;
+  }
+
+  .inputPin .button {
+     color: #ad9191;
+    }
+
 /* VIEW PIN INFO */
 
 .ViewPinInfo {
@@ -520,7 +531,8 @@ input {
   filter: alpha(opacity=80);
   opacity: 0.8;
   z-index: 5000;
-  overflow: scroll
+  overflow: scroll;
+  border:transparent;
 }
 
 .ViewPinInfo h3 {

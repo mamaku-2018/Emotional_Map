@@ -4,7 +4,6 @@ import {addPin, receivePinColour, removePinForm} from '../actions/pins'
 import {Redirect} from 'react-router-dom'
 import {isPolygon} from '../lib/isPolygon'
 import {getAreas} from '../actions/areas'
-import HideAddPin from './HideAddPin'
 
 export class AddPinInfo extends React.Component {
   constructor (props) {
@@ -59,7 +58,7 @@ export class AddPinInfo extends React.Component {
       return (
         <div className='inputPin'>
           <div className='AddPinClose'>
-            <HideAddPin />
+            <button className='button' onClick={this.closeFrom}><img src='/images/close.png' className='closeIcon'/></button>
           </div>
           <h3>share your street feel</h3>
           <div className='InputPinForm'>
@@ -79,7 +78,6 @@ export class AddPinInfo extends React.Component {
             <label>musings:</label>
             <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
-            <button className='button' onClick={this.closeFrom}> close </button>
           </div>
         </div>
       )
