@@ -3,8 +3,9 @@ import {connect} from 'react-redux'
 import {emotionReturn} from '../lib/emotionReturn'
 import {getpins} from '../actions/pins'
 import {removeAreaId} from '../actions/areas'
+import HideAreaInfo from './HideAreaInfo'
 
-class ViewAreaInfo extends React.Component {
+export class ViewAreaInfo extends React.Component {
   componentDidMount () {
     this.props.dispatch(getpins())
   }
@@ -18,8 +19,8 @@ class ViewAreaInfo extends React.Component {
 
     return (
       <div className='viewInfo'>
-        <h3> Area Information </h3>
         <div className='ViewAreaInfo'>
+          <HideAreaInfo />
           {pinArr.map(pin => {
             return (
               <div key={pin.pin_id}>

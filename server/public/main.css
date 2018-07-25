@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid red;
+  border: 0.5px solid transparent;
 }
 
  /* GLOBAL CSS */
@@ -40,6 +40,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #4F0521;
+  border-radius: 25px;
 } 
 
 .launch-page {
@@ -47,12 +48,12 @@ html, body {
   background-color: #4F0521;
   width: 100%;
   height: 100%;
+  margin-bottom: -50px; 
 }
 
 .logo {
   position: absolute;
   display: block;
-  margin-top: 2%;
   margin-left: 3%;
   width: 65%;
   background-size: contain;
@@ -67,7 +68,7 @@ html, body {
   width: fixed;
   height: auto;
   background: #4F0521;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-bottom: 5%;
   margin-left: 10%;
   margin-right: 10%;
@@ -107,6 +108,23 @@ html, body {
 
 .sf {
   color: rgb(231, 167, 136);
+}
+
+.addCarousal {
+  margin-right: 35%;
+  width: 202px;
+  z-index: 5000;
+}
+
+.viewCarousal {
+  z-index: 5000%;
+  width: 202px;
+
+}
+.areaCarousal {
+  z-index: 5000%;
+  width: 202px;
+
 }
 
 #slide2 {
@@ -353,6 +371,11 @@ a:focus, a:hover {
   text-decoration: none;
 }
 
+.leaflet-bar a {
+  background-color: #4F0521;
+
+}
+
 #home-icon {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -362,6 +385,13 @@ a:focus, a:hover {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+
+.col-md-12 {
+  padding: 0; 
+  background-color: transparent;
+  border: none;
+}
+
 /* VIEW PIN MAP */
 
 #viewPins {
@@ -450,7 +480,7 @@ input {
   padding: 1rem;
   font-size: 20px; 
   text-align: left;
-  height: 50vh;
+  height: 60vh;
   bottom: 26vh;
   width: 100%;
   z-index: 5000;
@@ -461,6 +491,7 @@ input {
   opacity: 0.8;
   animation-name: slide;
   animation-duration: 2s;
+  
 }
 
 @keyframes slide {
@@ -476,7 +507,7 @@ input {
   width: 80%;
   height: 40vh;
   bottom: 26vh;
-  padding: 1rem;
+  padding: 0 1% 1% 1%;
   margin: 2rem;
   text-align: left;
   font-size: 20px; 
@@ -518,28 +549,71 @@ input {
 .viewEmo {
   margin: 0 0 0 2%;
 }
+
+.hidepin {
+  position: absolute;
+  background-color: transparent;
+  z-index: 5000;
+  margin: 0;
+  float: right;
+  width: 100%;
+}
+
+.closeIcon {
+  width: 15%;
+  float: right;
+}
+
+.ViewPinInfoBox {
+  margin: 10% 0 0 0;
+}
+
+.hidearea {
+  width: 100%;
+  background-color: transparent;
+  float: right;
+}
+
+.inputPin .hidepin {
+  border: transparent;
+  margin-right: 2%;
+  margin-top: 0;
+}
+
+.inputPin h3 {
+  margin-top: 10%;
+}
+
+.hidepin .closeIcon {
+  width: 2.5rem;
+  margin-right: 4%;
+}
 /* AREA PAGE */
 
 .ViewAreaInfo {
   position: absolute;
-  display: inline-block;
-  width: 80%;
+  width: 25%;
   height: 40vh;
-  bottom: 60vh;
-  padding: 1rem;
-  margin: 2rem;
+  bottom: 26vh;
+  padding: 2rem;
+  margin-right: 70%;
+  margin-left: 5%;
   text-align: left;
   font-size: 20px; 
   border-radius: 15px;
-  position: relative;
   background-color:#4F0521;
   animation-name: slide;
-  animation-duration: 2s;
+  animation-duration: 4s;
   overflow: hidden;
   filter: alpha(opacity=80);
   opacity: 0.8;
   z-index: 5000;
   overflow: scroll;
+}
+
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:26vh;}
 }
 
 .pinName {
@@ -560,7 +634,15 @@ input {
   overflow: scroll;
 }
 
+.leaflet-interactive {
+  stroke: #D37D52;
+  fill: #D37D52;
+  fill-opacity: .4;
+}
+
 /* MEDIA QUERIES */
+
+/* MIN-WIDTH */
 
 @media only screen and (min-width: 400px) {
   .inputPin {
@@ -609,6 +691,8 @@ input {
   }
 }
 
+/* MAX-WIDTH */
+
 @media only screen and (max-width: 320px) {
   img.nav-icon {
   height: 4rem;
@@ -616,17 +700,20 @@ input {
   margin-top: 0.5rem;
   margin-bottom: 0.75rem;
   }
+}
+
+@media only screen and (max-width: 375px) {
+  .ViewAreaInfo {
+    width: 85%;
+    margin-left: 8%;
+    margin-right: 5%;
+    padding: 0.75rem;
   }
+}
 
-
-@media only screen and (min-width: 640px) {
-  .navbar-brand img {
-    width: 18%; 
-  }
-
-  .field.has-addons {
-    width: 40%;
-  }  
+@media only screen and (max-width: 750px) {
+#myCarousel {
+  max-width: 590px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -672,4 +759,5 @@ input {
   .navbar-brand img {
     width: 15%; 
   }
+}
 }

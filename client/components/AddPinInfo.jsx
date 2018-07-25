@@ -1,9 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addPin, receivePinColour} from '../actions/pins'
+import {addPin, receivePinColour, removePinForm} from '../actions/pins'
 import {Redirect} from 'react-router-dom'
 import {isPolygon} from '../lib/isPolygon'
 import {getAreas} from '../actions/areas'
+import HideAddPin from './HideAddPin'
 
 export class AddPinInfo extends React.Component {
   constructor (props) {
@@ -18,9 +19,14 @@ export class AddPinInfo extends React.Component {
 
     this.submitHandler = this.submitHandler.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
+    this.closeFrom = this.closeFrom.bind(this)
   }
   componentDidMount () {
     this.props.dispatch(getAreas())
+  }
+
+  closeFrom () {
+    this.props.dispatch(removePinForm(true))
   }
   changeHandler (e) {
     this.setState({
@@ -40,6 +46,7 @@ export class AddPinInfo extends React.Component {
       comment: this.state.comment,
       areaId: areaId
     }
+
     this.props.dispatch(addPin(pin))
     this.setState({redirect: true})
   }
@@ -51,6 +58,9 @@ export class AddPinInfo extends React.Component {
     } else {
       return (
         <div className='inputPin'>
+          <div className='AddPinClose'>
+            <HideAddPin />
+          </div>
           <h3>share your street feel</h3>
           <div className='InputPinForm'>
             <label>name:</label>
@@ -69,8 +79,8 @@ export class AddPinInfo extends React.Component {
             <label>musings:</label>
             <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
+            <button className='button' onClick={this.closeFrom}> close </button>
           </div>
-
         </div>
       )
     }

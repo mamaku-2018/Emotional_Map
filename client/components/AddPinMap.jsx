@@ -1,11 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {sendPinPosition, removePinColour} from '../actions/pins'
+import {sendPinPosition, removePinColour, removePinForm} from '../actions/pins'
 import {Map, TileLayer, Marker} from 'react-leaflet'
 import AddPinInfo from './AddPinInfo'
 import {getIcons} from '../lib/getIcons'
 
-class RealMap extends React.Component {
+export class RealMap extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -19,11 +19,10 @@ class RealMap extends React.Component {
   addMarker (e) {
     this.setState({
       lat: e.latlng.lat,
-      lng: e.latlng.lng,
-      showAddInfo: true
-
+      lng: e.latlng.lng
     })
     this.props.dispatch(sendPinPosition(this.state))
+    this.props.dispatch(removePinForm(false))
   }
 z
   render () {
@@ -43,20 +42,24 @@ z
 
         </Map>
 
-        {this.state.showAddInfo ? <AddPinInfo /> : null}
+        {!this.props.removePinForm ? <AddPinInfo /> : null}
 
       </div>
 
     )
   }
+
   componentWillUnmount () {
     this.props.dispatch(removePinColour())
   }
 }
-const mapDispatchToProps = (state) => {
+
+const mapStateToProps = (state) => {
   return {
+    removePinForm: state.removePinForm,
     pinColour: state.pinColour
+
   }
 }
 // export default RealMap
-export default connect(mapDispatchToProps)(RealMap)
+export default connect(mapStateToProps)(RealMap)
