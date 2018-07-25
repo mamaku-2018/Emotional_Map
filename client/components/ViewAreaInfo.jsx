@@ -20,19 +20,19 @@ export class ViewAreaInfo extends React.Component {
     let percentInfo = getPercentage(pinArr)
     return (
       <div>
-        <div>
-          {percentInfo.pinTotals.map(pin => {
-            return (
-              <div key ={pin.key} >
-                <h5>%{((pin.total / percentInfo.total) * 100).toFixed(1)}</h5>
-                <p>{pin.emotion}</p>
-              </div>
-            )
-          })}
-        </div>
         <div className='viewInfo'>
           <div className='ViewAreaInfo'>
             <HideAreaInfo />
+            <div>
+              {percentInfo.pinTotals.map(pin => {
+                return (
+                  <div key ={pin.key} >
+                    <h5>%{((pin.total / percentInfo.total) * 100).toFixed(0)}</h5>
+                    <p>{pin.emotion}</p>
+                  </div>
+                )
+              })}
+            </div>
             {pinArr.map(pin => {
               return (
                 <div key={pin.pin_id}>
