@@ -301,7 +301,10 @@ html, body {
 img.nav-icon {
   height: 5rem;
   border: 2px solid #AD9191;
+margin-top: 0.5rem;
+margin-bottom: 0.75rem;
 }
+
 .navbar {
   overflow: hidden;
   position: fixed;
@@ -321,8 +324,8 @@ ul {
   text-align: center;
   display: inline-block;
   list-style-type: none;
+  padding-left: 0;
   margin: 0;
-  padding-left: 0.75rem;
   overflow: hidden;
   background-color: #4F0521;
   filter: alpha(opacity=80);
@@ -350,6 +353,15 @@ a:focus, a:hover {
   text-decoration: none;
 }
 
+#home-icon {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+#areas-icon {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
 /* VIEW PIN MAP */
 
 #viewPins {
@@ -405,16 +417,10 @@ input {
   display: block;
 }
 
-@keyframes slide {
-  0%   {bottom:0vh;}
-  100% {bottom:25vh;}
-}
-
 .inputPin select {
   color: #4F0521;
   border: 2px solid #AD9191;
   margin-left: 1rem;
-
 }
 
 .inputPin button {
@@ -457,6 +463,11 @@ input {
   animation-duration: 2s;
 }
 
+@keyframes slide {
+  0%   {bottom:0vh;}
+  100% {bottom:26vh;}
+}
+
 /* VIEW PIN INFO */
 
 .ViewPinInfo {
@@ -464,26 +475,20 @@ input {
   display: inline-block;
   width: 80%;
   height: 40vh;
-  bottom: 60vh;
+  bottom: 26vh;
   padding: 1rem;
   margin: 2rem;
   text-align: left;
   font-size: 20px; 
   border-radius: 15px;
-  position: relative;
   background-color:#4F0521;
   animation-name: slide;
-  animation-duration: 2s;
+  animation-duration: 4s;
   overflow: hidden;
   filter: alpha(opacity=80);
   opacity: 0.8;
   z-index: 5000;
   overflow: scroll
-}
-
-@keyframes slide {
-  0%   {bottom:0vh;}
-  100% {bottom:25vh;}
 }
 
 .ViewPinInfo h3 {
@@ -560,8 +565,6 @@ input {
 @media only screen and (min-width: 400px) {
   .inputPin {
     position: absolute;
-    padding-left: 3rem;
-    padding-right: 3rem;
     font-size: 20px; 
     text-align: left;
     height: 40vh;
@@ -577,12 +580,17 @@ input {
     animation-duration: 2s;
   }
 
+  @keyframes slide {
+    0%   {bottom:0vh;}
+    100% {bottom:28vh;}
+  }
+
   .ViewPinInfo {
     position: absolute;
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 20px; 
-    width: 80%;
+    width: 30%;
     text-align: left;
     height: 40vh;
     bottom: 28vh;
@@ -595,14 +603,21 @@ input {
     animation-name: slide;
     animation-duration: 2s;
   }
-  /* .navbar-brand img {
-    width: 22%; 
+  @keyframes slide {
+    0%   {bottom:0vh;}
+    100% {bottom:28vh;}
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  img.nav-icon {
+  height: 4rem;
+  border: 2px solid #AD9191;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  }
   }
 
-  .field.has-addons {
-    width: 60%; */
-
-}  
 
 @media only screen and (min-width: 640px) {
   .navbar-brand img {
