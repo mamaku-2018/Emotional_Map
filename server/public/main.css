@@ -655,6 +655,10 @@ input {
   fill-opacity: .4;
 }
 
+.hidearea {
+  border: transparent;
+}
+
 /* MEDIA QUERIES */
 
 /* MIN-WIDTH */
