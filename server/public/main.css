@@ -110,6 +110,21 @@ html, body {
   color: rgb(231, 167, 136);
 }
 
+.addCarousal {
+  z-index: 5000%;
+  width: 100%;
+}
+
+.viewCarousal {
+  z-index: 5000%;
+  width: 100%;
+}
+
+.areaCarousal {
+  z-index: 5000%;
+  width: 100%;
+}
+
 #slide2 {
   margin:0;
   padding: 0;
@@ -354,6 +369,11 @@ a:focus, a:hover {
   text-decoration: none;
 }
 
+.leaflet-bar a {
+  background-color: #4F0521;
+
+}
+
 #home-icon {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -575,6 +595,12 @@ input {
   color: rgb(221, 196, 196);
   padding: 0 0 0 20%;
   overflow: scroll;
+}
+
+.leaflet-interactive {
+  stroke: #D37D52;
+  fill: #D37D52;
+  fill-opacity: .4;
 }
 
 /* MEDIA QUERIES */
