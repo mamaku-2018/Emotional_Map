@@ -11,7 +11,7 @@ const sqliteDefaults = Object.assign({
   client: 'sqlite3',
   useNullAsDefault: true,
   seeds: {
-    directory: path.join(__dirname, '../../test/server/db/seeds')
+    directory: path.join(__dirname, '../../tests/server/db/seeds')
   },
   pool: {
     afterCreate: (conn, cb) =>
