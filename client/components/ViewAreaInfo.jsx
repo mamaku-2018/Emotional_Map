@@ -20,27 +20,29 @@ export class ViewAreaInfo extends React.Component {
     let percentInfo = getPercentage(pinArr)
     return (
       <div>
-        {percentInfo.pinTotals.map(pin => {
-          return (
-            <div>
-              <h3> </h3>
-              <p> </p>
-            </div>
-          )
-        })}
-      </div>
-      <div className='viewInfo'>
-        <div className='ViewAreaInfo'>
-          <HideAreaInfo />
-          {pinArr.map(pin => {
+        <div>
+          {percentInfo.pinTotals.map(pin => {
             return (
-              <div key={pin.pin_id}>
-                <p className='pinName'> {pin.pin_name} </p>
-                <img className='areaEmo' src={emotionReturn(pin.emotion_type, true)}/>
-                <p className='comments'> {pin.comment} </p>
+              <div key ={pin.key} >
+                <h5>%{((pin.total / percentInfo.total) * 100).toFixed(1)}</h5>
+                <p>{pin.emotion}</p>
               </div>
             )
           })}
+        </div>
+        <div className='viewInfo'>
+          <div className='ViewAreaInfo'>
+            <HideAreaInfo />
+            {pinArr.map(pin => {
+              return (
+                <div key={pin.pin_id}>
+                  <p className='pinName'> {pin.pin_name} </p>
+                  <img className='areaEmo' src={emotionReturn(pin.emotion_type, true)}/>
+                  <p className='comments'> {pin.comment} </p>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
 

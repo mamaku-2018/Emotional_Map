@@ -10,7 +10,8 @@ export function getPercentage (pins) {
     })
     percentInfo.pinTotals.push({
       total: temp.length,
-      emotion: emotions[i]
+      emotion: emotions[i],
+      key: i
     })
   }
   return percentInfo
