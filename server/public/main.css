@@ -478,7 +478,7 @@ input {
   filter: alpha(opacity=80);
   opacity: 0.8;
   z-index: 5000;
-  overflow: scroll;
+  overflow: scroll
 }
 
 @keyframes slide {
