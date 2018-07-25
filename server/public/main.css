@@ -480,7 +480,7 @@ input {
   padding: 1rem;
   font-size: 20px; 
   text-align: left;
-  height: 50vh;
+  height: 60vh;
   bottom: 26vh;
   width: 100%;
   z-index: 5000;
@@ -491,6 +491,7 @@ input {
   opacity: 0.8;
   animation-name: slide;
   animation-duration: 2s;
+  
 }
 
 @keyframes slide {
