@@ -14,7 +14,7 @@
     "knex": "knex --knexfile ./server/db/knexfile.js",
     "test": "jest --watchAll",
     "start": "node server",
-    "postinstall": "npm build && npm knex --knexfile ./server/db/knexfile.js migrate:latest"
+    "postinstall": "npm run build && npm run knex migrate:latest"
   },
   "babel": {
     "presets": [
