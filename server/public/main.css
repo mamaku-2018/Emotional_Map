@@ -571,6 +571,21 @@ input {
   background-color: transparent;
   float: right;
 }
+
+.inputPin .hidepin {
+  border: transparent;
+  margin-right: 2%;
+  margin-top: 0;
+}
+
+.inputPin h3 {
+  margin-top: 10%;
+}
+
+.hidepin .closeIcon {
+  width: 2.5rem;
+  margin-right: 4%;
+}
 /* AREA PAGE */
 
 .ViewAreaInfo {

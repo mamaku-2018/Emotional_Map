@@ -52,6 +52,9 @@ export class AddPinInfo extends React.Component {
     } else {
       return (
         <div className='inputPin'>
+          <div className='AddPinClose'>
+            <HideAddPin />
+          </div>
           <h3>share your street feel</h3>
           <div className='InputPinForm'>
             <label>name:</label>
@@ -71,7 +74,6 @@ export class AddPinInfo extends React.Component {
             <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
           </div>
-          <HideAddPin />
         </div>
       )
     }
