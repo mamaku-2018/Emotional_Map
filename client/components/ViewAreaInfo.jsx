@@ -18,7 +18,6 @@ class ViewAreaInfo extends React.Component {
 
     return (
       <div className='viewInfo'>
-        <h3> Area Information </h3>
         <div className='ViewAreaInfo'>
           {pinArr.map(pin => {
             return (
