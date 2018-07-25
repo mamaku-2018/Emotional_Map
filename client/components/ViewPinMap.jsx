@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {Map, TileLayer, Marker, Polygon} from 'react-leaflet'
 import {getpins, getOnePin} from '../actions/pins'
 import {getAreas} from '../actions/areas'
-import {getIcons} from '../lib/getIcons'
+import {getIcons, setPolyColor} from '../lib/getIcons'
 
 export class ViewPinMap extends React.Component {
   constructor (props) {
@@ -24,6 +24,23 @@ export class ViewPinMap extends React.Component {
   }
 
   render () {
+    let style = (id) => {
+      id = parseInt(id)
+      let polyColor = ''
+
+      switch (id) {
+        case 1:
+          polyColor = 'red'
+          break
+        case 2:
+          polyColor = 'blue'
+          break
+
+        default:
+      }
+      return polyColor
+    }
+
     return (
       <div className='viewMap'>
         <Map className ="map"
@@ -39,7 +56,7 @@ export class ViewPinMap extends React.Component {
           })}
 
           { this.props.area.map(area => {
-            return <Polygon key={area.area_id} positions={area.positions} />
+            return <Polygon key={area.area_id} positions={area.positions} color={setPolyColor(area.area_id)} />
           }) }
         </Map>
 

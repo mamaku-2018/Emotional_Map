@@ -31,3 +31,20 @@ export function getIcons (id) {
   }
   return myIcon
 }
+
+export function setPolyColor (id) {
+  id = parseInt(id)
+  let polyColor = ''
+
+  switch (id) {
+    case 1:
+      polyColor = 'red'
+      break
+    case 2:
+      polyColor = 'blue'
+      break
+
+    default:
+  }
+  return polyColor
+}
