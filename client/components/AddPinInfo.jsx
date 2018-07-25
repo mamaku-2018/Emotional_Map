@@ -30,6 +30,11 @@ export class AddPinInfo extends React.Component {
       this.props.dispatch(receivePinColour(e.target.value))
     }
   }
+
+  closeInfo () {
+    document.getElementsByClassName = 'inputPin'
+  }
+
   submitHandler () {
     const areaId = isPolygon(this.props.pinPosition.lat, this.props.pinPosition.lng, this.props.area)
     const pin = {
@@ -69,6 +74,7 @@ export class AddPinInfo extends React.Component {
             <label>musings:</label>
             <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
             <button className='button' onClick={this.submitHandler}>SUBMIT</button>
+            <button className='button' onClick={this.closeInfo}>Close</button>
           </div>
 
         </div>
