@@ -18,7 +18,6 @@ export const REMOVE_PIN_FORM = 'REMOVE_PIN_FORM'
 export const SHOW_INFO = 'SHOW_INFO'
 export const SHOW_PIN_FORM = 'SHOW_PIN_FORM'
 
-
 export const sendPinPosition = (position) => {
   return {
     type: SEND_PIN_POSITION,
@@ -140,18 +139,11 @@ export const removeOnePin = () => {
   }
 }
 
-export const removePinForm = () => {
-  return {
-    type: REMOVE_PIN_FORM
-  }
-}
-
 export const removePinColour = () => {
   return {
     type: REMOVE_PIN_COLOUR
   }
 }
-
 
 export const removePinForm = (val) => {
   return {
@@ -159,4 +151,3 @@ export const removePinForm = (val) => {
     showAddInfo: val
   }
 }
-
