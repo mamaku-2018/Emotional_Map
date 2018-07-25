@@ -26,18 +26,3 @@ test('addPin inserts a new pin object', () => {
       expect(typeof (resp)).toBe('number') // return newPinId
     })
 })
-
-// test('get allPins select all pins', () => {
-//   const pin = {
-//     name: 'test',
-//     emotionType: 1,
-//     comment: 'this is test',
-//     areaId: 1,
-//     lat: -36.51319,
-//     long: 174.38107
-//   }
-//   return db.getAllPins()
-//     .then(resp => {
-//       expect(typeof (resp)).toBe('number') // return newPinId
-//     })
-// })

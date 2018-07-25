@@ -639,11 +639,11 @@ input {
   z-index: 5000;
 }
 
-.leaflet-interactive {
+/* .leaflet-interactive {
   stroke: #D37D52;
   fill: #D37D52;
   fill-opacity: .4;
-}
+} */
 
 /* MEDIA QUERIES */
 

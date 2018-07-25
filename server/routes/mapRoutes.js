@@ -71,30 +71,17 @@ router.get('/viewArea', (req, res) => {
     })
 })
 
-router.get('/pinsByArea/:id', (req, res) => {
+router.get('/viewArea/:id', (req, res) => {
   const areaId = req.params.id
-  db.getPinsByAreaId(areaId)
-    .then(pins => {
-      res.json(pins)
+  db.getAreaById(areaId)
+    .then(area => {
+      res.json(area)
     })
     .catch(err => {
       // eslint-disable-next-line
       console.log(err)
-      res.status(500).send('Unable to find pins by areaId')
+      res.status(500).send('Unable to find AreaId')
     })
 })
-
-// router.get('/viewArea/:id', (req, res) => {
-//   const areaId = req.params.id
-//   db.getAreaById(areaId)
-//     .then(area => {
-//       res.json(area)
-//     })
-//     .catch(err => {
-//       // eslint-disable-next-line
-//       console.log(err)
-//       res.status(500).send('Unable to find AreaId')
-//     })
-// })
 
 module.exports = router
