@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import HidePinInfo from './HidePinInfo'
 import {emotionReturn} from '../lib/emotionReturn'
+
 class ViewPinInfo extends React.Component {
   render () {
     const emotInfo = emotionReturn(this.props.onePinInfo.emotion_type)
@@ -13,6 +15,7 @@ class ViewPinInfo extends React.Component {
         {/* <p>{this.props.onePinInfo.emotion_type}</p> */}
         <p className='commentsView'>{this.props.onePinInfo.comment}</p>
         <div className='PinInfo'>
+          <HidePinInfo />
         </div>
       </div>
     )
