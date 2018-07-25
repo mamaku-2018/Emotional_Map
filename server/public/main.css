@@ -478,6 +478,7 @@ input {
   filter: alpha(opacity=80);
   opacity: 0.8;
   z-index: 5000;
+  overflow: scroll;
 }
 
 @keyframes slide {
@@ -486,16 +487,32 @@ input {
 }
 
 .ViewPinInfo h3 {
-  color: #AD9191;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E4DFDA;
   margin: 0;
   margin-bottom: 1rem;
-  border-bottom:5px solid #AD9191;
+  border-bottom:5px solid #E4DFDA;
+  width: 80%;
+  float: right;
 }
 .ViewPinInfo p {
   color: #AD9191;
   margin: 0;
 }
 
+.commentsView {
+  width: 100%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(221, 196, 196);
+  padding: 0 0 0 20%;
+  overflow: scroll;
+}
+
+.viewEmo {
+  margin: 0 0 0 2%;
+}
 /* AREA PAGE */
 
 .ViewAreaInfo {
@@ -523,7 +540,9 @@ input {
 .pinName {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: white;
+  color: #E4DFDA;
+  margin-bottom: 1rem;
+  border-bottom:5px solid #E4DFDA;
   height: auto;
   width: 80%;
   float: right;
@@ -533,6 +552,7 @@ input {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(221, 196, 196);
   padding: 0 0 0 20%;
+  overflow: scroll;
 }
 
 /* MEDIA QUERIES */
