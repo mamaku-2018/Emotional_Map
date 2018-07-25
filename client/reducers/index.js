@@ -5,6 +5,7 @@ import errorMessage from './errorMessage'
 import pinInfo from './pinInfo'
 import onePinInfo from './onePinInfo'
 import pinPosition from './pinPosition'
+import keepPinsInfo from './keepPinsInfo'
 import pinColour from './pinColour'
 import areasInfo from './areasInfo'
 import areaId from './areaId'
@@ -15,6 +16,7 @@ export default combineReducers({
   pinColour,
   onePinInfo,
   pinPosition,
+  keepPinsInfo,
   areasInfo,
   areaId
 })
