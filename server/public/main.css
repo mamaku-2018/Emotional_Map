@@ -496,7 +496,7 @@ input {
   width: 80%;
   height: 40vh;
   bottom: 26vh;
-  padding: 1rem;
+  padding: 0 1% 1% 1%;
   margin: 2rem;
   text-align: left;
   font-size: 20px; 
@@ -538,6 +538,25 @@ input {
 .viewEmo {
   margin: 0 0 0 2%;
 }
+
+.hidepin {
+  position: absolute;
+  background-color: transparent;
+  z-index: 5000;
+  margin: 0;
+  float: right;
+  width: 100%;
+}
+
+.closeIcon {
+  width: 15%;
+  float: right;
+}
+
+.ViewPinInfoBox {
+  margin: 10% 0 0 0;
+}
+
 /* AREA PAGE */
 
 .ViewAreaInfo {
