@@ -4,6 +4,7 @@ import {emotionReturn} from '../lib/emotionReturn'
 import {getpins} from '../actions/pins'
 import {removeAreaId} from '../actions/areas'
 import HideAreaInfo from './HideAreaInfo'
+import {getPercentage} from '../lib/getPercentage'
 
 export class ViewAreaInfo extends React.Component {
   componentDidMount () {
@@ -16,8 +17,18 @@ export class ViewAreaInfo extends React.Component {
     let pinArr = this.props.pinInfo.filter(pin => {
       return pin.area_id === this.props.areaId
     })
-
+    let percentInfo = getPercentage(pinArr)
     return (
+      <div>
+        {percentInfo.pinTotals.map(pin => {
+          return (
+            <div>
+              <h3> </h3>
+              <p> </p>
+            </div>
+          )
+        })}
+      </div>
       <div className='viewInfo'>
         <div className='ViewAreaInfo'>
           <HideAreaInfo />
