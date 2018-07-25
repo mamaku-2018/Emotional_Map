@@ -19,9 +19,9 @@
     ]
   },
   "dependencies": {
+    "@turf/turf": "^5.1.6",
     "anime": "^0.1.2",
     "bootstrap": "^4.1.2",
-    "@turf/turf": "^5.1.6",
     "browserify": "^16.2.2",
     "dotenv": "^6.0.0",
     "express": "^4.16.2",

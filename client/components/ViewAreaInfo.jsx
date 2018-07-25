@@ -5,7 +5,7 @@ import {getpins} from '../actions/pins'
 import {removeAreaId} from '../actions/areas'
 import HideAreaInfo from './HideAreaInfo'
 
-class ViewAreaInfo extends React.Component {
+export class ViewAreaInfo extends React.Component {
   componentDidMount () {
     this.props.dispatch(getpins())
   }

@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {setFileterEmotion, keepPins} from '../actions/pins'
-import {emotionReturn} from '../lib/emotionReturn'
 
 class ViewFilterEmotion extends React.Component {
   constructor (props) {
