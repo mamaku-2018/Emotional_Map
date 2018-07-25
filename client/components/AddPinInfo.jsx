@@ -13,11 +13,13 @@ export class AddPinInfo extends React.Component {
       emotionType: 0,
       comment: '',
       areaId: 0,
-      redirect: false
+      redirect: false,
+      close: false
     }
 
     this.submitHandler = this.submitHandler.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
+    this.closeInfo = this.closeInfo.bind(this)
   }
   componentDidMount () {
     this.props.dispatch(getAreas())
@@ -32,7 +34,9 @@ export class AddPinInfo extends React.Component {
   }
 
   closeInfo () {
-    document.getElementsByClassName = 'inputPin'
+    this.setState({
+      close: true
+    })
   }
 
   submitHandler () {
@@ -55,28 +59,31 @@ export class AddPinInfo extends React.Component {
       )
     } else {
       return (
-        <div className='inputPin'>
-          <h3>share your street feel</h3>
-          <div className='InputPinForm'>
-            <label>name:</label>
-            <input onChange={this.changeHandler} name='name' placeholder='name your experience'/>
-            <label>feeling:
-              <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
-                <option value='1'>Happy</option>
-                <option value='2'>Sad</option>
-                <option value='3'>Mad</option>
-                <option value='4'>Scared</option>
-                <option value='5'>Powerful</option>
-                <option value='6'>Peaceful</option>
-              </select>
-            </label>
-            <br />
-            <label>musings:</label>
-            <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
-            <button className='button' onClick={this.submitHandler}>SUBMIT</button>
-            <button className='button' onClick={this.closeInfo}>Close</button>
-          </div>
-
+        <div>
+          {!this.state.close
+            ? <div className='inputPin'>
+              <h3>share your street feel</h3>
+              <div className='InputPinForm'>
+                <label>name:</label>
+                <input onChange={this.changeHandler} name='name' placeholder='name your experience'/>
+                <label>feeling:
+                  <select value={this.state.value} onChange={this.changeHandler} name='emotionType'>
+                    <option value='1'>Happy</option>
+                    <option value='2'>Sad</option>
+                    <option value='3'>Mad</option>
+                    <option value='4'>Scared</option>
+                    <option value='5'>Powerful</option>
+                    <option value='6'>Peaceful</option>
+                  </select>
+                </label>
+                <br />
+                <label>musings:</label>
+                <input onChange={this.changeHandler} name='comment' placeholder='share your experience'/>
+                <button className='button' onClick={this.submitHandler}>SUBMIT</button>
+                <button className='button' onClick={this.closeInfo}>Close</button>
+              </div>
+            </div>
+            : null}
         </div>
       )
     }
